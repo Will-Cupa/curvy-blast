@@ -44,50 +44,64 @@ Use the built-in continuous integration in GitLab.
 
 ***
 
-# Editing this README
+## Curvy Blast
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Description  
+**Curvy Blast** est un jeu d'aventure mêlant plateforme et résolution d’énigmes mathématiques. Le joueur utilise des canons pour tirer des projectiles et doit écrire une fonction définissant leur trajectoire. Plus le joueur progresse, plus les obstacles se complexifient, nécessitant des fonctions avancées comme les sinusoïdes, les compositions ou les discontinuités.
 
-## Suggestions for a good README
+Le jeu commence avec des aides pour guider le joueur dans la création des fonctions. Cependant, ces aides disparaissent progressivement, obligeant le joueur à maîtriser des concepts mathématiques et à utiliser des blocs de fonctions (cos, sin, x², 1/x, etc.) pour ajuster précisément ses tirs.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Objectif pédagogique  
+Rendre l’apprentissage des fonctions mathématiques interactif et amusant en permettant aux joueurs d’expérimenter avec des concepts comme :  
+- Les équations linéaires  
+- Les fonctions quadratiques  
+- Les fonctions trigonométriques  
+- Les discontinuités  
 
-## Name
-Choose a self-explaining name for your project.
+## Badges  
+*(Ajoutez ici des badges comme le statut du build, la couverture des tests, etc.)*  
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Visuels  
+*(Ajoutez ici des captures d'écran ou des GIFs du gameplay pour illustrer le jeu.)*  
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Installation  
+1. Clonez le dépôt :  
+   ```bash
+   git clone https://github.com/votre-repo/curvy-blast.git
+   cd curvy-blast
+   ```
+2. Installez les dépendances :  
+   ```bash
+   npm install  # ou yarn install
+   ```
+3. Lancez le jeu en local :  
+   ```bash
+   npm start  # ou yarn start
+   ```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Usage  
+- **Écrivez une fonction mathématique** dans le champ prévu avant de tirer.  
+- **Testez votre trajectoire** et ajustez-la pour atteindre la cible.  
+- **Apprenez progressivement** en surmontant des niveaux de plus en plus complexes.  
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Roadmap  
+- [ ] Ajout de nouveaux obstacles et défis  
+- [ ] Intégration d'un mode multijoueur  
+- [ ] Amélioration de l'interface utilisateur  
+- [ ] Déploiement sur mobile  
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## Contributing  
+Les contributions sont les bienvenues ! Pour proposer des améliorations :  
+1. Forkez le projet  
+2. Créez une branche (`feature/ma-fonctionnalité`)  
+3. Faites vos modifications et testez-les  
+4. Soumettez une Pull Request  
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Auteurs et remerciements  
+Développé par **Késsé Zoh , Alain Sandoz et Ethan Guillot** dans le cadre d’un projet académique.  
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Licence  
+*(Ajoutez ici la licence du projet, par ex. MIT, GPL, etc.)*  
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Statut du projet  
+Actuellement en cours de développement.  
