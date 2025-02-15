@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjyn8on0dme0a"]
+[gd_scene load_steps=3 format=3 uid="uid://cjyn8on0dme0a"]
 
+[ext_resource type="Script" path="res://ressources(image, animation, ...)/player/player.gd" id="1_ars7u"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://icon.svg" id="1_gky4p"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ars7u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
