@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Curvy blast the game"
+run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [dotnet]
 
