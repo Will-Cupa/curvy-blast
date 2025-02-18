@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://biet31yard4ge"]
+
+[node name="canon" type="StaticBody2D"]
