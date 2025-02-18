@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://gdlet1u2gkvm"]
+
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/player.tscn" id="1_qapnw"]
+
+[node name="Tutoriel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_qapnw")]
+unique_name_in_owner = true
