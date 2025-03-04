@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://biet31yard4ge"]
+[gd_scene load_steps=3 format=3 uid="uid://biet31yard4ge"]
+
+[ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_mkq0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
 
 [node name="canon" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, -10)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_mkq0k")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, -10)
+shape = SubResource("RectangleShape2D_husja")
