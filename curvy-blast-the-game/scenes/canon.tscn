@@ -1,10 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://biet31yard4ge"]
+[gd_scene load_steps=5 format=3 uid="uid://biet31yard4ge"]
 
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_mkq0k"]
+[ext_resource type="Script" path="res://scripts/funcInput.gd" id="3_jhxu4"]
+
+[sub_resource type="GDScript" id="GDScript_jm0hy"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
 
 [node name="canon" type="StaticBody2D"]
+script = SubResource("GDScript_jm0hy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, -10)
@@ -15,7 +31,10 @@ texture = ExtResource("1_mkq0k")
 offset_top = 2.0
 offset_right = 39.0
 offset_bottom = 10.0
+script = ExtResource("3_jhxu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, -10)
 shape = SubResource("RectangleShape2D_husja")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
