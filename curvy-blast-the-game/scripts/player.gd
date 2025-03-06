@@ -4,11 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+const CANNON_VELOCITY = 2
+var XYScale = 30
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var expression = Expression.new()
 var cannoned = true
+var inCannon = false 
+var functionCurve  = "2*cos(x)+4"
 
 func calcule(f):
 	var error = expression.parse(f)
@@ -17,31 +22,40 @@ func calcule(f):
 		return
 	var result = expression.execute()
 	if not expression.has_execute_failed():
+		#print(result)
 		return result
 
 func shoot(f):
-	var error = expression.parse(f)
-	if error == OK:
-		cannoned = true
-
+	if(inCannon):
+		var error = expression.parse(f)
+		if error == OK:
+			cannoned = true
+			inCannon = false
+			
+			functionCurve = f
+			
+			#changer d'annimation
+			
+func enterCanon(x,y):
+	inCannon = true
+	cannoned = false
+	
+	#ajouter l'apparition de l'interface
+	#changer d'annimation
 
 func _physics_process(delta):
 	
-	
 	if(cannoned):
-		position.x += 1
+		position.x += CANNON_VELOCITY
 		
-		#var res = calcule(str(position.x) + "+2");
-		var res = calcule("( ");
+		var res = calcule(functionCurve.replace("x","("+str(position.x)+"/"+str(XYScale)+".0)"))
+		
 		if (res != null):
-			position.y = res
-		
-		
+			position.y = -res*XYScale
+			
 		var collision = move_and_collide(velocity * delta,true)
-		
 		if (collision):
 			cannoned = false
-			print("ok")
 			
 	else:
 		# Add the gravity.
