@@ -27,6 +27,6 @@ layer_0/tile_data = PackedInt32Array(-131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qapnw")]
 unique_name_in_owner = true
-position = Vector2(-362, -4)
+position = Vector2(-349, -83)
 
 [node name="Camera2D" type="Camera2D" parent="."]

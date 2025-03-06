@@ -16,6 +16,9 @@ var expression = Expression.new()
 var canoned = true
 var inCanon = false 
 var functionCurve  = "2*cos(x)+4"
+var xRelatif = 0
+var yRelatif = 0
+var yAvantCanon = 0
 
 func calcule(f):
 	var error = expression.parse(f)
@@ -41,15 +44,21 @@ func shoot(f):
 func enterCanon(x,y):
 	inCanon = true
 	canoned = false
-	
+	position.x = x
+	position.y = y
 	#ajouter l'apparition de l'interface
-	#changer d'annimation
+	xRelatif = 0
+	yRelatif = 0
+	yAvantCanon = position.y
 
 func applyCanonMov(delta):
+	
 	position.x += CANNON_VELOCITY
-	var res = calcule(functionCurve.replace("x","("+str(position.x)+"/"+str(XYScale)+".0)"))
+	xRelatif += CANNON_VELOCITY
+	var res = calcule(functionCurve.replace("x","("+str(xRelatif)+"/"+str(XYScale)+".0)"))
 	if (res != null):
-		position.y = -res*XYScale
+		yRelatif = -res*XYScale
+		position.y = yAvantCanon + yRelatif
 	var collision = move_and_collide(velocity * delta,true)
 	if (collision):
 		canoned = false
