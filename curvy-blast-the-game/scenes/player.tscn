@@ -1,7 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjyn8on0dme0a"]
+[gd_scene load_steps=8 format=3 uid="uid://cjyn8on0dme0a"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dt2iw"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_gky4p"]
+[ext_resource type="Texture2D" uid="uid://du5yb6l4vjm3n" path="res://assets/MC32x32IdleSheet.png" id="3_xiul7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyh3n"]
+atlas = ExtResource("3_xiul7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym8mk"]
+atlas = ExtResource("3_xiul7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ro566"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gky4p")
+}],
+"loop": true,
+"name": &"enVol",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyh3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym8mk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"inCanon",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ib2r7"]
 radius = 32.0156
@@ -14,6 +65,8 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_gky4p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ro566")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ib2r7")
