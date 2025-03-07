@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cjyn8on0dme0a"]
+[gd_scene load_steps=31 format=3 uid="uid://cjyn8on0dme0a"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dt2iw"]
 [ext_resource type="Texture2D" uid="uid://dapk0j0uokqts" path="res://assets/launch/0001.png" id="2_q5oh0"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cjascp54fe1gx" path="res://assets/walk/0008.png" id="25_s1xj2"]
 [ext_resource type="Texture2D" uid="uid://ni4pafhxmsq6" path="res://assets/walk/0009.png" id="26_2imjf"]
 [ext_resource type="Texture2D" uid="uid://muyqe5yr6o2h" path="res://assets/walk/0010.png" id="27_j0ba3"]
+[ext_resource type="Texture2D" uid="uid://6hakqk26f5nd" path="res://assets/face.png" id="28_tas6e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ro566"]
 animations = [{
@@ -153,5 +154,12 @@ animation = &"enVol"
 frame = 4
 frame_progress = 1.0
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, -11)
+scale = Vector2(0.0808333, 0.0883092)
+texture = ExtResource("28_tas6e")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_ib2r7")
