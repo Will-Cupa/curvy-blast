@@ -1,19 +1,18 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
-
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-const CANNON_VELOCITY = 2
+const CANNON_VELOCITY = 3
 var XYScale = 30
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var expression = Expression.new()
-var canoned = true
+var canoned = false
 var inCanon = false 
 var functionCurve  = "2*cos(x)+4"
 var xRelatif = 0
@@ -64,6 +63,7 @@ func applyCanonMov(delta):
 		canoned = false
 
 func _physics_process(delta):
+	
 	if(inCanon):
 		animation.play("inCanon")
 		
