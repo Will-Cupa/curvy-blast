@@ -1,32 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6dannarqfvkd"]
+[gd_scene load_steps=5 format=3 uid="uid://b6dannarqfvkd"]
 
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_mkq0k"]
 [ext_resource type="Script" path="res://scripts/canon.gd" id="1_tuoyq"]
-[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/player.tscn" id="3_136nf"]
 [ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="3_161ud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
+size = Vector2(124, 124)
 
 [node name="canon" type="StaticBody2D"]
 script = ExtResource("1_tuoyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(10, -10)
-scale = Vector2(0.15625, 0.15625)
+position = Vector2(-7.62939e-06, 7.62939e-06)
+scale = Vector2(0.96875, 0.96875)
 texture = ExtResource("1_mkq0k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10, -10)
-shape = SubResource("RectangleShape2D_husja")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("3_161ud")
 
 [node name="LineEdit" type="LineEdit" parent="."]
-offset_right = 67.0625
-offset_bottom = 31.0
+offset_left = -51.0
+offset_top = 94.0
+offset_right = 135.0
+offset_bottom = 152.0
 
-[node name="Player" parent="." instance=ExtResource("3_136nf")]
-position = Vector2(145, 66)
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_husja")
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
