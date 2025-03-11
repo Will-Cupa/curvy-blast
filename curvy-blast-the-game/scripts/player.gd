@@ -11,7 +11,6 @@ var XYScale = 30
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var expression = Expression.new()
 var canoned = false
 var inCanon = false 
 var functionCurve
@@ -20,7 +19,7 @@ var yRelatif = 0
 var yAvantCanon = 0
 
 func calculeCurve():
-	var result = functionCurve.execute([xRelatif/XYScale])
+	var result = functionCurve.execute([float(xRelatif)/XYScale])
 	if not functionCurve.has_execute_failed():
 		#print(result)
 		return result
