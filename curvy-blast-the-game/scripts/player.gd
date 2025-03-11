@@ -20,7 +20,7 @@ var yRelatif = 0
 var yAvantCanon = 0
 
 func calcule(f):
-	var error = expression.parse(f)
+	var error = expression.parse(f.replace("x","("+str(xRelatif)+"/"+str(XYScale)+".0)"))
 	if error != OK:
 		#print(expression.get_error_text())
 		return
@@ -54,7 +54,7 @@ func applyCanonMov(delta):
 	
 	position.x += CANNON_VELOCITY
 	xRelatif += CANNON_VELOCITY
-	var res = calcule(functionCurve.replace("x","("+str(xRelatif)+"/"+str(XYScale)+".0)"))
+	var res = calcule(functionCurve)
 	if (res != null):
 		yRelatif = -res*XYScale
 		position.y = yAvantCanon + yRelatif
