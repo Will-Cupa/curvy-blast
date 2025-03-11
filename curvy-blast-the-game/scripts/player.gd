@@ -62,33 +62,57 @@ func applyCanonMov(delta):
 	if (collision):
 		canoned = false
 
-func _physics_process(delta):
-	
+func animationGestion():
 	if(inCanon):
 		animation.play("inCanon")
 		
 	elif(canoned):
-		applyCanonMov(delta)
 		animation.play("enVol")
 		
 	else:
-		animation.play("idle")
+		if is_on_floor():
+			if Input.is_action_pressed("ui_left"):
+				animation.play("walk")
+			elif Input.is_action_pressed("ui_right"):
+				animation.play_backwards("walk")
+			else:
+				animation.play("idle")
+			
+		else:
+			if velocity.y < 0:
+				animation.play("jump")
+			else:
+				animation.play("fall")
+			
 		
+		
+		
+
+func _physics_process(delta):
+	
+	animationGestion()
+	
+	if(inCanon):
+		pass
+		
+	elif(canoned):
+		applyCanonMov(delta)
+		
+	else:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
-			animation.play("fall")
+			
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			animation.play("jump")
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * SPEED
-			animation.play("jump")
+			
 			if(direction < 0):animation.flip_v
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
