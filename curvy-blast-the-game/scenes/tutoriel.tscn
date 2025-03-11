@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_dnt8h"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/player.tscn" id="1_qapnw"]
-[ext_resource type="PackedScene" uid="uid://bni3d7nq76k8s" path="res://scenes/testEthanCanon.tscn" id="3_3osfc"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/canon.tscn" id="4_5m0ew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6fg3"]
 texture = ExtResource("1_dnt8h")
@@ -39,5 +39,5 @@ position = Vector2(-349, -83)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_3osfc")]
-position = Vector2(-489, 80)
+[node name="canon" parent="." instance=ExtResource("4_5m0ew")]
+position = Vector2(-500, 119)
