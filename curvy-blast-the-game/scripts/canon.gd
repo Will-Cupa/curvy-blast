@@ -14,21 +14,22 @@ func _ready():
 func _process(delta):
 	pass
 
-func isParsable(text):
+func parseFunc(text):
 	#verifier que le texte saisie est bien une fonction en maths
 	var parsable = expression.parse(text,["x"])
+	
 	if parsable == OK :
 		var result = expression.execute([0])
-		return !expression.has_execute_failed()
-	else :
-		return false
+		if !expression.has_execute_failed():
+			return expression
+			
+	return null
 
 func _on_line_edit_text_submitted(text):
 	print("send")
-	var parsable = isParsable(text)
-	#Si la fonction est valide, qu'on connait le jouer et qu'il est dans le canon
-	if parsable && playerInCanon && player != null: 
-		player.shoot(text) #On lance le joueur
+	var f = parseFunc(text)
+	print(f)
+	player.shoot(f) #On lance le joueur
 
 
 func _on_area_2d_body_entered(body):
@@ -37,5 +38,3 @@ func _on_area_2d_body_entered(body):
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
 		playerInCanon = true #Le joueur est dans le canon
-
-

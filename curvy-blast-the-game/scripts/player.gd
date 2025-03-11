@@ -14,32 +14,26 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var expression = Expression.new()
 var canoned = false
 var inCanon = false 
-var functionCurve  = "2*cos(x)+4"
+var functionCurve
 var xRelatif = 0
 var yRelatif = 0
 var yAvantCanon = 0
 
-func calcule(f):
-	var error = expression.parse(f.replace("x","("+str(xRelatif)+"/"+str(XYScale)+".0)"))
-	if error != OK:
-		#print(expression.get_error_text())
-		return
-	var result = expression.execute()
-	if not expression.has_execute_failed():
+func calculeCurve():
+	var result = functionCurve.execute([xRelatif/XYScale])
+	if not functionCurve.has_execute_failed():
 		#print(result)
 		return result
 
 func shoot(f):
 	if(inCanon):
-		var error = expression.parse(f)
-		if error == OK:
-			canoned = true
-			inCanon = false
-			
-			functionCurve = f
-			
-			#changer d'annimation
-			
+		canoned = true
+		inCanon = false
+		
+		functionCurve = f
+		print(functionCurve)
+		#changer d'annimation
+
 func enterCanon(x,y):
 	inCanon = true
 	canoned = false
@@ -54,7 +48,7 @@ func applyCanonMov(delta):
 	
 	position.x += CANNON_VELOCITY
 	xRelatif += CANNON_VELOCITY
-	var res = calcule(functionCurve)
+	var res = calculeCurve()
 	if (res != null):
 		yRelatif = -res*XYScale
 		position.y = yAvantCanon + yRelatif
