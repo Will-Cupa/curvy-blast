@@ -13,7 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var canoned = false
 var inCanon = false 
-var functionCurve
+var functionCurve #Expression
 var xRelatif = 0
 var yRelatif = 0
 var yAvantCanon = 0
@@ -30,7 +30,6 @@ func shoot(f):
 		inCanon = false
 		
 		functionCurve = f
-		print(functionCurve)
 		#changer d'annimation
 
 func enterCanon(x,y):
