@@ -47,7 +47,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_ge1l3")
 }],
-"loop": false,
+"loop": true,
 "name": &"enVol",
 "speed": 15.0
 }, {
@@ -150,9 +150,9 @@ script = ExtResource("1_dt2iw")
 position = Vector2(0, 5.96046e-08)
 scale = Vector2(0.150463, 0.150463)
 sprite_frames = SubResource("SpriteFrames_ro566")
-animation = &"enVol"
-frame = 4
-frame_progress = 1.0
+animation = &"walk"
+frame = 1
+frame_progress = 0.856157
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
@@ -161,5 +161,4 @@ scale = Vector2(0.0808333, 0.0883092)
 texture = ExtResource("28_tas6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_ib2r7")

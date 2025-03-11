@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs6sgks0d5gwp"]
+
+[ext_resource type="Script" path="res://scenes/LevelIcons/level_icon.gd" id="1_54ya5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n422s"]
+font_size = 14
+
+[sub_resource type="Gradient" id="Gradient_pn4ui"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j7d1s"]
+gradient = SubResource("Gradient_pn4ui")
+width = 64
+
+[node name="LevelIcon" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_54ya5")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = -24.0
+offset_right = 64.0
+offset_bottom = -1.0
+text = "Level  1"
+label_settings = SubResource("LabelSettings_n422s")
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+texture = SubResource("GradientTexture1D_j7d1s")

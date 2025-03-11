@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnw5ysym0p7k"]
+
+[ext_resource type="Script" path="res://scenes/Two/second_scene.gd" id="1_ei6nq"]
+[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="2_scgs7"]
+[ext_resource type="Texture2D" uid="uid://bte4k8hrengj8" path="res://assets/BackgroundMenu/Image2.png" id="2_vdhsn"]
+[ext_resource type="StyleBox" uid="uid://5hhhlsdokbnf" path="res://assets/Themes/buttonThemeFocus.tres" id="3_kepob"]
+[ext_resource type="StyleBox" uid="uid://bfd05e6j6ywha" path="res://assets/Themes/buttonThemeHover.tres" id="3_nfj7q"]
+[ext_resource type="StyleBox" uid="uid://drk4tlj01am44" path="res://assets/Themes/buttonTheme.tres" id="3_wjx8k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwq2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyd63"]
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_qr1al"]
+default_font_size = 25
+Button/styles/focus = ExtResource("3_kepob")
+Button/styles/hover = ExtResource("3_nfj7q")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_jwq2w")
+Button/styles/normal = ExtResource("3_wjx8k")
+Button/styles/pressed = SubResource("StyleBoxFlat_yyd63")
+
+[node name="SecondScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ei6nq")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_scgs7")
+autoplay = true
+expand = true
+loop = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(278, 221)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_vdhsn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Play" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_qr1al")
+text = "Jouer
+"
+
+[node name="Options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_qr1al")
+text = "Parametres"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_qr1al")
+text = "Quitter"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
