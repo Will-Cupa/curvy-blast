@@ -71,9 +71,9 @@ func animationGestion():
 		
 	else:
 		if is_on_floor():
-			if Input.is_action_pressed("ui_left"):
+			if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
 				animation.play("walk")
-			elif Input.is_action_pressed("ui_right"):
+			elif Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
 				animation.play_backwards("walk")
 			else:
 				animation.play("idle")
