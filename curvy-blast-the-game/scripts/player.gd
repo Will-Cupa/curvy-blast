@@ -38,7 +38,7 @@ func shoot(f):
 			
 			functionCurve = f
 			
-			#changer d'animation
+			#changer d'annimation
 			
 func enterCanon(x,y):
 	inCanon = true
