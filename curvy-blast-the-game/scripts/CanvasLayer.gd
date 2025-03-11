@@ -1,5 +1,4 @@
-extends TextEdit
-
+extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,5 +7,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	queue_redraw()
 	
+func _draw():
+	draw_line(Vector2(1.5, 1.0), Vector2(1.5, 4.0), Color.GREEN, 1.0)

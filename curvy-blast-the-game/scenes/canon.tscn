@@ -1,40 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6dannarqfvkd"]
+[gd_scene load_steps=6 format=3 uid="uid://b6dannarqfvkd"]
 
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_mkq0k"]
-[ext_resource type="Script" path="res://scripts/funcInput.gd" id="3_jhxu4"]
-
-[sub_resource type="GDScript" id="GDScript_jm0hy"]
-script/source = "extends StaticBody2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="Script" path="res://scripts/canon.gd" id="1_tuoyq"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/player.tscn" id="3_136nf"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="3_161ud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
 
 [node name="canon" type="StaticBody2D"]
-script = SubResource("GDScript_jm0hy")
+script = ExtResource("1_tuoyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, -10)
 scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("1_mkq0k")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_top = 2.0
-offset_right = 39.0
-offset_bottom = 10.0
-script = ExtResource("3_jhxu4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, -10)
 shape = SubResource("RectangleShape2D_husja")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_161ud")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_right = 67.0625
+offset_bottom = 31.0
+
+[node name="Player" parent="." instance=ExtResource("3_136nf")]
+position = Vector2(145, 66)
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
