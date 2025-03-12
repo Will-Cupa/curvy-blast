@@ -42,13 +42,18 @@ func _on_area_2d_body_entered(body : Object) -> void:
 
 func _draw() -> void:
 	var space = 1
+	var maxWidth = get_viewport_rect().size.x - position.x
+	var maxHeight = get_viewport_rect().size.y - position.y
+	var minHeight = -get_viewport_rect().size.y - maxHeight
+	draw_line(Vector2(0,0), Vector2(0, minHeight), Color.BLUE)
 	if expressionReady && player != null:
 		var p1
 		var p2
-		for i in range(1000):
-			p1 = Vector2(i*space, -expression.execute([(i*space)/player.XYScale])*player.XYScale) 
-			p2 = Vector2((i+1)*space, -expression.execute([((i+1)*space)/player.XYScale])*player.XYScale)
-			
+		var i = 0
+		while i <= maxWidth:
+			p1 = Vector2(i, -expression.execute([i/player.XYScale])*player.XYScale) 
+			p2 = Vector2(i+space, -expression.execute([(i+space)/player.XYScale])*player.XYScale)
+			i += space
 			draw_line(p1,p2,Color.RED,1)
 
 
