@@ -6,6 +6,8 @@ var playerInCanon = false
 var expression = Expression.new()
 var expressionReady = false
 
+@onready var sprite = $Sprite2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,10 +29,13 @@ func parseFunc(text : String) -> bool:
 			
 	return false
 
-func _on_line_edit_text_submitted(text : String) -> void: #appeler quand le joueur valide sa saisie
+func _on_line_edit_text_submitted(text : String) -> void: #appel quand le joueur valide sa saisie
 	if expressionReady && playerInCanon:
 		player.shoot(expression) #On lance le joueur
-
+		
+func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
+	expressionReady = parseFunc(new_text)
+	queue_redraw()
 
 func _on_area_2d_body_entered(body : Object) -> void:
 	#On verifie que l'objet qui entre est le joueur
@@ -39,24 +44,30 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		player.enterCanon(position.x,position.y)
 		playerInCanon = true #Le joueur est dans le canon
 
+func slopeAt(x : float, precision : float) -> float:
+	if player != null:
+		return (valueAt(x + precision) -valueAt(x))/precision
+	return 0.0
+
+func valueAt(x : float) -> float:
+	if expressionReady && player != null:
+		return -expression.execute([x/player.XYScale])*player.XYScale
+	return 0.0
 
 func _draw() -> void:
 	var space = 1
 	var maxWidth = get_viewport_rect().size.x - position.x
-	var maxHeight = get_viewport_rect().size.y - position.y
-	var minHeight = -get_viewport_rect().size.y - maxHeight
-	draw_line(Vector2(0,0), Vector2(0, minHeight), Color.BLUE)
-	if expressionReady && player != null:
-		var p1
-		var p2
-		var i = 0
+	var p1
+	var p2
+	var i = 0
+	if expressionReady:
 		while i <= maxWidth:
-			p1 = Vector2(i, -expression.execute([i/player.XYScale])*player.XYScale) 
-			p2 = Vector2(i+space, -expression.execute([(i+space)/player.XYScale])*player.XYScale)
+			p1 = Vector2(i, valueAt(i)) 
+			p2 = Vector2(i+space, valueAt(i+space))
 			i += space
 			draw_line(p1,p2,Color.RED,1)
+			sprite.rotation = slopeAt(0,0.1)
+			print(slopeAt(0,0.1))
 
 
-func _on_line_edit_text_changed(new_text: String) -> void:
-	expressionReady = parseFunc(new_text)
-	queue_redraw()
+

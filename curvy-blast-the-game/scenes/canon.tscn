@@ -10,8 +10,7 @@ size = Vector2(124, 124)
 script = ExtResource("1_tuoyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-7.62939e-06, 7.62939e-06)
-scale = Vector2(0.96875, 0.96875)
+scale = Vector2(0.320313, 0.320313)
 texture = ExtResource("1_mkq0k")
 
 [node name="LineEdit" type="LineEdit" parent="."]
@@ -24,6 +23,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("RectangleShape2D_husja")
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]

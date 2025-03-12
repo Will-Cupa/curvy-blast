@@ -40,4 +40,4 @@ position = Vector2(-349, -83)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="canon" parent="." instance=ExtResource("4_5m0ew")]
-position = Vector2(-453, 121)
+position = Vector2(295, 105)
