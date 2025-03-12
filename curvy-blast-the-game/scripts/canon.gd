@@ -41,13 +41,13 @@ func _on_area_2d_body_entered(body : Object) -> void:
 
 
 func _draw() -> void:
-	var step = 1
-	if expressionReady:
+	var space = 1
+	if expressionReady && player != null:
 		var p1
 		var p2
 		for i in range(1000):
-			p1 = Vector2(i*step, expression.execute([i*step])) 
-			p2 = Vector2((i+1)*step, expression.execute([(i+1)*step]))
+			p1 = Vector2(i*space, -expression.execute([(i*space)/player.XYScale])*player.XYScale) 
+			p2 = Vector2((i+1)*space, -expression.execute([((i+1)*space)/player.XYScale])*player.XYScale)
 			
 			draw_line(p1,p2,Color.RED,1)
 
