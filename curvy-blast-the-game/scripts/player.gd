@@ -76,13 +76,29 @@ func animationGestion():
 			else:
 				animation.play("fall")
 			
+func checkDeath():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var body = collision.get_collider()
 		
-		
-		
+		if body is TileMap:
+			var tilemap = body
+			var collision_position = collision.get_position()
+			var cell = tilemap.local_to_map(collision_position)
+			
+			var layer_id = 0  # Remplacez par l'index de la couche "Layer 2"
+			var tile_data = tilemap.get_cell_tile_data(layer_id, cell)
+			if tile_data:
+				if tile_data.get_collision_polygons_count(1) > 0:
+					print("tu es mort")
+			
+
+
 
 func _physics_process(delta):
 	
 	animationGestion()
+	checkDeath()
 	
 	if(inCanon):
 		pass
