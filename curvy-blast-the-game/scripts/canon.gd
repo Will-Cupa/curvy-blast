@@ -54,8 +54,20 @@ func valueAt(x : float) -> float:
 		return -expression.execute([x/player.XYScale])*player.XYScale
 	return 0.0
 
+
+func getOptiPoint(x1,x2, space, treshold) -> float:
+	var x3 = x1 + space/2
+	var y1 = valueAt(x1)
+	var y2 = valueAt(x2)
+	var y3 = min(y1, y2) + abs(y1 - y2)
+	var yTarget = valueAt(x3)
+	
+	if(abs(y3 - yTarget) > treshold):
+		
+	return x2
+
 func _draw() -> void:
-	var space = 1
+	var space = 20
 	var maxWidth = get_viewport_rect().size.x - position.x
 	var p1
 	var p2
@@ -68,6 +80,3 @@ func _draw() -> void:
 			draw_line(p1,p2,Color.RED,1)
 			sprite.rotation = slopeAt(0,0.1)
 			print(slopeAt(0,0.1))
-
-
-
