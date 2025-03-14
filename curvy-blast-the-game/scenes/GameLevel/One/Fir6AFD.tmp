@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bbetv8nr2ivr8"]
 
-[ext_resource type="Script" path="res://scenes/One/first_scene.gd" id="1_tc6n4"]
+[ext_resource type="Script" path="res://scenes/GameLevel/One/first_scene.gd" id="1_tc6n4"]
 [ext_resource type="Texture2D" uid="uid://8q5fcov5v3bp" path="res://assets/BackgroundMenu/Image1.png" id="2_88547"]
-[ext_resource type="Script" path="res://scenes/One/logo.gd" id="3_k173u"]
+[ext_resource type="Script" path="res://scenes/GameLevel/One/logo.gd" id="3_k173u"]
 
 [sub_resource type="Environment" id="Environment_osf5t"]
 background_mode = 3

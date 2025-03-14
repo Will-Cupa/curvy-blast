@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://10irpxgic6u6"]
 
-[ext_resource type="PackedScene" uid="uid://bs64qb3wr381y" path="res://scenes/LevelIcons/world_icon.tscn" id="1_5kcng"]
-[ext_resource type="Script" path="res://scenes/LevelManager/world_select.gd" id="1_b5are"]
-[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/LevelIcons/player_icon.tscn" id="3_6aq3q"]
-[ext_resource type="PackedScene" uid="uid://wu0woxtgjbxa" path="res://scenes/LevelManager/level_select_test.tscn" id="3_6awmx"]
-[ext_resource type="PackedScene" uid="uid://c6bebk54j4366" path="res://scenes/LevelManager/level_select_test2.tscn" id="4_qrorh"]
+[ext_resource type="PackedScene" uid="uid://bs64qb3wr381y" path="res://scenes/GameLevel/LevelIcons/world_icon.tscn" id="1_5kcng"]
+[ext_resource type="Script" path="res://scenes/GameLevel/LevelManager/world_select.gd" id="1_b5are"]
+[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_6aq3q"]
+[ext_resource type="PackedScene" uid="uid://wu0woxtgjbxa" path="res://scenes/GameLevel/LevelManager/level_select_test.tscn" id="3_6awmx"]
+[ext_resource type="PackedScene" uid="uid://c6bebk54j4366" path="res://scenes/GameLevel/LevelManager/level_select_test2.tscn" id="4_qrorh"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="6_y5tiw"]
 
 [node name="WorldSelect" type="Control"]

@@ -11,6 +11,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Engine.is_editor_hint():
 		$Label.text = "World  " + str(level_index)

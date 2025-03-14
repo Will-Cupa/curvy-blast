@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b723wpkm1g8iw"]
+
+[node name="PlayerIcon" type="TextureRect"]
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+expand_mode = 1

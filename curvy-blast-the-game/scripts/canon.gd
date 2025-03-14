@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	
 func parseFunc(text : String) -> bool:
@@ -22,13 +22,13 @@ func parseFunc(text : String) -> bool:
 	
 	#verifier que le texte saisie est bien une fonction en maths
 	if parsable == OK :
-		var result = expression.execute([0]) #tester la fonction 
+		var _result = expression.execute([0]) #tester la fonction 
 		if !expression.has_execute_failed(): #verifier qu'elle s'execute bien
 			return true
 			
 	return false
 
-func _on_line_edit_text_submitted(text : String) -> void: #appel quand le joueur valide sa saisie
+func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueur valide sa saisie
 	if expressionReady && playerInCanon:
 		player.shoot(expression) #On lance le joueur
 		

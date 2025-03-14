@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6bebk54j4366"]
 
-[ext_resource type="Script" path="res://scenes/LevelManager/level_select_test.gd" id="1_5kfe8"]
-[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/LevelIcons/level_icon.tscn" id="2_sqbsl"]
-[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/LevelIcons/player_icon.tscn" id="3_gle7j"]
+[ext_resource type="Script" path="res://scenes/GameLevel/LevelManager/level_select_test.gd" id="1_5kfe8"]
+[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="2_sqbsl"]
+[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_gle7j"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="4_wb7ob"]
 
 [node name="LevelSelectTest2" type="Control"]

@@ -1,0 +1,179 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbetv8nr2ivr8"]
+
+[ext_resource type="Script" path="res://scenes/GameLevel/One/first_scene.gd" id="1_tc6n4"]
+[ext_resource type="Texture2D" uid="uid://8q5fcov5v3bp" path="res://assets/BackgroundMenu/Image1.png" id="2_88547"]
+[ext_resource type="Script" path="res://scenes/GameLevel/One/logo.gd" id="3_k173u"]
+
+[sub_resource type="Environment" id="Environment_osf5t"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v7lq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_32xog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_alpbk"]
+resource_name = "appear"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3, 5),
+"transitions": PackedFloat32Array(3.13834, 1, 1, 1),
+"update": 0,
+"values": [Color(1.1, 1.1, 1.1, 0), Color(1.3, 1.3, 1.3, 1), Color(1.2, 1.2, 1.2, 1), Color(1.2, 1.2, 1.2, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.45, 0.45), Vector2(1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playAnimationDisappear"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_p5u6d"]
+resource_name = "disappear"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.307786, 1),
+"update": 0,
+"values": [Color(1.2, 1.2, 1.2, 1), Color(1.1, 1.1, 1.1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_animation_disappear_finished"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7shgk"]
+_data = {
+"RESET": SubResource("Animation_32xog"),
+"appear": SubResource("Animation_alpbk"),
+"disappear": SubResource("Animation_p5u6d")
+}
+
+[node name="FirstScene" type="Control"]
+self_modulate = Color(1.2, 1.2, 1.2, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tc6n4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_osf5t")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -126.0
+offset_right = 127.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(126, 126)
+theme_override_styles/panel = SubResource("StyleBoxFlat_4v7lq")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("2_88547")
+script = ExtResource("3_k173u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_7shgk")
+}

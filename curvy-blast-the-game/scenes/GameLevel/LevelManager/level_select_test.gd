@@ -10,11 +10,6 @@ var move_tween : Tween
 func _ready():
 	$PlayerIcon.global_position = current_level.global_position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 #Called when the player press direction button
 func _input(event):
 	if move_tween and move_tween.is_running():

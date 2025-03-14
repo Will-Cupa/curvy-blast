@@ -1,7 +1,7 @@
 extends TextureRect
 
 @onready var animation_player = $AnimationPlayer
-var menu = preload("res://scenes/Two/second_scene.tscn");
+var menu = preload("res://scenes/GameLevel/Two/second_scene.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,7 +9,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	
 func on_animation_disappear_finished():
