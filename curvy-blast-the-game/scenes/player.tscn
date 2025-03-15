@@ -154,18 +154,16 @@ script = ExtResource("1_dt2iw")
 position = Vector2(0, 3)
 scale = Vector2(0.150463, 0.150463)
 sprite_frames = SubResource("SpriteFrames_ro566")
-animation = &"enVol"
+animation = &"idle"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
 z_index = 1
-position = Vector2(-1, -11)
-scale = Vector2(0.0808333, 0.0883092)
+position = Vector2(-6.64615, -93.0461)
+scale = Vector2(0.53723, 0.586916)
 texture = ExtResource("28_tas6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CircleShape2D_ib2r7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_stkgg")

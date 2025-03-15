@@ -60,6 +60,7 @@ func animationGestion():
 		
 	elif(canoned):
 		animation.play("enVol")
+		animation.rotation = atan(functionCurve.slopeAt(position.x, 0.1))
 		
 	else:
 		if is_on_floor():
