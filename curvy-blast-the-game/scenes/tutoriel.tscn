@@ -36,3 +36,7 @@ position = Vector2(-349, -83)
 
 [node name="canon" parent="." instance=ExtResource("4_5m0ew")]
 position = Vector2(-514, 113)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(1, 0.675121, 0.40582, 1)
+blend_mode = 1

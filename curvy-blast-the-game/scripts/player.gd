@@ -63,6 +63,7 @@ func animationGestion():
 		animation.rotation = atan(functionCurve.slopeAt(position.x, 0.1))
 		
 	else:
+		animation.rotation = 0
 		if is_on_floor():
 			if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
 				animation.play("walk")
@@ -92,8 +93,6 @@ func checkDeath():
 			if tile_data:
 				if tile_data.get_collision_polygons_count(1) > 0:
 					print("tu es mort")
-			
-
 
 
 func _physics_process(delta):
