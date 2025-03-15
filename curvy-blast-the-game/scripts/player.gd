@@ -19,7 +19,7 @@ var yRelatif = 0
 var yAvantCanon = 0
 
 func calculeCurve():
-	var result = functionCurve.execute([float(xRelatif)/XYScale])
+	var result = functionCurve.valueAt(xRelatif)
 	if not functionCurve.has_execute_failed():
 		#print(result)
 		return result
@@ -48,7 +48,7 @@ func applyCanonMov(delta):
 	xRelatif += CANNON_VELOCITY
 	var res = calculeCurve()
 	if (res != null):
-		yRelatif = -res*XYScale
+		yRelatif = res
 		position.y = yAvantCanon + yRelatif
 	var collision = move_and_collide(velocity * delta,true)
 	if (collision):

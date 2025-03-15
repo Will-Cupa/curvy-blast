@@ -1,9 +1,9 @@
 extends StaticBody2D
 
-var player
 
+var player
 var playerInCanon = false
-var expression = Expression.new()
+var expression = mathFunction.new()
 var expressionReady = false
 @onready var sprite = $Sprite2D
 
@@ -43,25 +43,15 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		player.enterCanon(position.x,position.y)
 		playerInCanon = true #Le joueur est dans le canon
 
-func slopeAt(x : float, precision : float) -> float:
-	if player != null:
-		return (valueAt(x + precision) -valueAt(x))/precision
-	return 0.0
-
-func valueAt(x : float) -> float:
-	if expressionReady && player != null:
-		return -expression.execute([x/player.XYScale])*player.XYScale
-	return 0.0
-
 
 func getOptiPoint(x1, space, treshold) -> float:
 	print(space)
 	var x2 = x1 + space
 	var x3 = x1 + space/2
-	var y1 = valueAt(x1)
-	var y2 = valueAt(x2)
+	var y1 = expression.valueAt(x1)
+	var y2 = expression.valueAt(x2)
 	var y3 = min(y1, y2) + abs(y1 - y2)/2
-	var yTarget = valueAt(x3)
+	var yTarget = expression.valueAt(x3)
 	
 	if abs(y3 - yTarget) > treshold && space > 1:
 		return getOptiPoint(x1, space/2, treshold)
@@ -77,11 +67,11 @@ func _draw() -> void:
 	var nbPoints = 1
 	if expressionReady:
 		while i <= maxWidth:
-			p1 = Vector2(i, valueAt(i)) 
+			p1 = Vector2(i, expression.valueAt(i)) 
 			i2 = getOptiPoint(i, space, 0.1)
-			p2 = Vector2(i2, valueAt(i2))
+			p2 = Vector2(i2, expression.valueAt(i2))
 			i = i2
 			nbPoints += 1
 			draw_line(p1,p2,Color.RED,1)
-			sprite.rotation = atan(slopeAt(0,0.1))
+			sprite.rotation = atan(expression.slopeAt(0,0.1))
 		print(nbPoints)
