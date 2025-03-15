@@ -83,6 +83,5 @@ func _draw() -> void:
 			i = i2
 			nbPoints += 1
 			draw_line(p1,p2,Color.RED,1)
-			#sprite.rotation = slopeAt(0,0.1)
-			#print(slopeAt(0,0.1))
+			sprite.rotation = atan(slopeAt(0,0.1))
 		print(nbPoints)
