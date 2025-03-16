@@ -88,10 +88,10 @@ func checkDeath():
 			var collision_position = collision.get_position()
 			var cell = tilemap.local_to_map(collision_position)
 			
-			var layer_id = 0  # Remplacez par l'index de la couche "Layer 2"
+			var layer_id = 1  # Remplacez par l'index de la couche
 			var tile_data = tilemap.get_cell_tile_data(layer_id, cell)
 			if tile_data:
-				if tile_data.get_collision_polygons_count(1) > 0:
+				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
 
 

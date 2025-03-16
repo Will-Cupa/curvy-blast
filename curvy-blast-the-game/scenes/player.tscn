@@ -81,6 +81,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_7vwyb")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.956897, 0.0560345)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q7a57"]
 shader = ExtResource("3_u1ash")
@@ -351,6 +352,7 @@ shape = SubResource("RectangleShape2D_stkgg")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(5.96046e-08, 1.90735e-06)
 scale = Vector2(3.54688, 3.5)
+color = Color(0.825359, 0.535453, 0.337253, 1)
 texture = SubResource("GradientTexture2D_miabv")
 
 [node name="AnimationManager" type="Node2D" parent="."]
