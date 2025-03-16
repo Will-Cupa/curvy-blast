@@ -38,5 +38,8 @@ position = Vector2(-349, -83)
 position = Vector2(-514, 113)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-color = Color(1, 0.675121, 0.40582, 1)
-blend_mode = 1
+rotation = 0.947714
+color = Color(0.769966, 0.903448, 1, 1)
+blend_mode = 2
+shadow_enabled = true
+height = 0.32

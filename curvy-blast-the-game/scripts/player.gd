@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation: Node2D = $AnimationManager
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
