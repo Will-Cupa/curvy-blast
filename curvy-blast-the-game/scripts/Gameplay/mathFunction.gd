@@ -8,3 +8,5 @@ func valueAt(x : float) -> float:
 func slopeAt(x : float, precision : float) -> float:
 	return (valueAt(x + precision) -valueAt(x))/precision
 	
+func getXYScale():
+	return XYScale

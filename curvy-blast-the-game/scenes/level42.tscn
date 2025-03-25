@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfu0xserpos3d"]
+
+[ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_excgu"]
+[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_4t7y2"]
+[ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="3_vonbo"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_6txhu"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_4d3yc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
+shader = ExtResource("2_4t7y2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyank"]
+texture = ExtResource("3_vonbo")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ssfd8"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_iyank")
+
+[node name="Tutoriel" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(189.055, 53.9999)
+scale = Vector2(0.820776, 0.787037)
+texture = ExtResource("1_excgu")
+
+[node name="TileMap" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_hjemj")
+tile_set = SubResource("TileSet_ssfd8")
+format = 2
+layer_0/name = "base"
+layer_0/tile_data = PackedInt32Array(393208, 65537, 1, 393209, 65537, 1, 393210, 65537, 1, 393211, 65537, 1, 393212, 65537, 1, 393213, 65537, 1, 393214, 65537, 1, 393215, 65537, 1, 393207, 65537, 2, 327680, 65537, 2, 262144, 65537, 2, 196608, 65537, 2, 131072, 65537, 2, -65544, 65537, 2, -65543, 65537, 2, -65542, 65537, 2, -65541, 65537, 2, -65539, 65537, 2, -65538, 65537, 2, -65537, 65537, 2, -131072, 65537, 2, -131071, 65537, 2, -131070, 65537, 2, -131069, 65537, 2, -131068, 65537, 2, -131067, 65537, 2, -131066, 65537, 2, -131065, 65537, 2, -131064, 65537, 2, -65540, 65537, 2, 327681, 65537, 2, 327682, 65537, 2, 327683, 65537, 2, 327684, 65537, 2, 327685, 65537, 2, 327686, 65537, 2, 327687, 65537, 2, 327688, 65537, 2, 327689, 65537, 2, 327690, 65537, 2, -131063, 65537, 2, -131062, 65537, 2, -131061, 65537, 2, -131060, 65537, 2, 327691, 65537, 2, 327692, 65537, 2, 327693, 65537, 2, -65531, 65537, 2, 5, 65537, 2, 65541, 65537, 2, -65545, 65537, 2, -9, 65537, 2, 65527, 65537, 2, 131063, 65537, 2, 196599, 65537, 2, 262135, 65537, 2, 327671, 65537, 2, -131059, 65537, 2, -65523, 65537, 2, 13, 65537, 2, 65549, 65537, 2, 131085, 65537, 2, 196621, 65537, 2, 262157, 65537, 2)
+layer_1/name = "spike"
+layer_1/tile_data = PackedInt32Array(262145, 1, 4, 262146, 1, 4, 262147, 1, 4, 262148, 1, 4, -65535, 1, 805306372, -65534, 1, 805306372, -65533, 1, 805306372, -65532, 1, 805306372)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_6txhu")]
+position = Vector2(-279, 293)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(186, 50)
+zoom = Vector2(0.75, 0.75)
+
+[node name="canon" parent="." instance=ExtResource("5_4d3yc")]
+position = Vector2(-419, 289)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-834, -508)
+rotation = 0.947714
+color = Color(0.890934, 0.953776, 1, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32
