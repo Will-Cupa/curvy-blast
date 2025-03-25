@@ -6,9 +6,11 @@ var playerInCanon = false
 var expression = mathFunction.new()
 var expressionReady = false
 @onready var sprite = $Sprite2D
+@onready var inputField = $LineEdit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	inputField.visible = false
 	pass # Replace with function body.
 
 
@@ -31,6 +33,7 @@ func parseFunc(text : String) -> bool:
 func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueur valide sa saisie
 	if expressionReady && playerInCanon:
 		player.shoot(expression) #On lance le joueur
+		inputField.visible = false
 		
 func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
 	expressionReady = parseFunc(new_text)
@@ -39,6 +42,7 @@ func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueu
 func _on_area_2d_body_entered(body : Object) -> void:
 	#On verifie que l'objet qui entre est le joueur
 	if body is Player:
+		inputField.visible = true #afficher la barre de saisie
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
 		playerInCanon = true #Le joueur est dans le canon
