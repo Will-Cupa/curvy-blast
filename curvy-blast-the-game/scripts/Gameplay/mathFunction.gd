@@ -1,6 +1,6 @@
 class_name mathFunction extends Expression
 
-var XYScale : float = 30.0
+var XYScale : float = 64.0
 
 func valueAt(x : float) -> float:
 	return -execute([x/XYScale])*XYScale
