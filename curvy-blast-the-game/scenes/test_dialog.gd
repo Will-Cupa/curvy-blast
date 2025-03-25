@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-@onready var lines : Array[String] = [
+@export var lines : Array[String] = [
 	"Salut, jeune crabe!",
 	"Prêt à relever des défis",
 	"Apprête toi, le canon ...",

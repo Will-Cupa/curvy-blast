@@ -71,7 +71,8 @@ shadow_color = Color(0, 0, 0, 1)
 height = 0.32
 
 [node name="TestDialog" type="Sprite2D" parent="."]
-position = Vector2(-22, 116)
+position = Vector2(-35, -67)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_ag3x6")
 script = ExtResource("7_bvk7x")
+lines = Array[String](["Salut, jeune crabe!", "Prêt à relever des défis ?", "Apprête toi, le canon ...", "Fonction ... ne"])

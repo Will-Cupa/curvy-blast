@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbetv8nr2ivr8"]
+[gd_scene load_steps=11 format=3 uid="uid://bbetv8nr2ivr8"]
 
 [ext_resource type="Script" path="res://scripts/first_scene.gd" id="1_tc6n4"]
+[ext_resource type="Texture2D" uid="uid://dh3w8d0d58kbm" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-018.png" id="2_7mo7g"]
 [ext_resource type="Texture2D" uid="uid://8q5fcov5v3bp" path="res://assets/BackgroundMenu/Image1.png" id="2_88547"]
 [ext_resource type="Script" path="res://scripts/logo.gd" id="3_k173u"]
 
@@ -148,6 +149,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7mo7g")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_osf5t")
