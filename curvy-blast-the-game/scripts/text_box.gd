@@ -25,13 +25,13 @@ func display_text(text_to_display: String):
 		await resized #waiting for y resize
 		custom_minimum_size.y = size.y
 	
-	global_position.x -= size.x / 2
-	global_position.y -= size.y + 15
+	global_position.x -= size.x / 4
+	global_position.y -= size.y + 38
+	label.text = "";
+	_display_letter()
 	
-	label.text = ""
-	
-func _display_text():
-	label.text = text[letter_index]
+func _display_letter():
+	label.text += text[letter_index]
 	letter_index += 1
 	if letter_index >= text.length():
 		finished_displaying.emit()
@@ -47,4 +47,4 @@ func _display_text():
 
 
 func _on_letter_display_timer_timeout():
-	_display_text()
+	_display_letter()
