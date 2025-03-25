@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cs6sgks0d5gwp"]
 
-[ext_resource type="Script" path="res://scenes/GameLevel/LevelIcons/level_icon.gd" id="1_54ya5"]
+[ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_54ya5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n422s"]
 font_size = 14

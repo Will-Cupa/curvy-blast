@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cnw5ysym0p7k"]
 
-[ext_resource type="Script" path="res://scenes/GameLevel/Two/second_scene.gd" id="1_ei6nq"]
+[ext_resource type="Script" path="res://scripts/second_scene.gd" id="1_ei6nq"]
 [ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="2_scgs7"]
 [ext_resource type="Texture2D" uid="uid://bte4k8hrengj8" path="res://assets/BackgroundMenu/Image2.png" id="2_vdhsn"]
 [ext_resource type="StyleBox" uid="uid://5hhhlsdokbnf" path="res://assets/Themes/buttonThemeFocus.tres" id="3_kepob"]

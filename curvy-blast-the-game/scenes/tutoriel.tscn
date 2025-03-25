@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://ctpxw4yoncqk1"]
 
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="1_5fsj1"]
-[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/player.tscn" id="1_qapnw"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="1_qapnw"]
 [ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="1_tdm6d"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_wm0pr"]
-[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/canon.tscn" id="4_5m0ew"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_5m0ew"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("1_5fsj1")

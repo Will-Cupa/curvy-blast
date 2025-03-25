@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://wu0woxtgjbxa"]
+[gd_scene load_steps=5 format=3 uid="uid://wu0woxtgjbxa"]
 
-[ext_resource type="Script" path="res://scenes/GameLevel/LevelManager/level_select_test.gd" id="1_b13nv"]
+[ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_b13nv"]
 [ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="1_ks0ri"]
 [ext_resource type="PackedScene" uid="uid://ctpxw4yoncqk1" path="res://scenes/tutoriel.tscn" id="3_110bo"]
 [ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_c787i"]
-[ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="5_1ks4o"]
 
 [node name="LevelSelectTest" type="Control"]
 layout_mode = 3
@@ -97,9 +96,7 @@ next_level_up = NodePath("../LevelIcon7")
 next_level_down = NodePath("../LevelIcon6")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("3_c787i")]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 308.0
-offset_right = 70.0
-offset_bottom = 372.0
-texture = ExtResource("5_1ks4o")
+offset_left = -2.0
+offset_top = 54.0
+offset_right = 62.0
+offset_bottom = 118.0

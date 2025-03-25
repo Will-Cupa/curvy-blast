@@ -352,7 +352,7 @@ shape = SubResource("RectangleShape2D_stkgg")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(5.96046e-08, 1.90735e-06)
 scale = Vector2(3.54688, 3.5)
-color = Color(0.825359, 0.535453, 0.337253, 1)
+color = Color(0.823529, 0.537255, 0.337255, 1)
 texture = SubResource("GradientTexture2D_miabv")
 
 [node name="AnimationManager" type="Node2D" parent="."]
@@ -364,13 +364,13 @@ material = SubResource("ShaderMaterial_q7a57")
 position = Vector2(0, 2.615)
 scale = Vector2(0.162, 0.162)
 sprite_frames = SubResource("SpriteFrames_ro566")
-animation = &"enVol"
+animation = &"idle"
 
 [node name="outline" type="AnimatedSprite2D" parent="AnimationManager"]
 position = Vector2(0, 2.615)
 scale = Vector2(0.162, 0.162)
 sprite_frames = SubResource("SpriteFrames_fnynk")
-animation = &"enVol"
+animation = &"idle"
 
 [node name="FaceSprite" type="Sprite2D" parent="AnimationManager"]
 position = Vector2(1.19209e-07, -5)
