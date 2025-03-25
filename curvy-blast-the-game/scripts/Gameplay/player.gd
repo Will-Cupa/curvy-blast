@@ -64,7 +64,7 @@ func animationGestion():
 		
 	elif(canoned):
 		animation.play("enVol")
-		animation.rotation = atan(-1/functionCurve.slopeAt(position.x, 0.01))
+		animation.rotation = atan(functionCurve.slopeAt(position.x, 0.1))
 		
 	else:
 		animation.rotation = 0
