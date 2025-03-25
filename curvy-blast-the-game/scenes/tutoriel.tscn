@@ -2,60 +2,61 @@
 
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="1_5fsj1"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="1_qapnw"]
+[ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="1_tdm6d"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_wm0pr"]
-[ext_resource type="Texture2D" uid="uid://cdjjegy4vvaxh" path="res://scenes/tileset.png" id="3_dd7s6"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_5m0ew"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("1_5fsj1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyank"]
-texture = ExtResource("3_dd7s6")
+texture = ExtResource("1_tdm6d")
 texture_region_size = Vector2i(64, 64)
-<<<<<<< HEAD
 0:0/0 = 0
-=======
->>>>>>> f1984488fc358066b90795100f4706ed61bf6e22
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-<<<<<<< HEAD
 0:3/0 = 0
-=======
->>>>>>> f1984488fc358066b90795100f4706ed61bf6e22
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
 2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
 0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, 32, 32, -32, 32)
-1:3/0 = 0
-1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:3/0/physics_layer_0/angular_velocity = 0.0
-2:5/0 = 0
-2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:5/0/physics_layer_0/angular_velocity = 0.0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-0:5/0 = 0
-0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:5/0/physics_layer_0/angular_velocity = 0.0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:5/0 = 0
-1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:5/0/physics_layer_0/angular_velocity = 0.0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_ssfd8"]
 tile_size = Vector2i(64, 64)
@@ -74,7 +75,7 @@ material = SubResource("ShaderMaterial_hjemj")
 tile_set = SubResource("TileSet_ssfd8")
 format = 2
 layer_0/name = "base"
-layer_0/tile_data = PackedInt32Array(327675, 65537, 2, 327674, 65537, 2, 327673, 65537, 2, 327672, 65537, 2, 327671, 65537, 2, 262144, 65537, 2, 196611, 65537, 1, 262147, 65537, 2, 262148, 65537, 2, 196612, 131073, 1, 196613, 65537, 1, 262149, 65537, 2, 262150, 65537, 2, 196614, 131073, 4, 131078, 131073, 3, 65542, 65537, 1342177283, -65530, 1, 1, 196615, 65537, 2, 262151, 65537, 2, 262152, 65537, 2, 196616, 131073, 268435460, 196617, 131073, 1, 262153, 65537, 2, 262154, 65537, 2, 196618, 65537, 1, 196619, 131073, 1, 262155, 65537, 2, 262156, 65537, 2, 196620, 65537, 1, 196621, 131073, 1, 262157, 65537, 2, 262158, 65537, 2, 196622, 65537, 1, 196623, 131073, 1, 262159, 65537, 2, 262160, 1, 268435458, 196624, 1, 268435457, 327679, 65537, 2, 327678, 65537, 2, 327677, 65537, 2, 327676, 65537, 2, 196610, 131073, 1, 196609, 65537, 1, 262145, 65537, 2, 262146, 65537, 2, -65529, 65537, 1, 7, 65537, 2, 65543, 65537, 2, 131079, 65537, 2, -65528, 1, 268435457, 8, 65537, 1610612739, 65544, 65537, 1610612739, 131080, 131073, 268435459, 131081, 131073, 0, 131082, 131073, 0, 131083, 131073, 0, 131084, 131073, 0, 131085, 131073, 0, 131086, 131073, 0, 131087, 131073, 0, 327670, 1, 2, 131077, 131073, 0, 262135, 65537, 1, 262136, 131073, 1, 262137, 65537, 1, 262138, 131073, 1, 262139, 65537, 1, 262141, 65537, 2, 262142, 65537, 2, 196608, 131073, 1, 131076, 131073, 0, 196606, 131073, 268435461, 196604, 131073, 2, 196605, 131073, 5, 196602, 131073, 0, 196603, 131073, 0, 196600, 131073, 0, 196601, 131073, 0, 196599, 65537, 0, 262134, 1, 1, 6, 65537, 1342177283, 131069, 65537, 5, 131070, 65537, 268435461, 262140, 1, 5, 262143, 1, 268435461, 196607, 131073, 268435458, 131072, 131073, 0, 131073, 131073, 0)
+layer_0/tile_data = PackedInt32Array(327675, 65537, 2, 327674, 65537, 2, 327673, 65537, 2, 327672, 65537, 2, 327671, 65537, 2, 262144, 65537, 2, 196611, 65537, 1, 262147, 65537, 2, 262148, 65537, 2, 196612, 131073, 1, 196613, 65537, 1, 262149, 65537, 2, 262150, 65537, 2, 196614, 131073, 4, 131078, 131073, 3, 65542, 1, 2, 6, 1, 2, -65530, 1, 1, -131066, 1, 0, 196615, 65537, 2, 262151, 65537, 2, 262152, 65537, 2, 196616, 131073, 268435460, 196617, 131073, 1, 262153, 65537, 2, 262154, 65537, 2, 196618, 65537, 1, 196619, 131073, 1, 262155, 65537, 2, 262156, 65537, 2, 196620, 65537, 1, 196621, 131073, 1, 262157, 65537, 2, 262158, 65537, 2, 196622, 65537, 1, 196623, 131073, 1, 262159, 65537, 2, 262160, 1, 268435458, 196624, 1, 268435457, 327679, 65537, 2, 327678, 65537, 2, 327677, 65537, 2, 327676, 65537, 2, 196610, 131073, 1, 196609, 65537, 1, 262145, 65537, 2, 262146, 65537, 2, -65529, 65537, 1, 7, 65537, 2, 65543, 65537, 2, 131079, 65537, 2, -131065, 131073, 0, -65528, 1, 268435457, 8, 1, 268435458, 65544, 1, 268435458, 131080, 131073, 268435459, -131064, 1, 268435456, 131081, 65537, 0, 131082, 131073, 0, 131083, 65537, 0, 131084, 131073, 0, 131085, 65537, 0, 131086, 131073, 0, 131087, 131073, 0, 327670, 1, 2, 131077, 131073, 0, 262135, 65537, 1, 262136, 131073, 1, 262137, 65537, 1, 262138, 131073, 1, 262139, 65537, 1, 262140, 131073, 1, 262141, 65537, 1, 262142, 131073, 1, 262143, 65537, 1, 196608, 131073, 1, 131076, 65537, 0, 131072, 65537, 0, 131073, 131073, 0, 196606, 65537, 0, 196607, 131073, 0, 196604, 65537, 0, 196605, 131073, 0, 196602, 65537, 0, 196603, 131073, 0, 196600, 65537, 0, 196601, 131073, 0, 196599, 65537, 0, 262134, 1, 1, 131088, 1, 268435456, 196598, 1, 0)
 layer_1/name = "spike"
 layer_1/tile_data = PackedInt32Array(131074, 1, 4, 131075, 1, 4)
 
