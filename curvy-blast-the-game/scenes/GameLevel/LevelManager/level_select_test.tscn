@@ -42,19 +42,19 @@ level_name = "2B"
 next_level_down = NodePath("../LevelIcon2")
 
 [node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left") instance=ExtResource("1_ks0ri")]
-offset_left = 372.0
-offset_top = 296.0
-offset_right = 436.0
-offset_bottom = 360.0
+offset_left = 388.0
+offset_top = 300.0
+offset_right = 452.0
+offset_bottom = 364.0
 level_name = "3"
 next_level_right = NodePath("../LevelIcon4")
 next_level_left = NodePath("../LevelIcon2")
 
 [node name="LevelIcon4" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left") instance=ExtResource("1_ks0ri")]
-offset_left = 547.0
-offset_top = 102.0
-offset_right = 611.0
-offset_bottom = 166.0
+offset_left = 556.0
+offset_top = 113.0
+offset_right = 620.0
+offset_bottom = 177.0
 level_name = "4"
 next_level_right = NodePath("../LevelIcon5")
 next_level_left = NodePath("../LevelIcon3")
