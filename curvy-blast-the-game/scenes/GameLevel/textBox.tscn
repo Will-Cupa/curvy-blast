@@ -5,13 +5,15 @@
 [ext_resource type="FontFile" uid="uid://cp5qst7dfn33s" path="res://assets/font/superstar_memesbruh03.ttf" id="2_1nkxr"]
 
 [node name="Text" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1075.0
-offset_bottom = -616.0
+anchors_preset = -1
+offset_left = -16.0
+offset_top = 304.0
+offset_right = 16.0
+offset_bottom = 344.0
 grow_horizontal = 2
-grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
 script = ExtResource("1_taicn")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]

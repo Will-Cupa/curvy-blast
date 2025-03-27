@@ -1,34 +1,32 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnw5ysym0p7k"]
+[gd_scene load_steps=12 format=3 uid="uid://cnw5ysym0p7k"]
 
 [ext_resource type="Script" path="res://scripts/second_scene.gd" id="1_ei6nq"]
 [ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="2_scgs7"]
 [ext_resource type="Texture2D" uid="uid://bte4k8hrengj8" path="res://assets/BackgroundMenu/Image2.png" id="2_vdhsn"]
-[ext_resource type="StyleBox" uid="uid://5hhhlsdokbnf" path="res://assets/Themes/buttonThemeFocus.tres" id="3_kepob"]
-[ext_resource type="StyleBox" uid="uid://bfd05e6j6ywha" path="res://assets/Themes/buttonThemeHover.tres" id="3_nfj7q"]
 [ext_resource type="Texture2D" uid="uid://dh3w8d0d58kbm" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-018.png" id="3_uosdw"]
-[ext_resource type="StyleBox" uid="uid://drk4tlj01am44" path="res://assets/Themes/buttonTheme.tres" id="3_wjx8k"]
 [ext_resource type="FontFile" uid="uid://cp5qst7dfn33s" path="res://assets/font/superstar_memesbruh03.ttf" id="5_s6gvg"]
-[ext_resource type="Texture2D" uid="uid://4f1u5gabmmvn" path="res://assets/kenney_fantasy-ui-borders/PNG/Default/Border/panel-border-021.png" id="9_ylwgt"]
+[ext_resource type="StyleBox" uid="uid://el0y21mrxcdc" path="res://assets/Themes/ButtonTextureFocus.tres" id="6_eqebm"]
+[ext_resource type="StyleBox" uid="uid://b4hnk27uuuhbu" path="res://assets/Themes/ButtonTextureHover.tres" id="7_xijpb"]
+[ext_resource type="StyleBox" uid="uid://bi32ivqih375t" path="res://assets/Themes/ButtonTextureNormal.tres" id="8_4ilfk"]
+[ext_resource type="Texture2D" uid="uid://de4v4xk6cfxws" path="res://assets/kenney_fantasy-ui-borders/PNG/Default/Transparent border/panel-transparent-border-029.png" id="9_4efga"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwq2w"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyd63"]
-bg_color = Color(1, 1, 1, 0)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-shadow_color = Color(1, 1, 1, 0.6)
-shadow_size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_maqye"]
+texture = ExtResource("9_4efga")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
 
 [sub_resource type="Theme" id="Theme_qr1al"]
 default_font_size = 25
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/fonts/font = ExtResource("5_s6gvg")
-Button/styles/focus = ExtResource("3_kepob")
-Button/styles/hover = ExtResource("3_nfj7q")
-Button/styles/hover_pressed = SubResource("StyleBoxFlat_jwq2w")
-Button/styles/normal = ExtResource("3_wjx8k")
-Button/styles/pressed = SubResource("StyleBoxFlat_yyd63")
+Button/styles/focus = ExtResource("6_eqebm")
+Button/styles/hover = ExtResource("7_xijpb")
+Button/styles/normal = ExtResource("8_4ilfk")
+Button/styles/pressed = SubResource("StyleBoxTexture_maqye")
 
 [node name="SecondScene" type="Control"]
 layout_mode = 3
@@ -107,7 +105,7 @@ custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 15
+theme_override_constants/separation = 45
 
 [node name="Play" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -116,19 +114,6 @@ size_flags_stretch_ratio = 0.7
 theme = SubResource("Theme_qr1al")
 text = "Jouer
 "
-
-[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_ylwgt")
-patch_margin_left = 16
-patch_margin_top = 16
-patch_margin_right = 16
-patch_margin_bottom = 16
 
 [node name="Options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

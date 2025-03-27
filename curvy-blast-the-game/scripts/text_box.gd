@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 @onready var label = $MarginContainer/Label
 @onready var timer = $LetterDisplayTimer

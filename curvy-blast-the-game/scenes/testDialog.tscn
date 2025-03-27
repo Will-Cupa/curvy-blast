@@ -59,6 +59,7 @@ layer_1/tile_data = PackedInt32Array(131074, 1, 4, 131075, 1, 4)
 position = Vector2(-349, -83)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [node name="canon" parent="." instance=ExtResource("5_x35b3")]
 position = Vector2(-514, 113)
