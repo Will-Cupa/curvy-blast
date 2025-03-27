@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6dannarqfvkd"]
 
+[ext_resource type="Script" path="res://scripts/Gameplay/canon.gd" id="1_2pd8a"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/icon.svg" id="1_mkq0k"]
-[ext_resource type="Script" path="res://scripts/Gameplay/canon.gd" id="1_tuoyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
 size = Vector2(124, 124)
 
 [node name="canon" type="StaticBody2D"]
-script = ExtResource("1_tuoyq")
+script = ExtResource("1_2pd8a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.320313, 0.320313)
@@ -23,7 +23,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
+scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_husja")
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]

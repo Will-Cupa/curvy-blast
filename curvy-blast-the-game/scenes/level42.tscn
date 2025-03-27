@@ -1,19 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctpxw4yoncqk1"]
+[gd_scene load_steps=9 format=3 uid="uid://cfu0xserpos3d"]
 
-[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="1_5fsj1"]
-[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="1_qapnw"]
-[ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="1_tdm6d"]
-[ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_wm0pr"]
-[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_5m0ew"]
+[ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_excgu"]
+[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_4t7y2"]
+[ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="3_vonbo"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_6txhu"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_4d3yc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
-shader = ExtResource("1_5fsj1")
+shader = ExtResource("2_4t7y2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyank"]
-texture = ExtResource("1_tdm6d")
+texture = ExtResource("3_vonbo")
 texture_region_size = Vector2i(64, 64)
-<<<<<<< HEAD
-=======
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -59,38 +57,40 @@ texture_region_size = Vector2i(64, 64)
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
->>>>>>> c45bebcfa26b702c0903fa856fb461ea13e9e0cd
 
 [sub_resource type="TileSet" id="TileSet_ssfd8"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_iyank")
 
-[node name="Tutoriel2" type="Node2D"]
+[node name="Tutoriel" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(30, -17.25)
-scale = Vector2(0.655093, 0.655093)
-texture = ExtResource("1_wm0pr")
+position = Vector2(189.055, 53.9999)
+scale = Vector2(0.820776, 0.787037)
+texture = ExtResource("1_excgu")
 
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource("ShaderMaterial_hjemj")
 tile_set = SubResource("TileSet_ssfd8")
 format = 2
 layer_0/name = "base"
-layer_0/tile_data = PackedInt32Array(327675, 65537, 2, 327674, 65537, 2, 327673, 65537, 2, 327672, 65537, 2, 327671, 65537, 2, 262144, 65537, 2, 196611, 65537, 1, 262147, 65537, 2, 262148, 65537, 2, 196612, 131073, 1, 196613, 65537, 1, 262149, 65537, 2, 262150, 65537, 2, 196614, 131073, 4, 131078, 131073, 3, 65542, 1, 2, 6, 1, 2, -65530, 1, 1, -131066, 1, 0, 196615, 65537, 2, 262151, 65537, 2, 262152, 65537, 2, 196616, 131073, 268435460, 196617, 131073, 1, 262153, 65537, 2, 262154, 65537, 2, 196618, 65537, 1, 196619, 131073, 1, 262155, 65537, 2, 262156, 65537, 2, 196620, 65537, 1, 196621, 131073, 1, 262157, 65537, 2, 262158, 65537, 2, 196622, 65537, 1, 196623, 131073, 1, 262159, 65537, 2, 262160, 1, 268435458, 196624, 1, 268435457, 327679, 65537, 2, 327678, 65537, 2, 327677, 65537, 2, 327676, 65537, 2, 196610, 131073, 1, 196609, 65537, 1, 262145, 65537, 2, 262146, 65537, 2, -65529, 65537, 1, 7, 65537, 2, 65543, 65537, 2, 131079, 65537, 2, -131065, 131073, 0, -65528, 1, 268435457, 8, 1, 268435458, 65544, 1, 268435458, 131080, 131073, 268435459, -131064, 1, 268435456, 131081, 65537, 0, 131082, 131073, 0, 131083, 65537, 0, 131084, 131073, 0, 131085, 65537, 0, 131086, 131073, 0, 131087, 131073, 0, 327670, 1, 2, 131077, 131073, 0, 262135, 65537, 1, 262136, 131073, 1, 262137, 65537, 1, 262138, 131073, 1, 262139, 65537, 1, 262140, 131073, 1, 262141, 65537, 1, 262142, 131073, 1, 262143, 65537, 1, 196608, 131073, 1, 131076, 65537, 0, 131072, 65537, 0, 131073, 131073, 0, 196606, 65537, 0, 196607, 131073, 0, 196604, 65537, 0, 196605, 131073, 0, 196602, 65537, 0, 196603, 131073, 0, 196600, 65537, 0, 196601, 131073, 0, 196599, 65537, 0, 262134, 1, 1, 131088, 1, 268435456, 196598, 1, 0)
+layer_0/tile_data = PackedInt32Array(393208, 65537, 1, 393209, 65537, 1, 393210, 65537, 1, 393211, 65537, 1, 393212, 65537, 1, 393213, 65537, 1, 393214, 65537, 1, 393215, 65537, 1, 393207, 65537, 2, 327680, 65537, 2, 262144, 65537, 2, 196608, 65537, 2, 131072, 65537, 2, -65544, 65537, 2, -65543, 65537, 2, -65542, 65537, 2, -65541, 65537, 2, -65539, 65537, 2, -65538, 65537, 2, -65537, 65537, 2, -131072, 65537, 2, -131071, 65537, 2, -131070, 65537, 2, -131069, 65537, 2, -131068, 65537, 2, -131067, 65537, 2, -131066, 65537, 2, -131065, 65537, 2, -131064, 65537, 2, -65540, 65537, 2, 327681, 65537, 2, 327682, 65537, 2, 327683, 65537, 2, 327684, 65537, 2, 327685, 65537, 2, 327686, 65537, 2, 327687, 65537, 2, 327688, 65537, 2, 327689, 65537, 2, 327690, 65537, 2, -131063, 65537, 2, -131062, 65537, 2, -131061, 65537, 2, -131060, 65537, 2, 327691, 65537, 2, 327692, 65537, 2, 327693, 65537, 2, -65531, 65537, 2, 5, 65537, 2, 65541, 65537, 2, -65545, 65537, 2, -9, 65537, 2, 65527, 65537, 2, 131063, 65537, 2, 196599, 65537, 2, 262135, 65537, 2, 327671, 65537, 2, -131059, 65537, 2, -65523, 65537, 2, 13, 65537, 2, 65549, 65537, 2, 131085, 65537, 2, 196621, 65537, 2, 262157, 65537, 2)
 layer_1/name = "spike"
-layer_1/tile_data = PackedInt32Array(131074, 1, 4, 131075, 1, 4)
+layer_1/tile_data = PackedInt32Array(262145, 1, 4, 262146, 1, 4, 262147, 1, 4, 262148, 1, 4, -65535, 1, 805306372, -65534, 1, 805306372, -65533, 1, 805306372, -65532, 1, 805306372)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_qapnw")]
-position = Vector2(-349, -83)
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_6txhu")]
+position = Vector2(-279, 293)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(186, 50)
+zoom = Vector2(0.75, 0.75)
 
-[node name="canon" parent="." instance=ExtResource("4_5m0ew")]
-position = Vector2(-514, 113)
+[node name="canon" parent="." instance=ExtResource("5_4d3yc")]
+position = Vector2(-419, 289)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-834, -508)
 rotation = 0.947714
 color = Color(0.890934, 0.953776, 1, 1)
 blend_mode = 2

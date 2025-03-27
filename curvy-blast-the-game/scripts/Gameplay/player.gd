@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 
 @onready var animation: Node2D = $AnimationManager
+@onready var hitBoxPatte = $CollisionShape2D2
 
 signal death
 
@@ -24,7 +25,7 @@ func calculeCurve():
 	if not functionCurve.has_execute_failed():
 		#print(result)
 		return result
-
+		
 func shoot(f):
 	if(inCanon):
 		canoned = true
@@ -32,6 +33,7 @@ func shoot(f):
 		
 		functionCurve = f
 		#changer d'annimation
+		show()
 
 func enterCanon(x,y):
 	inCanon = true
@@ -42,6 +44,7 @@ func enterCanon(x,y):
 	xRelatif = 0
 	yRelatif = 0
 	yAvantCanon = position.y
+	hide()
 
 func applyCanonMov(delta):
 	
@@ -94,6 +97,7 @@ func checkDeath():
 			if tile_data:
 				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
+					death.emit()
 
 
 func _physics_process(delta):
@@ -106,8 +110,10 @@ func _physics_process(delta):
 		
 	elif(canoned):
 		applyCanonMov(delta)
+		hitBoxPatte.disabled = true
 		
 	else:
+		hitBoxPatte.disabled = false
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
