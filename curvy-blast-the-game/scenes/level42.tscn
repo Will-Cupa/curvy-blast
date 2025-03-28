@@ -61,7 +61,7 @@ position = Vector2(186, 50)
 zoom = Vector2(0.75, 0.75)
 
 [node name="canon" parent="." instance=ExtResource("5_4d3yc")]
-position = Vector2(-419, 289)
+position = Vector2(-457, 270)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(-834, -508)

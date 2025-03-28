@@ -78,6 +78,7 @@ func _draw() -> void:
 			nbPoints += 1
 			draw_line(p1,p2,Color.RED,1)
 			sprite.rotation = atan(expression.slopeAt(0,0.1))
+			sprite.position.y = expression.valueAt(0)
 		print(nbPoints)
 		
 	var default_font : Font = ThemeDB.fallback_font;	
