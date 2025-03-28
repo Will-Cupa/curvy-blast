@@ -30,18 +30,19 @@ visible = false
 shape = SubResource("RectangleShape2D_husja")
 
 [node name="baseSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 7)
-scale = Vector2(0.163889, 0.163889)
+position = Vector2(-2.38419e-07, 1.31251)
+scale = Vector2(0.203935, 0.186343)
 texture = ExtResource("2_qkad7")
 
-[node name="canonNormal" type="Sprite2D" parent="baseSprite"]
+[node name="canonNormal" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_aabir")
-position = Vector2(2.27374e-13, -42.7118)
-scale = Vector2(0.978801, 0.978801)
+scale = Vector2(0.220207, 0.220207)
 texture = ExtResource("3_bgm4c")
+offset = Vector2(110, 0)
 
-[node name="canonOutline" type="Sprite2D" parent="baseSprite/canonNormal"]
+[node name="canonOutline" type="Sprite2D" parent="canonNormal"]
 texture = ExtResource("4_wfdmn")
+offset = Vector2(110, 0)
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

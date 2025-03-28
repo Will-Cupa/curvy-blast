@@ -5,7 +5,7 @@ var player
 var playerInCanon = false
 var expression = mathFunction.new()
 var expressionReady = false
-@onready var sprite = $baseSprite/canonNormal
+@onready var sprite = $canonNormal
 @onready var inputField = $LineEdit
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +33,7 @@ func parseFunc(text : String) -> bool:
 func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueur valide sa saisie
 	if expressionReady && playerInCanon:
 		player.shoot(expression) #On lance le joueur
+		playerInCanon = false
 		inputField.visible = false
 		
 func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
@@ -69,7 +70,7 @@ func _draw() -> void:
 	var i = 0
 	var i2
 	var nbPoints = 1
-	if expressionReady:
+	if expressionReady && playerInCanon:
 		while i <= maxWidth:
 			p1 = Vector2(i, expression.valueAt(i)) 
 			i2 = getOptiPoint(i, space, 0.1)
@@ -77,6 +78,7 @@ func _draw() -> void:
 			i = i2
 			nbPoints += 1
 			draw_line(p1,p2,Color.RED,1)
+			#sprite.texture.get_width()
 			sprite.rotation = atan(expression.slopeAt(0,0.1))
 			sprite.position.y = expression.valueAt(0)
 		print(nbPoints)
