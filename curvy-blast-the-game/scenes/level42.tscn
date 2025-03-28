@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_excgu"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_4t7y2"]
-[ext_resource type="Texture2D" uid="uid://y8e8hn2cmneq" path="res://assets/tileset.png" id="3_vonbo"]
+[ext_resource type="Texture2D" uid="uid://cdjjegy4vvaxh" path="res://assets/Sprites/tileset.png" id="3_vonbo"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_6txhu"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_4d3yc"]
 

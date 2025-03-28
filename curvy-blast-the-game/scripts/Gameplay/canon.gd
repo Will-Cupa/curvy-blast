@@ -5,7 +5,7 @@ var player
 var playerInCanon = false
 var expression = mathFunction.new()
 var expressionReady = false
-@onready var sprite = $Sprite2D
+@onready var sprite = $baseSprite/canonNormal
 @onready var inputField = $LineEdit
 
 # Called when the node enters the scene tree for the first time.
