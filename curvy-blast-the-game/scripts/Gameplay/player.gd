@@ -44,19 +44,26 @@ func enterCanon(x,y):
 	xRelatif = 0
 	yRelatif = 0
 	yAvantCanon = position.y
+	velocity = Vector2(0,0)
 	hide()
 
 func applyCanonMov(delta):
 	
-	position.x += CANON_VELOCITY
 	xRelatif += CANON_VELOCITY
 	var res = calculeCurve()
-	if (res != null):
+	if res != null:
 		yRelatif = res
-		position.y = yAvantCanon + yRelatif
-	var collision = move_and_collide(velocity * delta,true)
-	if (collision):
+
+	var new_y = yAvantCanon + yRelatif
+	var new_velocity = Vector2(CANON_VELOCITY / delta, (new_y - position.y) / delta)
+	velocity = new_velocity
+
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		checkDeath(collision)
+		print(collision)
 		canoned = false
+
 
 func animationGestion():
 	if(inCanon):
@@ -64,7 +71,7 @@ func animationGestion():
 		
 	elif(canoned):
 		animation.play("enVol")
-		animation.rotation = atan(functionCurve.slopeAt(position.x, 0.1))
+		animation.rotation = atan(functionCurve.slopeAt(xRelatif, 0.1))+PI/2
 		
 	else:
 		animation.rotation = 0
@@ -82,9 +89,28 @@ func animationGestion():
 			else:
 				animation.play("fall")
 			
-func checkDeath():
+func checkDeath(collision = null):
+	if(collision != null):
+		print("ok")
+		var body = collision.get_collider()
+		if body is TileMap:
+			print("ok")
+			var tilemap = body
+			var collision_position = collision.get_position()
+			var cell = tilemap.local_to_map(collision_position)
+			
+			var layer_id = 1  # Remplacez par l'index de la couche
+			print(collision_position)
+			var tile_data = tilemap.get_cell_tile_data(layer_id, cell)
+			if tile_data:
+				print("ok")
+				if tile_data.get_collision_polygons_count(0) > 0:
+					print("tu es mort")
+					#death.emit()
+					get_tree().reload_current_scene()
+	
 	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
+		collision = get_slide_collision(i)
 		var body = collision.get_collider()
 		
 		if body is TileMap:
@@ -97,7 +123,9 @@ func checkDeath():
 			if tile_data:
 				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
-					death.emit()
+					#death.emit()
+					get_tree().reload_current_scene()
+					
 
 
 func _physics_process(delta):
