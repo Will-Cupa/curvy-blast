@@ -82,11 +82,13 @@ func _draw() -> void:
 			sprite.rotation = atan(expression.slopeAt(0,0.1))
 			sprite.position.y = expression.valueAt(0)
 		print(nbPoints)
+	
+	if playerInCanon:	
+		var default_font : Font = ThemeDB.fallback_font;	
 		
-	var default_font : Font = ThemeDB.fallback_font;	
-	for n in range(40):
-		draw_string(default_font, Vector2(n*expression.getXYScale(),0), str(n), HORIZONTAL_ALIGNMENT_LEFT, 20, 10)
-		draw_string(default_font, Vector2(0,-n*expression.getXYScale()), str(n), HORIZONTAL_ALIGNMENT_LEFT, 20, 10)
+		for n in range(40):
+			draw_string(default_font, Vector2(n*expression.getXYScale(),0), str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.BLACK)
+			draw_string(default_font, Vector2(0,-n*expression.getXYScale()), str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.BLACK)
 				
 				
 				

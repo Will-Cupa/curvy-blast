@@ -142,10 +142,13 @@ func _physics_process(delta):
 		pass
 		
 	elif(canoned):
+		scale = Vector2(0.5,0.5)
 		applyCanonMov(delta)
 		hitBoxPatte.disabled = true
 		
 	else:
+		scale = Vector2(1,1)
+		
 		hitBoxPatte.disabled = false
 		# Add the gravity.
 		if not is_on_floor():
