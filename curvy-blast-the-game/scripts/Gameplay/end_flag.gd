@@ -1,5 +1,6 @@
 extends AnimatableBody2D
 
+@onready var win_timer: Timer = $winTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,4 +14,10 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
-		get_tree().reload_current_scene()
+		win_timer.start()
+		print("you win")
+
+
+
+func _on_win_timer_timeout() -> void:
+	get_tree().reload_current_scene()

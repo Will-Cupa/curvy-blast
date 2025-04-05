@@ -3,6 +3,7 @@ class_name Player extends CharacterBody2D
 @onready var animation: Node2D = $AnimationManager
 @onready var hitBoxPatte = $CollisionShape2D2
 
+
 signal death
 
 const SPEED = 300.0
@@ -19,6 +20,10 @@ var functionCurve #Expression
 var xRelatif = 0
 var yRelatif = 0
 var yAvantCanon = 0
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
 
 func calculeCurve():
 	var result = functionCurve.valueAt(xRelatif)
