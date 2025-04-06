@@ -36,6 +36,7 @@ func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueu
 		player.shoot(expression) #On lance le joueur
 		playerInCanon = false
 		inputField.visible = false
+		queue_redraw()
 		
 func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
 	expressionReady = parseFunc(new_text)
@@ -68,7 +69,7 @@ func getOptiPoint(x1, space, treshold) -> float:
 
 func _draw() -> void:
 	var space = 50
-	var maxWidth = get_viewport_rect().size.x - position.x
+	var maxWidth = get_viewport_rect().size.x
 	var p1
 	var p2
 	var i = 0
@@ -77,7 +78,7 @@ func _draw() -> void:
 		drawScale()
 		
 		if expressionReady:
-			while i <= maxWidth:
+			while i <= (40*expression.getXYScale()):
 				p1 = Vector2(i, expression.valueAt(i)) 
 				i2 = getOptiPoint(i, space, 0.1)
 				p2 = Vector2(i2, expression.valueAt(i2))
