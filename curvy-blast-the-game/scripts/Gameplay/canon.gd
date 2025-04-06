@@ -7,6 +7,8 @@ var expressionReady = false
 @onready var sprite = $canonNormal
 @onready var inputField = $LineEdit
 @onready var camera = $Camera2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inputField.visible = false

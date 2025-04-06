@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtda5dlwxv0u"]
+[gd_scene load_steps=16 format=3 uid="uid://dtda5dlwxv0u"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d1qry"]
 [ext_resource type="Script" path="res://scripts/world2/world_2_3.gd" id="1_gfnit"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://nm1tw35w5pcr" path="res://assets/Sprites/tileset2.png" id="4_vlv7r"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_syr45"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_5kgst"]
-[ext_resource type="Texture2D" uid="uid://8q5fcov5v3bp" path="res://assets/BackgroundMenu/Image1.png" id="9_e2f8e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_3bswg")
@@ -73,16 +72,26 @@ sources/0 = SubResource("TileSetAtlasSource_lwcpl")
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 128.0
-angle_min = -208.8
-angle_max = -145.3
+angle_min = -1433.8
+angle_max = 949.2
 gravity = Vector3(0, -10, 0)
 turbulence_noise_strength = 20.0
 collision_mode = 2
+
+[sub_resource type="Gradient" id="Gradient_we5bk"]
+colors = PackedColorArray(0.305882, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ki0by"]
+gradient = SubResource("Gradient_we5bk")
+fill = 1
+fill_from = Vector2(0.508621, 0.5)
+fill_to = Vector2(0.758621, 0.293103)
 
 [node name="Tutoriel" type="Node2D"]
 script = ExtResource("1_gfnit")
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-23, 25)
 scale = Vector2(1.80156, 1.68796)
 texture = ExtResource("1_d1qry")
 
@@ -116,11 +125,19 @@ height = 0.32
 position = Vector2(1028, 20)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-402, 404)
+position = Vector2(-415, 526)
+scale = Vector2(3, 0.5)
 amount = 10
-amount_ratio = 0.5
 process_material = SubResource("ParticleProcessMaterial_xvqo7")
-texture = ExtResource("9_e2f8e")
+texture = SubResource("GradientTexture2D_ki0by")
+lifetime = 10.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(639, 519)
+scale = Vector2(2, 0.5)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_xvqo7")
+texture = SubResource("GradientTexture2D_ki0by")
 lifetime = 10.0
 
 [editable path="TileMap/canon"]
