@@ -63,10 +63,8 @@ layer_1/tile_data = PackedInt32Array(327676, 1, 4, 327677, 1, 4, 327678, 1, 4, 3
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_j8skl")]
 position = Vector2(-349, -83)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="canon" parent="." instance=ExtResource("5_os1k8")]
-position = Vector2(-514, 113)
+position = Vector2(-526, 149)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 rotation = 0.947714
@@ -76,4 +74,4 @@ shadow_color = Color(0, 0, 0, 1)
 height = 0.32
 
 [node name="canon2" parent="." instance=ExtResource("5_os1k8")]
-position = Vector2(258, 118)
+position = Vector2(246, 148)

@@ -30,20 +30,24 @@ visible = false
 shape = SubResource("RectangleShape2D_husja")
 
 [node name="baseSprite" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 2.81256)
-scale = Vector2(0.203935, 0.180787)
+position = Vector2(-2.28882e-05, -7.62939e-06)
+scale = Vector2(0.148148, 0.130722)
 texture = ExtResource("2_qkad7")
 
 [node name="canonNormal" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_aabir")
-position = Vector2(-5.68434e-14, 0)
-scale = Vector2(0.181747, 0.186667)
+position = Vector2(0.573171, 1.19209e-07)
+scale = Vector2(0.180071, 0.168333)
 texture = ExtResource("3_bgm4c")
 offset = Vector2(110, 0)
 
 [node name="canonOutline" type="Sprite2D" parent="canonNormal"]
 texture = ExtResource("4_wfdmn")
 offset = Vector2(110, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(820, -449)
+zoom = Vector2(0.75, 0.75)
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

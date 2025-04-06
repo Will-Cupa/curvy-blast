@@ -7,7 +7,7 @@ var expression = mathFunction.new()
 var expressionReady = false
 @onready var sprite = $canonNormal
 @onready var inputField = $LineEdit
-
+@onready var camera = $Camera2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inputField.visible = false
@@ -47,6 +47,7 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		inputField.visible = true #afficher la barre de saisie
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
+		camera.make_current()
 		playerInCanon = true #Le joueur est dans le canon
 		queue_redraw()
 
