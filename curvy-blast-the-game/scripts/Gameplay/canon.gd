@@ -1,6 +1,5 @@
 extends StaticBody2D
 
-
 var player
 var playerInCanon = false
 var expression = mathFunction.new()

@@ -1,14 +1,35 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3cdmqav1ju0o"]
+[gd_scene load_steps=12 format=3 uid="uid://c3cdmqav1ju0o"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_yb3ja"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_gnj5o"]
 [ext_resource type="Texture2D" uid="uid://cdjjegy4vvaxh" path="res://assets/Sprites/tileset.png" id="3_6u48s"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_capyj"]
+[ext_resource type="Texture2D" uid="uid://nm1tw35w5pcr" path="res://assets/Sprites/tileset2.png" id="4_oxvtu"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_t6c7w"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_087lw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_gnj5o")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k83e4"]
+texture = ExtResource("4_oxvtu")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyank"]
 texture = ExtResource("3_6u48s")
@@ -37,6 +58,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_iyank")
+sources/0 = SubResource("TileSetAtlasSource_k83e4")
 
 [node name="Tutoriel" type="Node2D"]
 
@@ -44,6 +66,7 @@ sources/1 = SubResource("TileSetAtlasSource_iyank")
 position = Vector2(-320, 256)
 
 [node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
 position = Vector2(189.055, 53.9999)
 scale = Vector2(0.820776, 0.787037)
 texture = ExtResource("1_yb3ja")
