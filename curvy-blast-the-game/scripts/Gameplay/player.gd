@@ -65,8 +65,8 @@ func applyCanonMov(delta):
 
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		move_and_collide(-velocity*5 * delta)
 		checkDeath(collision)
-		print(collision)
 		canoned = false
 
 
@@ -149,10 +149,12 @@ func _physics_process(delta):
 	else:
 		scale = Vector2(1,1)
 		
-		hitBoxPatte.disabled = false
+		
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
+		else :	
+			hitBoxPatte.disabled = false
 			
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
