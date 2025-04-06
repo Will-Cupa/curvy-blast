@@ -91,7 +91,8 @@ func _draw() -> void:
 			draw_string(default_font, Vector2(0,-n*expression.getXYScale()), str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.BLACK)
 				
 				
-				
+func setScale(scale):
+	expression.XYScale = scale
 				
 				
 				
