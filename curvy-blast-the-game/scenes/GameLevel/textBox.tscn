@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://cp5qst7dfn33s" path="res://assets/font/superstar_memesbruh03.ttf" id="2_1nkxr"]
 
 [node name="Text" type="MarginContainer"]
-anchors_preset = -1
 offset_left = -16.0
 offset_top = 304.0
 offset_right = 16.0
@@ -38,6 +37,7 @@ texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_1nkxr")
+theme_override_font_sizes/font_size = 50
 vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="."]
