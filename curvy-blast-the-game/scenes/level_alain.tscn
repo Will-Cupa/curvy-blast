@@ -75,3 +75,6 @@ height = 0.32
 
 [node name="canon2" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(246, 148)
+
+[editable path="canon"]
+[editable path="canon2"]
