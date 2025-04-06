@@ -30,13 +30,14 @@ visible = false
 shape = SubResource("RectangleShape2D_husja")
 
 [node name="baseSprite" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 1.31251)
-scale = Vector2(0.203935, 0.186343)
+position = Vector2(-2.38419e-07, 2.81256)
+scale = Vector2(0.203935, 0.180787)
 texture = ExtResource("2_qkad7")
 
 [node name="canonNormal" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_aabir")
-scale = Vector2(0.220207, 0.220207)
+position = Vector2(-5.68434e-14, 0)
+scale = Vector2(0.181747, 0.186667)
 texture = ExtResource("3_bgm4c")
 offset = Vector2(110, 0)
 

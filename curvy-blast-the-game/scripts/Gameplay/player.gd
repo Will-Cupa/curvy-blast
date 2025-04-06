@@ -156,7 +156,8 @@ func _physics_process(delta):
 		if direction:
 			velocity.x = direction * SPEED
 			
-			if(direction < 0):animation.flip_v
+			if(direction < 0):
+				animation.flip_v
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 

@@ -38,6 +38,7 @@ func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueu
 		
 func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
 	expressionReady = parseFunc(new_text)
+	print(new_text)
 	queue_redraw()
 
 func _on_area_2d_body_entered(body : Object) -> void:
@@ -69,27 +70,17 @@ func _draw() -> void:
 	var p2
 	var i = 0
 	var i2
-	var nbPoints = 1
 	if expressionReady && playerInCanon:
-		while i <= maxWidth:
-			p1 = Vector2(i, expression.valueAt(i)) 
-			i2 = getOptiPoint(i, space, 0.1)
-			p2 = Vector2(i2, expression.valueAt(i2))
-			i = i2
-			nbPoints += 1
-			draw_line(p1,p2,Color.RED,1)
-			#sprite.texture.get_width()
-			sprite.rotation = atan(expression.slopeAt(0,0.1))
-			sprite.position.y = expression.valueAt(0)
-		print(nbPoints)
-		
+		#while i <= maxWidth:
+		p1 = Vector2(i, expression.valueAt(i)) 
+		i2 = getOptiPoint(i, space, 0.1)
+		p2 = Vector2(i2, expression.valueAt(i2))
+		i2 = 100
+		draw_line(p1,p2,Color.RED,1)
+		sprite.rotation = atan(expression.slopeAt(0,0.1))
+		sprite.position.y = expression.valueAt(0)
+	
 	var default_font : Font = ThemeDB.fallback_font;	
 	for n in range(40):
 		draw_string(default_font, Vector2(n*expression.getXYScale(),0), str(n), HORIZONTAL_ALIGNMENT_LEFT, 20, 10)
 		draw_string(default_font, Vector2(0,-n*expression.getXYScale()), str(n), HORIZONTAL_ALIGNMENT_LEFT, 20, 10)
-				
-				
-				
-				
-				
-				
