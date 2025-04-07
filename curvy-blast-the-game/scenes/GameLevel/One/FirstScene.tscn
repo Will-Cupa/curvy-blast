@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbetv8nr2ivr8"]
+[gd_scene load_steps=12 format=3 uid="uid://bbetv8nr2ivr8"]
 
 [ext_resource type="Script" path="res://scripts/first_scene.gd" id="1_tc6n4"]
 [ext_resource type="Texture2D" uid="uid://dh3w8d0d58kbm" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-018.png" id="2_7mo7g"]
 [ext_resource type="Texture2D" uid="uid://8q5fcov5v3bp" path="res://assets/BackgroundMenu/Image1.png" id="2_88547"]
 [ext_resource type="Script" path="res://scripts/logo.gd" id="3_k173u"]
+[ext_resource type="PackedScene" uid="uid://dxowfnetumqx7" path="res://scenes/Character/bubule_2d.tscn" id="5_g1prp"]
 
 [sub_resource type="Environment" id="Environment_osf5t"]
 background_mode = 3
@@ -191,3 +192,9 @@ script = ExtResource("3_k173u")
 libraries = {
 "": SubResource("AnimationLibrary_7shgk")
 }
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("5_g1prp")]
+position = Vector2(857, 849)
+scale = Vector2(6, 0.5)
+amount = 20
+speed_scale = 3.0

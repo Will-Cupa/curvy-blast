@@ -9,6 +9,7 @@ size = Vector2(524, 607.5)
 [node name="panneau" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_7j5sf")
+metadata/lignes = PackedStringArray()
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -18,8 +19,5 @@ shape = SubResource("RectangleShape2D_xytid")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xts2v")
-
-[node name="Texte" type="Node" parent="."]
-metadata/lignes = PackedStringArray()
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
