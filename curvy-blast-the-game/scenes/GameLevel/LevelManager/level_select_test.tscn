@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://wu0woxtgjbxa"]
+[gd_scene load_steps=7 format=3 uid="uid://wu0woxtgjbxa"]
 
 [ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_b13nv"]
 [ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="1_ks0ri"]
+[ext_resource type="Texture2D" uid="uid://cm3cyeyxduq3h" path="res://assets/Sprites/worldMap1.png" id="2_krcn4"]
 [ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_c787i"]
 [ext_resource type="PackedScene" uid="uid://c3k0ngcoky2wk" path="res://scenes/World1/world1-1.tscn" id="3_eeyo5"]
 [ext_resource type="PackedScene" uid="uid://18q4g1eg566h" path="res://scenes/World1/world1-2.tscn" id="4_w0dmv"]
@@ -15,33 +16,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b13nv")
 
+[node name="WorldMap1" type="Sprite2D" parent="."]
+position = Vector2(864, 486)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_krcn4")
+
 [node name="LevelIcon1" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("1_ks0ri")]
-offset_left = 6.0
-offset_top = 308.0
-offset_right = 70.0
-offset_bottom = 372.0
+offset_left = 488.0
+offset_top = 285.0
+offset_right = 552.0
+offset_bottom = 349.0
 next_scene_path = ExtResource("3_eeyo5")
 next_level_right = NodePath("../LevelIcon2")
 
-[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_up", "next_level_right", "next_level_left") instance=ExtResource("1_ks0ri")]
-offset_left = 173.0
-offset_top = 228.0
-offset_right = 237.0
-offset_bottom = 292.0
+[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_down", "next_level_right", "next_level_left") instance=ExtResource("1_ks0ri")]
+offset_left = 883.0
+offset_top = 289.0
+offset_right = 947.0
+offset_bottom = 353.0
 level_name = "2"
 next_scene_path = ExtResource("4_w0dmv")
-next_level_up = NodePath("")
+next_level_down = NodePath("../LevelIcon3")
 next_level_right = NodePath("../LevelIcon3")
 next_level_left = NodePath("../LevelIcon1")
 
-[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left") instance=ExtResource("1_ks0ri")]
-offset_left = 388.0
-offset_top = 300.0
-offset_right = 452.0
-offset_bottom = 364.0
+[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_up", "next_level_right") instance=ExtResource("1_ks0ri")]
+offset_left = 1094.0
+offset_top = 550.0
+offset_right = 1158.0
+offset_bottom = 614.0
 level_name = "3"
-next_level_right = NodePath("")
-next_level_left = NodePath("../LevelIcon2")
+next_level_up = NodePath("../LevelIcon2")
+next_level_right = NodePath("../LevelIcon2")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("3_c787i")]
 offset_left = -2.0

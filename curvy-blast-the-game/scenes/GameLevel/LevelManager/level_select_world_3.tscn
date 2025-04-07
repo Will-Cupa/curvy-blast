@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpxdv5r5yukg"]
+[gd_scene load_steps=7 format=3 uid="uid://cpxdv5r5yukg"]
 
 [ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_fs504"]
+[ext_resource type="Texture2D" uid="uid://be063m7qtspsp" path="res://assets/Sprites/worldMap3.png" id="2_j2y31"]
 [ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="2_wht3m"]
 [ext_resource type="PackedScene" uid="uid://6bnwukxfp832" path="res://scenes/World3/world3-1.tscn" id="3_0xjs1"]
 [ext_resource type="PackedScene" uid="uid://bpfsrhjb67wm7" path="res://scenes/World3/world3-2.tscn" id="4_srbwr"]
@@ -15,20 +16,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fs504")
 
+[node name="WorldMap3" type="Sprite2D" parent="."]
+position = Vector2(864, 486)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_j2y31")
+
 [node name="LevelIcon1" parent="." node_paths=PackedStringArray("next_level_right", "collectable") instance=ExtResource("2_wht3m")]
-offset_left = 6.0
-offset_top = 308.0
-offset_right = 70.0
-offset_bottom = 372.0
+offset_left = 561.0
+offset_top = 515.0
+offset_right = 625.0
+offset_bottom = 579.0
 next_scene_path = ExtResource("3_0xjs1")
 next_level_right = NodePath("../LevelIcon2")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
 
 [node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left", "collectable") instance=ExtResource("2_wht3m")]
-offset_left = 190.0
-offset_top = 228.0
-offset_right = 254.0
-offset_bottom = 292.0
+offset_left = 990.0
+offset_top = 441.0
+offset_right = 1054.0
+offset_bottom = 505.0
 level_name = "2"
 next_scene_path = ExtResource("4_srbwr")
 next_level_right = NodePath("../LevelIcon3")
@@ -36,10 +42,10 @@ next_level_left = NodePath("../LevelIcon1")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
 
 [node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_left", "collectable") instance=ExtResource("2_wht3m")]
-offset_left = 388.0
-offset_top = 300.0
-offset_right = 452.0
-offset_bottom = 364.0
+offset_left = 721.0
+offset_top = 172.0
+offset_right = 785.0
+offset_bottom = 236.0
 level_name = "3"
 next_level_left = NodePath("../LevelIcon2")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
