@@ -53,7 +53,6 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		playerInCanon = true #Le joueur est dans le canon
 		queue_redraw()
 
-
 func getOptiPoint(x1, space, treshold) -> float:
 	print(space)
 	var x2 = x1 + space
@@ -98,6 +97,4 @@ func drawScale():
 
 func setScale(scale):
 	expression.XYScale = scale
-				
-				
 				

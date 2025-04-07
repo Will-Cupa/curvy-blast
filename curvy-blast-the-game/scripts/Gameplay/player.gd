@@ -3,7 +3,6 @@ class_name Player extends CharacterBody2D
 @onready var animation: Node2D = $AnimationManager
 @onready var hitBoxPatte = $CollisionShape2D2
 
-
 signal death
 
 const SPEED = 300.0
