@@ -129,7 +129,7 @@ func checkDeath(collision = null):
 				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
 					#death.emit()
-					get_tree().reload_current_scene()
+					get_tree().reload_cu0rrent_scene()
 					
 
 

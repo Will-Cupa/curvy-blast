@@ -88,9 +88,6 @@ position = Vector2(-349, -83)
 [node name="canon" parent="." instance=ExtResource("5_x35b3")]
 position = Vector2(-514, 113)
 
-[node name="canon2" parent="." instance=ExtResource("5_x35b3")]
-position = Vector2(32, 110)
-
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 rotation = 0.947714
 color = Color(0.890934, 0.953776, 1, 1)
@@ -105,6 +102,6 @@ texture = ExtResource("6_ag3x6")
 script = ExtResource("7_bvk7x")
 lines = Array[String](["Salut, jeune crabe!", "Prêt à relever des défis ?", "Apprête toi, le canon ...", "Fonction ... ne"])
 
-[node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("8_kos68")]
-offset = Vector2(100, 100)
-target = NodePath("../TestDialog")
+[node name="Camera2D" parent="." instance=ExtResource("8_kos68")]
+
+[editable path="canon"]
