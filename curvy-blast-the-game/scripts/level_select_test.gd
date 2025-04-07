@@ -32,6 +32,7 @@ func _input(event):
 	
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
+			Global.current_level = current_level.next_scene_path
 			get_tree().change_scene_to_packed(current_level.next_scene_path)
 
 func tween_icon():

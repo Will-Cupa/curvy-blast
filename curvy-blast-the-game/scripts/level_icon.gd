@@ -3,6 +3,7 @@ extends Control
 class_name LevelIcon
 
 @export var level_name : String = "1"
+var niveau_1_score : int
 @export var next_scene_path: PackedScene
 @export var next_level_up : LevelIcon
 @export var next_level_down : LevelIcon
@@ -14,9 +15,12 @@ class_name LevelIcon
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Global.collectables_by_level.has(next_scene_path):
+		niveau_1_score = Global.collectables_by_level.get(next_scene_path, 0)
 	$Label.text = "Level  " + level_name
-	for child in h_box_container.get_children():
-		collectable.append(child)
+	if niveau_1_score:
+		for child in range(niveau_1_score):
+			h_box_container.get_child(child).visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

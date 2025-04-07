@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://10irpxgic6u6"]
+[gd_scene load_steps=7 format=3 uid="uid://10irpxgic6u6"]
 
 [ext_resource type="PackedScene" uid="uid://bs64qb3wr381y" path="res://scenes/GameLevel/LevelIcons/world_icon.tscn" id="1_5kcng"]
 [ext_resource type="Script" path="res://scripts/world_select.gd" id="1_b5are"]
 [ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_6aq3q"]
 [ext_resource type="PackedScene" uid="uid://wu0woxtgjbxa" path="res://scenes/GameLevel/LevelManager/level_select_test.tscn" id="3_6awmx"]
 [ext_resource type="PackedScene" uid="uid://c6bebk54j4366" path="res://scenes/GameLevel/LevelManager/level_select_test2.tscn" id="4_qrorh"]
+[ext_resource type="PackedScene" uid="uid://cpxdv5r5yukg" path="res://scenes/GameLevel/LevelManager/level_select_world_3.tscn" id="5_7f8pr"]
 
 [node name="WorldSelect" type="Control"]
 layout_mode = 3
@@ -36,7 +37,7 @@ offset_top = 293.0
 offset_right = 534.0
 offset_bottom = 357.0
 level_index = 3
-level_select_packed = ExtResource("3_6awmx")
+level_select_packed = ExtResource("5_7f8pr")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("3_6aq3q")]
 layout_mode = 0

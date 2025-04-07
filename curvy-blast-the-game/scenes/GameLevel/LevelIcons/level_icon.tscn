@@ -47,7 +47,6 @@ offset_right = 85.0
 offset_bottom = 103.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_s5shd")
@@ -55,7 +54,6 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_s5shd")
@@ -63,7 +61,6 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_s5shd")

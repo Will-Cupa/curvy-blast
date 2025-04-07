@@ -1,6 +1,6 @@
 extends Control
 
-@onready var worlds : Array = [$WorldIcon1, $WorldIcon2, $WorldIcon3, $WorldIcon4]
+@onready var worlds : Array = [$WorldIcon1, $WorldIcon2, $WorldIcon3]
 var current_world : int = 0
 var move_tween : Tween
 
