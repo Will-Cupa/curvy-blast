@@ -1,4 +1,4 @@
-extends StaticBody2D
+class_name Canon extends StaticBody2D
 
 var player
 var playerInCanon = false
@@ -6,14 +6,14 @@ var expression = mathFunction.new()
 var expressionReady = false
 @onready var sprite = $canonNormal
 @onready var inputField = $LineEdit
-@onready var camera = $Camera2D
 
+var camera
+@export var cameraOffset : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inputField.visible = false
-	pass # Replace with function body.
-
+	camera = get_viewport().get_camera_2d()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -25,10 +25,9 @@ func parseFunc(text : String) -> bool:
 	
 	#verifier que le texte saisie est bien une fonction en maths
 	if parsable == OK :
-		var _result = expression.execute([0]) #tester la fonction 
-		if !expression.has_execute_failed(): #verifier qu'elle s'execute bien
+		#var _result = expression.execute([0]) #tester la fonction 
+		#if !expression.has_execute_failed(): #verifier qu'elle s'execute bien
 			return true
-			
 	return false
 
 func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueur valide sa saisie
@@ -49,7 +48,10 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		inputField.visible = true #afficher la barre de saisie
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
-		camera.make_current()
+		
+		camera.setTarget(self)
+		camera.setOffset(cameraOffset)
+		
 		playerInCanon = true #Le joueur est dans le canon
 		queue_redraw()
 
@@ -67,26 +69,26 @@ func getOptiPoint(x1, space, treshold) -> float:
 	return x2
 
 func _draw() -> void:
+	if playerInCanon:
+		drawScale()
+		if expressionReady:
+			drawCurve()
+
+func drawCurve():
 	var space = 50
 	var maxWidth = get_viewport_rect().size.x
 	var p1
 	var p2
 	var i = 0
 	var i2
-	if playerInCanon:
-		drawScale()
-		
-		if expressionReady:
-			while i <= (40*expression.getXYScale()):
-				p1 = Vector2(i, expression.valueAt(i)) 
-				i2 = getOptiPoint(i, space, 0.1)
-				p2 = Vector2(i2, expression.valueAt(i2))
-				i = i2
-				draw_line(p1,p2,Color.WHITE,2)
-				sprite.rotation = atan(expression.slopeAt(0,0.1))
-				sprite.position.y = expression.valueAt(0)
-		
-		
+	while i <= (40*expression.getXYScale()):
+		p1 = Vector2(i, expression.valueAt(i)) 
+		i2 = getOptiPoint(i, space, 0.1)
+		p2 = Vector2(i2, expression.valueAt(i2))
+		i = i2
+		draw_line(p1,p2,Color.WHITE,2)
+		sprite.rotation = atan(expression.slopeAt(0,0.1))
+		sprite.position.y = expression.valueAt(0)
 
 func drawScale():
 	var default_font : Font = ThemeDB.fallback_font;	
@@ -97,4 +99,3 @@ func drawScale():
 
 func setScale(scale):
 	expression.XYScale = scale
-				

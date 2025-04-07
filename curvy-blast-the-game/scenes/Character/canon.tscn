@@ -45,10 +45,6 @@ offset = Vector2(110, 0)
 texture = ExtResource("4_wfdmn")
 offset = Vector2(110, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(820, -449)
-zoom = Vector2(0.75, 0.75)
-
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

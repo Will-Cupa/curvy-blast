@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://07lw112t3m28"]
+
+[ext_resource type="Texture2D" uid="uid://cvrjwhkuax0fy" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-021.png" id="1_jehlr"]
+[ext_resource type="FontFile" uid="uid://bs3r1553ilivc" path="res://assets/font/Superstar M54.ttf" id="2_pogug"]
+[ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="3_o3kwf"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer"]
+layout_mode = 2
+color = Color(0.266667, 0.266667, 0.266667, 0.701961)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_jehlr")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pogug")
+theme_override_font_sizes/font_size = 120
+text = "PAUSE"
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="Continue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_o3kwf")
+text = "Continuer"
+
+[node name="Reset" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_o3kwf")
+text = "Recommencer"
+
+[node name="Return" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_o3kwf")
+text = "Retourner"

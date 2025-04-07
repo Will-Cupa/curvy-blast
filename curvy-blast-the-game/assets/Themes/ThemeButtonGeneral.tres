@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c070wc77f0186"]
+
+[ext_resource type="FontFile" uid="uid://cp5qst7dfn33s" path="res://assets/font/superstar_memesbruh03.ttf" id="1_knwav"]
+[ext_resource type="StyleBox" uid="uid://el0y21mrxcdc" path="res://assets/Themes/ButtonTextureFocus.tres" id="2_q80cq"]
+[ext_resource type="StyleBox" uid="uid://b4hnk27uuuhbu" path="res://assets/Themes/ButtonTextureHover.tres" id="3_q7wko"]
+[ext_resource type="StyleBox" uid="uid://bi32ivqih375t" path="res://assets/Themes/ButtonTextureNormal.tres" id="4_e25v1"]
+[ext_resource type="Texture2D" uid="uid://de4v4xk6cfxws" path="res://assets/kenney_fantasy-ui-borders/PNG/Default/Transparent border/panel-transparent-border-029.png" id="5_rqavl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_maqye"]
+texture = ExtResource("5_rqavl")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[resource]
+default_font_size = 25
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_knwav")
+Button/styles/focus = ExtResource("2_q80cq")
+Button/styles/hover = ExtResource("3_q7wko")
+Button/styles/normal = ExtResource("4_e25v1")
+Button/styles/pressed = SubResource("StyleBoxTexture_maqye")
