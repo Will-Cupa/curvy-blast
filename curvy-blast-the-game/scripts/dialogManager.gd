@@ -2,7 +2,7 @@ extends Node
 
 @onready var text_box_scene : PackedScene = preload('res://scenes/GameLevel/textBox.tscn')
 
-var dialog_lines : Array[String] = []
+var dialog_lines
 var current_line_index = 0
 
 var text_box
@@ -11,7 +11,7 @@ var text_box_position : Vector2
 var is_dialog_active = false
 var can_advance_line = false
 
-func start_dialog(position: Vector2, lines: Array[String]):
+func start_dialog(position: Vector2, lines):
 	if is_dialog_active:
 		return
 	
