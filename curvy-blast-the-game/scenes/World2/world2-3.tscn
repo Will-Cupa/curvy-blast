@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtda5dlwxv0u"]
+[gd_scene load_steps=16 format=3 uid="uid://dtda5dlwxv0u"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d1qry"]
 [ext_resource type="Script" path="res://scripts/world2/world_2_3.gd" id="1_gfnit"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_5kgst"]
 [ext_resource type="PackedScene" uid="uid://dxowfnetumqx7" path="res://scenes/Character/bubule_2d.tscn" id="9_5e4r1"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="10_gech3"]
+[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="11_dvxfp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_3bswg")
@@ -147,6 +148,7 @@ layer_1/tile_data = PackedInt32Array(589813, 0, 4, 589814, 0, 4, 589815, 0, 4, 5
 
 [node name="canon" parent="TileMap" instance=ExtResource("4_ku2p0")]
 position = Vector2(-832, 0)
+cameraOffset = Vector2(832, 0)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_syr45")]
 position = Vector2(-1004, 2)
@@ -172,5 +174,5 @@ scale = Vector2(2, 0.5)
 position = Vector2(-872, -182)
 metadata/lignes = PackedStringArray("hmm...", "des souvenirs de trigo")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.75, 0.75)
+[node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_dvxfp")]
+target = NodePath("../TileMap/canon")
