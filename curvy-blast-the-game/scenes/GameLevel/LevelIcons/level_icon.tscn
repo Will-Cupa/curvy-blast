@@ -37,3 +37,10 @@ offset_right = 64.0
 offset_bottom = 64.0
 pivot_offset = Vector2(32, 32)
 texture = SubResource("GradientTexture1D_j7d1s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 64.0
+offset_right = 82.0
+offset_bottom = 97.0

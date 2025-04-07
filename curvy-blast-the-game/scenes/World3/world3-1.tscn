@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://6bnwukxfp832"]
+[gd_scene load_steps=8 format=3 uid="uid://6bnwukxfp832"]
 
+[ext_resource type="Script" path="res://scenes/World3/world_item_manager.gd" id="1_1igc8"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_xj5vl"]
 [ext_resource type="TileSet" uid="uid://c8dccpov8bvq2" path="res://assets/tileset/tileset1.tres" id="1_xlafe"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="2_q2lpn"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="6_mxkvk"]
 
 [node name="World3-1" type="Node2D"]
+script = ExtResource("1_1igc8")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1623.03, 228.001)
@@ -23,7 +25,7 @@ layer_1/name = "danger"
 layer_1/tile_data = PackedInt32Array(851977, 1, 4, 851978, 1, 4, 851984, 1, 4, 851985, 1, 4, 851990, 1, 4, 786439, 1, 536870916, 786445, 1, 536870916, 786451, 1, 536870916, 196634, 1, 4, 196635, 1, 4, 262169, 1, 4, 262172, 1, 4, 262175, 1, 4, 196640, 1, 4, 196641, 1, 4, 262178, 1, 4, 131095, 1, 536870916, 131102, 1, 536870916, 131108, 1, 536870916, 262184, 1, 4, 327721, 1, 4, 327722, 1, 4, 262188, 1, 4, 262189, 1, 4, 131114, 1, 536870916, 262182, 1, 4, 262183, 1, 4, 327715, 1, 4, 327716, 1, 4, 851991, 1, 4)
 
 [node name="Player" parent="." instance=ExtResource("2_q2lpn")]
-position = Vector2(145, 789)
+position = Vector2(337, 883)
 
 [node name="canon" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(160, 859)

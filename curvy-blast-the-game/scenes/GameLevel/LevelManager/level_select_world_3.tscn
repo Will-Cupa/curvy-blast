@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpxdv5r5yukg"]
+
+[ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_fs504"]
+[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="2_wht3m"]
+[ext_resource type="PackedScene" uid="uid://6bnwukxfp832" path="res://scenes/World3/world3-1.tscn" id="3_0xjs1"]
+[ext_resource type="PackedScene" uid="uid://bpfsrhjb67wm7" path="res://scenes/World3/world3-2.tscn" id="4_srbwr"]
+[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="5_ryq4k"]
+
+[node name="LevelSelectTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fs504")
+
+[node name="LevelIcon1" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("2_wht3m")]
+offset_left = 6.0
+offset_top = 308.0
+offset_right = 70.0
+offset_bottom = 372.0
+next_scene_path = ExtResource("3_0xjs1")
+next_level_right = NodePath("../LevelIcon2")
+
+[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left") instance=ExtResource("2_wht3m")]
+offset_left = 190.0
+offset_top = 228.0
+offset_right = 254.0
+offset_bottom = 292.0
+level_name = "2"
+next_scene_path = ExtResource("4_srbwr")
+next_level_right = NodePath("../LevelIcon3")
+next_level_left = NodePath("../LevelIcon1")
+
+[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_left") instance=ExtResource("2_wht3m")]
+offset_left = 388.0
+offset_top = 300.0
+offset_right = 452.0
+offset_bottom = 364.0
+level_name = "3"
+next_level_left = NodePath("../LevelIcon2")
+
+[node name="PlayerIcon" parent="." instance=ExtResource("5_ryq4k")]
+offset_left = -2.0
+offset_top = 54.0
+offset_right = 62.0
+offset_bottom = 118.0
