@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3cdmqav1ju0o"]
+[gd_scene load_steps=14 format=3 uid="uid://c3cdmqav1ju0o"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_yb3ja"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_gnj5o"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_t6c7w"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_087lw"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="8_l8ocv"]
+[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="9_wwrir"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_gnj5o")
@@ -175,5 +176,8 @@ position = Vector2(-252, -300.25)
 [node name="panneau" parent="." instance=ExtResource("8_l8ocv")]
 position = Vector2(-2044, 957)
 metadata/lignes = PackedStringArray("bonjour", "ici une simple sinus ne sufira pas", "essaye d\'utiliser floor(x)")
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_wwrir")]
+target = NodePath("../CharacterBody2D")
 
 [editable path="panneau2"]
