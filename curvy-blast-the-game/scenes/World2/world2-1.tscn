@@ -175,9 +175,10 @@ position = Vector2(-252, -300.25)
 
 [node name="panneau" parent="." instance=ExtResource("8_l8ocv")]
 position = Vector2(-2044, 957)
-metadata/lignes = PackedStringArray("bonjour", "ici une simple sinus ne sufira pas", "essaye d\'utiliser floor(x)")
+metadata/lignes = PackedStringArray("bonjour", "ici une simple affine ne sufira pas", "essaye d\'utiliser floor(x)")
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_wwrir")]
+position = Vector2(-1190, 718)
 target = NodePath("../CharacterBody2D")
 
 [editable path="panneau2"]
