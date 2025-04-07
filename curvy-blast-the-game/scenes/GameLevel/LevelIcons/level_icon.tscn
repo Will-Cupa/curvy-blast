@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs6sgks0d5gwp"]
+[gd_scene load_steps=6 format=3 uid="uid://cs6sgks0d5gwp"]
 
 [ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_54ya5"]
+[ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/Sprites/icon.svg" id="2_s5shd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n422s"]
 font_size = 14
@@ -40,7 +41,31 @@ texture = SubResource("GradientTexture1D_j7d1s")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = -23.0
-offset_top = 64.0
-offset_right = 82.0
-offset_bottom = 97.0
+offset_left = -22.0
+offset_top = 70.0
+offset_right = 85.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_s5shd")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_s5shd")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_s5shd")
+expand_mode = 2
+stretch_mode = 5

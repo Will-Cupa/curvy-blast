@@ -20,4 +20,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_win_timer_timeout() -> void:
+	var level_name = get_parent()
+	print(level_name)
 	get_tree().change_scene_to_file("res://scenes/GameLevel/LevelManager/world_select.tscn")
