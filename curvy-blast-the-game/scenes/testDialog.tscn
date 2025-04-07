@@ -105,5 +105,4 @@ texture = ExtResource("6_ag3x6")
 script = ExtResource("7_bvk7x")
 lines = Array[String](["Salut, jeune crabe!", "Prêt à relever des défis ?", "Apprête toi, le canon ...", "Fonction ... ne"])
 
-[node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("8_kos68")]
-target = NodePath("../TestDialog")
+[node name="Camera2D" parent="." instance=ExtResource("8_kos68")]
