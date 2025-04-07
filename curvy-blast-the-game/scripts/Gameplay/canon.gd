@@ -25,8 +25,8 @@ func parseFunc(text : String) -> bool:
 	
 	#verifier que le texte saisie est bien une fonction en maths
 	if parsable == OK :
-		#var _result = expression.execute([0]) #tester la fonction 
-		#if !expression.has_execute_failed(): #verifier qu'elle s'execute bien
+		var _result = expression.execute([0.001]) #tester la fonction 
+		if !expression.has_execute_failed(): #verifier qu'elle s'execute bien
 			return true
 	return false
 
