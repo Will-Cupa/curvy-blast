@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccpbe1wlpv7lr"]
+[gd_scene load_steps=6 format=3 uid="uid://ccpbe1wlpv7lr"]
 
 [ext_resource type="Script" path="res://scripts/Menu/settings_menu.gd" id="1_5wmgp"]
 [ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="1_fuvob"]
 [ext_resource type="Theme" uid="uid://b6kt1jg0qm6pn" path="res://assets/Themes/SettingTabsTheme.tres" id="2_2tlbn"]
 [ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="4_27qcs"]
+[ext_resource type="PackedScene" uid="uid://ktdgc7qd7yhg" path="res://scenes/Keybinding.tscn" id="4_mvjje"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_5wmgp")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
@@ -21,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 stream = ExtResource("1_fuvob")
 autoplay = true
 expand = true
@@ -33,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.176471, 0.176471, 0.176471, 0.898039)
 
 [node name="SettingTabs" type="TabContainer" parent="."]
@@ -43,10 +47,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_2tlbn")
-current_tab = 0
+current_tab = 2
 
 [node name="Video" type="TabBar" parent="SettingTabs"]
+visible = false
 layout_mode = 2
+mouse_filter = 1
 metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Video"]
@@ -101,6 +107,7 @@ rounded = true
 [node name="Audio" type="TabBar" parent="SettingTabs"]
 visible = false
 layout_mode = 2
+mouse_filter = 1
 metadata/_tab_index = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Audio"]
@@ -151,8 +158,8 @@ value = -10.0
 rounded = true
 
 [node name="Gameplay" type="TabBar" parent="SettingTabs"]
-visible = false
 layout_mode = 2
+mouse_filter = 1
 metadata/_tab_index = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Gameplay"]
@@ -167,10 +174,18 @@ theme_override_constants/margin_top = 90
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 90
 
-[node name="GameSettings" type="GridContainer" parent="SettingTabs/Gameplay/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingTabs/Gameplay/MarginContainer"]
 layout_mode = 2
-theme_override_constants/v_separation = 40
-columns = 2
+size_flags_vertical = 3
+
+[node name="GameSettings" type="VBoxContainer" parent="SettingTabs/Gameplay/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Button" parent="SettingTabs/Gameplay/MarginContainer/ScrollContainer/GameSettings" instance=ExtResource("4_mvjje")]
+layout_mode = 2
+mouse_filter = 1
 
 [node name="Retour" type="Button" parent="."]
 layout_mode = 1
@@ -183,6 +198,7 @@ offset_left = -152.0
 offset_top = -27.0161
 offset_right = 156.0
 offset_bottom = 31.9839
+mouse_filter = 1
 theme = ExtResource("4_27qcs")
 text = "Retour"
 
