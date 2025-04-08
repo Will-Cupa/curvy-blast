@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw4dh01xnecr4"]
+[gd_scene load_steps=16 format=3 uid="uid://dw4dh01xnecr4"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_t8a50"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_pd4op"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="6_su564"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="7_eumwn"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="8_11gks"]
+[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="9_fqv35"]
+[ext_resource type="Script" path="res://scripts/tuto/camera point.gd" id="10_oy7om"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_pd4op")
@@ -132,11 +134,14 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_iyank")
 sources/0 = SubResource("TileSetAtlasSource_k83e4")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpi52"]
+size = Vector2(329, 326)
+
 [node name="Tutoriel" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(5.50012, 0.5)
+position = Vector2(-479, 294)
 scale = Vector2(4.90052, 4.46389)
 texture = ExtResource("1_t8a50")
 
@@ -152,8 +157,6 @@ layer_1/tile_data = PackedInt32Array(589790, 1, 4, 589796, 1, 4)
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_g5dqr")]
 position = Vector2(-3478, 537)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
 [node name="panneau" parent="." instance=ExtResource("6_su564")]
 position = Vector2(-3288, 304)
 metadata/lignes = PackedStringArray("(presse x)", "bonjour et bienvenu", "tu peux te deplacer avec les fleches")
@@ -167,9 +170,6 @@ position = Vector2(-899, 305)
 [node name="canon" parent="." instance=ExtResource("7_eumwn")]
 position = Vector2(-705, 473)
 
-[node name="Camera2D" parent="canon" index="4"]
-enabled = false
-
 [node name="canon2" parent="." instance=ExtResource("7_eumwn")]
 position = Vector2(854, 531)
 
@@ -179,4 +179,17 @@ position = Vector2(3025, 262)
 [node name="EndFlag" parent="." instance=ExtResource("8_11gks")]
 position = Vector2(4320, 287)
 
-[editable path="canon"]
+[node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_fqv35")]
+target = NodePath("../CharacterBody2D")
+
+[node name="camera point" type="Node2D" parent="."]
+position = Vector2(2078, 500)
+script = ExtResource("10_oy7om")
+
+[node name="Area2D" type="Area2D" parent="camera point"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera point/Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_dpi52")
+
+[connection signal="body_entered" from="camera point/Area2D" to="camera point" method="_on_area_2d_body_entered"]
