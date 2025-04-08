@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtda5dlwxv0u"]
+[gd_scene load_steps=10 format=3 uid="uid://dtda5dlwxv0u"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d1qry"]
 [ext_resource type="Script" path="res://scripts/world2/world_2_3.gd" id="1_gfnit"]
-[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_3bswg"]
 [ext_resource type="TileSet" uid="uid://bblsj72icdgl0" path="res://assets/tileset/tileset2.tres" id="3_rlq5f"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_ku2p0"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_syr45"]
@@ -11,14 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="10_gech3"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="11_dvxfp"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
-shader = ExtResource("2_3bswg")
-
 [node name="root" type="Node2D"]
 script = ExtResource("1_gfnit")
 
 [node name="TileMap" type="TileMap" parent="."]
-material = SubResource("ShaderMaterial_hjemj")
 tile_set = ExtResource("3_rlq5f")
 format = 2
 layer_0/name = "base"

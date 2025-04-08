@@ -1,23 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4x535jcf1iyn"]
+[gd_scene load_steps=9 format=3 uid="uid://b4x535jcf1iyn"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_2j3gh"]
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_bpo3b"]
 [ext_resource type="TileSet" uid="uid://bblsj72icdgl0" path="res://assets/tileset/tileset2.tres" id="2_m72vh"]
-[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_tewa4"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_bqibe"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_t0vi3"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_jj3kg"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="8_h8kh8"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="9_i0bel"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
-shader = ExtResource("2_tewa4")
-
 [node name="root" type="Node2D"]
 script = ExtResource("1_bpo3b")
 
 [node name="TileMap" type="TileMap" parent="."]
-material = SubResource("ShaderMaterial_hjemj")
 tile_set = ExtResource("2_m72vh")
 format = 2
 layer_0/name = "base"
@@ -63,5 +58,4 @@ blend_mode = 2
 shadow_color = Color(0, 0, 0, 1)
 height = 0.32
 
-[editable path="TileMap/canon"]
 [editable path="panneau"]

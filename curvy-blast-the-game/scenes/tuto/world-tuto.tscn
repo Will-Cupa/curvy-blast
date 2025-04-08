@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw4dh01xnecr4"]
+[gd_scene load_steps=11 format=3 uid="uid://dw4dh01xnecr4"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_gfhl2"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_t8a50"]
-[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_pd4op"]
 [ext_resource type="TileSet" uid="uid://c8dccpov8bvq2" path="res://assets/tileset/tileset1.tres" id="3_cy3s1"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_g5dqr"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="6_su564"]
@@ -11,9 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="9_fqv35"]
 [ext_resource type="Script" path="res://scripts/tuto/camera point.gd" id="10_oy7om"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
-shader = ExtResource("2_pd4op")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpi52"]
 size = Vector2(329, 326)
 
@@ -21,7 +17,6 @@ size = Vector2(329, 326)
 script = ExtResource("1_gfhl2")
 
 [node name="TileMap" type="TileMap" parent="."]
-material = SubResource("ShaderMaterial_hjemj")
 tile_set = ExtResource("3_cy3s1")
 format = 2
 layer_0/name = "base"

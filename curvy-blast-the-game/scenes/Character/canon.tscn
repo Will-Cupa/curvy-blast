@@ -43,6 +43,7 @@ position = Vector2(0.573171, 1.19209e-07)
 scale = Vector2(0.180071, 0.168333)
 texture = ExtResource("3_bgm4c")
 offset = Vector2(110, 0)
+flip_v = true
 
 [node name="canonOutline" type="Sprite2D" parent="canonNormal"]
 texture = ExtResource("4_wfdmn")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3k0ngcoky2wk"]
+[gd_scene load_steps=9 format=3 uid="uid://c3k0ngcoky2wk"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_1u2h2"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d7oyu"]
-[ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_m23jr"]
 [ext_resource type="TileSet" uid="uid://c8dccpov8bvq2" path="res://assets/tileset/tileset1.tres" id="3_dq81n"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_j8skl"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_os1k8"]
@@ -10,14 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="7_exjeu"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="9_qqm6q"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iue33"]
-shader = ExtResource("2_m23jr")
-
 [node name="root" type="Node2D"]
 script = ExtResource("1_1u2h2")
 
 [node name="TileMap" type="TileMap" parent="."]
-material = SubResource("ShaderMaterial_iue33")
 tile_set = ExtResource("3_dq81n")
 format = 2
 layer_0/name = "base"
