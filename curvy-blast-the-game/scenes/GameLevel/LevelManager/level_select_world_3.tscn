@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpxdv5r5yukg"]
+[gd_scene load_steps=8 format=3 uid="uid://cpxdv5r5yukg"]
 
 [ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_fs504"]
 [ext_resource type="Texture2D" uid="uid://be063m7qtspsp" path="res://assets/Sprites/worldMap3.png" id="2_j2y31"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://6bnwukxfp832" path="res://scenes/World3/world3-1.tscn" id="3_0xjs1"]
 [ext_resource type="PackedScene" uid="uid://bpfsrhjb67wm7" path="res://scenes/World3/world3-2.tscn" id="4_srbwr"]
 [ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="5_ryq4k"]
+[ext_resource type="PackedScene" uid="uid://bykm5tu1og381" path="res://scenes/World3/world3-3.tscn" id="6_vgvci"]
 
 [node name="LevelSelectTest" type="Control"]
 layout_mode = 3
@@ -47,6 +48,7 @@ offset_top = 172.0
 offset_right = 785.0
 offset_bottom = 236.0
 level_name = "3"
+next_scene_path = ExtResource("6_vgvci")
 next_level_down = NodePath("../LevelIcon2")
 next_level_left = NodePath("../LevelIcon2")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]

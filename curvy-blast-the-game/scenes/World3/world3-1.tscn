@@ -26,7 +26,7 @@ position = Vector2(337, 883)
 
 [node name="panneau" parent="." instance=ExtResource("4_k32ow")]
 position = Vector2(396, 712)
-metadata/lignes = PackedStringArray("Te voila !", "Sache que tes connaissances, ici,", "Te seront très utiles.", "Essaie une composition de fonctions", "Avec sinus et cosinus.", "Bonne chance ...", "...")
+metadata/lignes = PackedStringArray("Te voila !", "Sache que tes connaissances, ici,", "Te seront très utiles.", "Essaie une composition de fonctions", "Avec sinus et cosinus.", "Bonne chance ...", "... Sérieusement, bonne chance.")
 
 [node name="canon" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(160, 859)
@@ -51,3 +51,7 @@ layer = -3
 position = Vector2(888, 496)
 scale = Vector2(1.06748, 1.06748)
 texture = ExtResource("1_xj5vl")
+
+[node name="panneau2" parent="." instance=ExtResource("4_k32ow")]
+position = Vector2(1554, 150)
+metadata/lignes = PackedStringArray("Bravo !!!", "Tu es arrivé jusque là.", "Celui-ci ne devrait pas être compliqué .", "Sers toi de ce que tu as découvert !")
