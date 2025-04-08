@@ -41,7 +41,7 @@ startCanon = true
 
 [node name="canon2" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(256, 152)
-focusCam = false
+focusSelf = false
 
 [node name="canon3" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(1024, -104)
@@ -49,7 +49,7 @@ cameraOffset = Vector2(1000, 0)
 
 [node name="canon4" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(1536, 80)
-focusCam = false
+focusSelf = false
 
 [node name="canon5" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(1920, 472)
@@ -60,15 +60,14 @@ position = Vector2(3136, 280)
 
 [node name="canon7" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(3904, 216)
-focusCam = false
 
 [node name="canon8" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(4096, -168)
-focusCam = false
+focusSelf = false
 
 [node name="canon9" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(4544, -552)
-focusCam = false
+focusSelf = false
 
 [node name="Camera2D" parent="." instance=ExtResource("7_exjeu")]
 

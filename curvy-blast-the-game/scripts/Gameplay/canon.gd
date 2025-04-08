@@ -9,7 +9,8 @@ var expressionReady = false
 
 var camera
 @export var cameraOffset : Vector2
-@export var focusCam : bool = true
+@export var focusSelf : bool = true
+@export var focusPlayer : bool = false
 @export var startCanon : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -40,6 +41,10 @@ func _on_line_edit_text_submitted(_text : String) -> void: #appel quand le joueu
 		player.shoot(expression) #On lance le joueur
 		playerInCanon = false
 		inputField.visible = false
+		
+		if focusPlayer:
+			camera.setOffset(Vector2(0,0))
+			camera.setTarget(player) 
 		queue_redraw()
 		
 func _on_line_edit_text_changed(new_text: String) -> void: #appel quand le joueur saisi quelque chose
@@ -55,7 +60,7 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		player.enterCanon(position.x,position.y)
 		
 		#set camera
-		if(focusCam):
+		if(focusSelf):
 			camera.setTarget(self)
 			camera.setOffset(cameraOffset)
 		
