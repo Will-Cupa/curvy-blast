@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3k0ngcoky2wk"]
+[gd_scene load_steps=11 format=3 uid="uid://c3k0ngcoky2wk"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_1u2h2"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d7oyu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_os1k8"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_hwnlj"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="7_exjeu"]
+[ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="9_qqm6q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iue33"]
 shader = ExtResource("2_m23jr")
@@ -81,3 +82,11 @@ layer = -3
 position = Vector2(888, 496)
 scale = Vector2(1.06748, 1.06748)
 texture = ExtResource("1_d7oyu")
+
+[node name="panneau" parent="." instance=ExtResource("9_qqm6q")]
+position = Vector2(-264, -48)
+metadata/lignes = PackedStringArray("Les canons suivent des expressions mathématiques.", "Entre dans le canon et écrit 0 !")
+
+[node name="panneau2" parent="." instance=ExtResource("9_qqm6q")]
+position = Vector2(344, -64)
+metadata/lignes = PackedStringArray("Un nombre seul est une constante")
