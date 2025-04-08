@@ -30,23 +30,24 @@ next_scene_path = ExtResource("3_0xjs1")
 next_level_right = NodePath("../LevelIcon2")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
 
-[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left", "collectable") instance=ExtResource("2_wht3m")]
+[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_up", "next_level_left", "collectable") instance=ExtResource("2_wht3m")]
 offset_left = 990.0
 offset_top = 441.0
 offset_right = 1054.0
 offset_bottom = 505.0
 level_name = "2"
 next_scene_path = ExtResource("4_srbwr")
-next_level_right = NodePath("../LevelIcon3")
+next_level_up = NodePath("../LevelIcon3")
 next_level_left = NodePath("../LevelIcon1")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
 
-[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_left", "collectable") instance=ExtResource("2_wht3m")]
+[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_down", "next_level_left", "collectable") instance=ExtResource("2_wht3m")]
 offset_left = 721.0
 offset_top = 172.0
 offset_right = 785.0
 offset_bottom = 236.0
 level_name = "3"
+next_level_down = NodePath("../LevelIcon2")
 next_level_left = NodePath("../LevelIcon2")
 collectable = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/TextureRect2"), NodePath("HBoxContainer/TextureRect3")]
 

@@ -2,7 +2,7 @@
 extends Control
 
 @export var level_index : int = 1
-@export var level_select_packed : PackedScene = load("res://scenes/LevelManager/level_select_test.tscn")
+@export var level_select_packed : PackedScene
 @onready var level_select_scene : LevelSelect = level_select_packed.instantiate()
 
 # Called when the node enters the scene tree for the first time.

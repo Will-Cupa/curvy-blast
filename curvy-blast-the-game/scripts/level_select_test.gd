@@ -36,5 +36,15 @@ func _input(event):
 			get_tree().change_scene_to_packed(current_level.next_scene_path)
 
 func tween_icon():
+	$PlayerIcon/body.play("walk");
+	$PlayerIcon/outline.play("walk")
+	
 	move_tween = get_tree().create_tween()
-	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 0.5).set_trans(Tween.TRANS_SINE)
+	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 1.5).set_trans(Tween.TRANS_SINE)
+	
+	move_tween.connect("finished", Callable(self, "_on_tween_finished"))
+
+func _on_tween_finished():
+	$PlayerIcon/body.play("idle");
+	$PlayerIcon/outline.play("idle")
+	
