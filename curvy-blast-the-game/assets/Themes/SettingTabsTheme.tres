@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://b6kt1jg0qm6pn"]
+
+[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="1_di1w4"]
+[ext_resource type="Texture2D" uid="uid://d04jpchqk0nb7" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-015.png" id="2_rxqpm"]
+[ext_resource type="Texture2D" uid="uid://cttkb8pbkwf27" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Transparent center/panel-transparent-center-030.png" id="3_ew3qq"]
+[ext_resource type="Texture2D" uid="uid://byvxfhu152crx" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Transparent border/panel-transparent-border-030.png" id="4_b7p8q"]
+[ext_resource type="Texture2D" uid="uid://bi8bsrgb6fsd6" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-030.png" id="5_dncwu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8mpe"]
+texture = ExtResource("2_rxqpm")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(1, 1, 1, 0.396078)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0wuv"]
+texture = ExtResource("3_ew3qq")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwtub"]
+texture = ExtResource("4_b7p8q")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8l1oe"]
+texture = ExtResource("5_dncwu")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsdyq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+default_font = ExtResource("1_di1w4")
+default_font_size = 25
+CheckButton/constants/align_to_largest_stylebox = 21
+CheckButton/constants/icon_max_width = 70
+CheckButton/constants/outline_size = 53
+TabContainer/colors/font_selected_color = Color(0.277526, 0.277528, 0.277528, 1)
+TabContainer/constants/icon_separation = 4
+TabContainer/constants/side_margin = 0
+TabContainer/font_sizes/font_size = 30
+TabContainer/fonts/font = ExtResource("1_di1w4")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_a8mpe")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_g0wuv")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_pwtub")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_8l1oe")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxFlat_rsdyq")
