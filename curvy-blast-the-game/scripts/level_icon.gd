@@ -15,12 +15,13 @@ var niveau_1_score : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.collectables_by_level:
+	if Global.collectables_by_level.has(next_scene_path):
 		niveau_1_score = Global.collectables_by_level.get(next_scene_path, 0)
-	$Label.text = "Level  " + level_name
-	if niveau_1_score:
 		for child in range(niveau_1_score):
+			print(h_box_container.get_child(child).visible)
 			h_box_container.get_child(child).visible = true
+	$Label.text = "Level  " + level_name
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

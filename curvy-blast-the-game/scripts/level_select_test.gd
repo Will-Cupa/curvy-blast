@@ -40,7 +40,7 @@ func tween_icon():
 	$PlayerIcon/outline.play("walk")
 	
 	move_tween = get_tree().create_tween()
-	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 0.5).set_trans(Tween.TRANS_SINE)
+	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 1.5).set_trans(Tween.TRANS_SINE)
 	
 	move_tween.connect("finished", Callable(self, "_on_tween_finished"))
 

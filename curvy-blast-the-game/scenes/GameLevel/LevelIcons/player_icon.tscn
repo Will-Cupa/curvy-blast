@@ -218,8 +218,9 @@ autoplay = "idle"
 frame = 9
 frame_progress = 1.0
 
-[node name="outline" type="AnimatedSprite2D" parent="body"]
-scale = Vector2(1, 1)
+[node name="outline" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+scale = Vector2(0.162, 0.162)
 sprite_frames = SubResource("SpriteFrames_6qhpy")
 animation = &"walk"
 autoplay = "idle"
