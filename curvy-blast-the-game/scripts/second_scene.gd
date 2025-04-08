@@ -1,8 +1,8 @@
 extends Control
 
 const WORLD_TUTO = preload("res://scenes/tuto/world-tuto.tscn")
-var world = preload("res://scenes/GameLevel/LevelManager/world_select.tscn");
-var settings = load("res://scenes/GameLevel/Menu/SettingsMenu.tscn")
+const world = preload("res://scenes/GameLevel/LevelManager/world_select.tscn")
+const settings = preload("res://scenes/GameLevel/Menu/SettingsMenu.tscn")
 
 
 func _on_quit_pressed():

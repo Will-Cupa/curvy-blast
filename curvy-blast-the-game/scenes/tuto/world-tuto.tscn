@@ -55,6 +55,7 @@ position = Vector2(3042, 287)
 
 [node name="EndFlag" parent="." instance=ExtResource("8_11gks")]
 position = Vector2(4320, 287)
+nextScenePath = "res://scenes/GameLevel/Two/second_scene.tscn"
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_fqv35")]
 target = NodePath("../CharacterBody2D")
