@@ -61,6 +61,7 @@ position = Vector2(3136, 280)
 
 [node name="canon7" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(3904, 216)
+focusSelf = false
 
 [node name="canon8" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(4096, -168)
@@ -89,4 +90,12 @@ metadata/lignes = PackedStringArray("Les canons suivent des expressions mathéma
 
 [node name="panneau2" parent="." instance=ExtResource("9_qqm6q")]
 position = Vector2(344, -64)
-metadata/lignes = PackedStringArray("Un nombre seul est une constante")
+metadata/lignes = PackedStringArray("Un nombre seul est une constante.", "Il définira la hauteur de la courbe.", "Essaye différents nombres pour trouver la bonne hauteur !")
+
+[node name="panneau3" parent="." instance=ExtResource("9_qqm6q")]
+position = Vector2(1080, -248)
+metadata/lignes = PackedStringArray("Les nombres négatifs marchent aussi !")
+
+[node name="panneau4" parent="." instance=ExtResource("9_qqm6q")]
+position = Vector2(3672, -400)
+metadata/lignes = PackedStringArray("Cette dernière énigme est un peu plus compliquée...")
