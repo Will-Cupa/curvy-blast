@@ -30,6 +30,8 @@ metadata/lignes = PackedStringArray("Te voila !", "Sache que tes connaissances, 
 
 [node name="canon" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(160, 859)
+focusPlayer = true
+startCanon = true
 
 [node name="EndFlag" parent="." instance=ExtResource("4_squy6")]
 position = Vector2(3045, 253)
