@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_1igc8"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_xj5vl"]
-[ext_resource type="TileSet" path="res://assets/tileset/tileset3.tres" id="2_kwx4u"]
+[ext_resource type="TileSet" uid="uid://dygtp05udik3t" path="res://assets/tileset/tileset3.tres" id="2_kwx4u"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="2_q2lpn"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="3_3uotk"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="4_squy6"]
@@ -27,7 +27,7 @@ position = Vector2(337, 883)
 position = Vector2(160, 859)
 
 [node name="EndFlag" parent="." instance=ExtResource("4_squy6")]
-position = Vector2(532, 897)
+position = Vector2(3045, 253)
 
 [node name="canon2" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(1320, 351)

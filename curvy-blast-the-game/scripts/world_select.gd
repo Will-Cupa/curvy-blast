@@ -15,10 +15,10 @@ func _input(event):
 		return 
 	if event.is_action_pressed("ui_left") and current_world > 0:
 		current_world -= 1
+		tween_icon()
 	elif event.is_action_pressed("ui_right") and current_world < worlds.size() - 1:
 		current_world += 1
-	
-	tween_icon()
+		tween_icon()
 	
 	if event.is_action_pressed("ui_accept"):
 		if worlds[current_world].level_select_scene:
@@ -32,7 +32,7 @@ func tween_icon():
 	$PlayerIcon/outline.play("walk")
 	
 	move_tween = get_tree().create_tween()
-	move_tween.tween_property($PlayerIcon, "global_position", worlds[current_world].global_position, 0.5).set_trans(Tween.TRANS_SINE)
+	move_tween.tween_property($PlayerIcon, "global_position", worlds[current_world].global_position, 1.0).set_trans(Tween.TRANS_SINE)
 	move_tween.connect("finished", Callable(self, "_on_tween_finished"))
 
 func _on_tween_finished():

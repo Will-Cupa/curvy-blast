@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_whre5"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="2_qg74t"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="3_ted5i"]
-[ext_resource type="TileSet" path="res://assets/tileset/tileset3.tres" id="3_x5q6b"]
+[ext_resource type="TileSet" uid="uid://dygtp05udik3t" path="res://assets/tileset/tileset3.tres" id="3_x5q6b"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_bjl8x"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="5_laf8y"]
 [ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="7_wgycv"]

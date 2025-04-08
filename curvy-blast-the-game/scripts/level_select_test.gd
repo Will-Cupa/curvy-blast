@@ -16,14 +16,16 @@ func _input(event):
 		return 
 	if event.is_action_pressed("ui_left") and current_level.next_level_left:
 		current_level = current_level.next_level_left
+		tween_icon()
 	elif event.is_action_pressed("ui_right") and current_level.next_level_right:
 		current_level = current_level.next_level_right
+		tween_icon()
 	elif event.is_action_pressed("ui_up") and current_level.next_level_up:
 		current_level = current_level.next_level_up
+		tween_icon()
 	elif event.is_action_pressed("ui_down") and current_level.next_level_down:
 		current_level = current_level.next_level_down
-
-	tween_icon()
+		tween_icon()
 	
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().get_root().add_child(parent_world_select)
