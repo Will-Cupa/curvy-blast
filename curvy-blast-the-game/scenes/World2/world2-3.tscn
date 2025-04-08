@@ -14,7 +14,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_3bswg")
 
-[node name="Tutoriel2" type="Node2D"]
+[node name="root" type="Node2D"]
 script = ExtResource("1_gfnit")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -32,14 +32,6 @@ cameraOffset = Vector2(832, 0)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_syr45")]
 position = Vector2(-1004, 2)
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(-834, -508)
-rotation = 0.947714
-color = Color(0.890934, 0.953776, 1, 1)
-blend_mode = 2
-shadow_color = Color(0, 0, 0, 1)
-height = 0.32
 
 [node name="EndFlag" parent="." instance=ExtResource("6_5kgst")]
 position = Vector2(1028, 20)
@@ -64,3 +56,11 @@ layer = -3
 position = Vector2(888, 496)
 scale = Vector2(1.06748, 1.06748)
 texture = ExtResource("1_d1qry")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.794125
+color = Color(0.975108, 0.692313, 0.473762, 1)
+energy = 0.91
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32

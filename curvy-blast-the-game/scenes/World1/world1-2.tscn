@@ -28,13 +28,6 @@ layer_1/tile_data = PackedInt32Array(-1703904, 65537, 1342177284, -1703903, 6553
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_bweqg")]
 position = Vector2(-528, 224)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-rotation = -0.90059
-color = Color(0.890934, 0.953776, 1, 1)
-blend_mode = 2
-shadow_color = Color(0, 0, 0, 1)
-height = 0.32
-
 [node name="Camera2D" parent="." instance=ExtResource("6_00wc0")]
 position = Vector2(5376, -1424)
 
@@ -94,5 +87,12 @@ position = Vector2(-80, -548)
 
 [node name="CollisionShape2D" parent="panneau4/Area2D" index="0"]
 position = Vector2(-38, -506)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.565487
+color = Color(0.790469, 0.818876, 0.628206, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32
 
 [editable path="panneau4"]

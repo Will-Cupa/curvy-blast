@@ -27,13 +27,6 @@ layer_1/tile_data = PackedInt32Array(65530, 65537, 1342177284)
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_qfwc2")]
 position = Vector2(-528, 224)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-rotation = -0.90059
-color = Color(0.890934, 0.953776, 1, 1)
-blend_mode = 2
-shadow_color = Color(0, 0, 0, 1)
-height = 0.32
-
 [node name="Camera2D" parent="." instance=ExtResource("4_6geuo")]
 position = Vector2(-247, 869)
 
@@ -52,3 +45,10 @@ layer = -3
 position = Vector2(888, 496)
 scale = Vector2(1.06748, 1.06748)
 texture = ExtResource("7_mlhpm")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -1.6057
+color = Color(0.790469, 0.818876, 0.628206, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32

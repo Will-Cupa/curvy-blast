@@ -57,3 +57,10 @@ texture = ExtResource("1_xj5vl")
 [node name="panneau2" parent="." instance=ExtResource("4_k32ow")]
 position = Vector2(1554, 150)
 metadata/lignes = PackedStringArray("Bravo !!!", "Tu es arrivé jusque là.", "Celui-ci ne devrait pas être compliqué .", "Sers toi de ce que tu as découvert !")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = 0.342085
+color = Color(0.715641, 0.921051, 0.951694, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32

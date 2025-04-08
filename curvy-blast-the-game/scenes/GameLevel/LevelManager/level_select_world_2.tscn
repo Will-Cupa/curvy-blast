@@ -55,3 +55,10 @@ offset_left = 353.0
 offset_top = 464.0
 offset_right = 417.0
 offset_bottom = 528.0
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.680678
+color = Color(0.985824, 0.772833, 0.613984, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32
