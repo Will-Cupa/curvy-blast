@@ -1,0 +1,109 @@
+[gd_scene load_steps=13 format=3 uid="uid://ccpbe1wlpv7lr"]
+
+[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="1_fuvob"]
+[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_2yljo"]
+[ext_resource type="Texture2D" uid="uid://d04jpchqk0nb7" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-015.png" id="3_aqx26"]
+[ext_resource type="Texture2D" uid="uid://cttkb8pbkwf27" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Transparent center/panel-transparent-center-030.png" id="4_0c6eo"]
+[ext_resource type="Texture2D" uid="uid://byvxfhu152crx" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Transparent border/panel-transparent-border-030.png" id="5_61322"]
+[ext_resource type="Texture2D" uid="uid://bi8bsrgb6fsd6" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-030.png" id="6_mpxct"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8mpe"]
+texture = ExtResource("3_aqx26")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(1, 1, 1, 0.396078)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0wuv"]
+texture = ExtResource("4_0c6eo")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwtub"]
+texture = ExtResource("5_61322")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8l1oe"]
+texture = ExtResource("6_mpxct")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsdyq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_a52ye"]
+default_font = ExtResource("2_2yljo")
+default_font_size = 25
+TabContainer/colors/font_selected_color = Color(0.277526, 0.277528, 0.277528, 1)
+TabContainer/fonts/font = ExtResource("2_2yljo")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_a8mpe")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_g0wuv")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_pwtub")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_8l1oe")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxFlat_rsdyq")
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_fuvob")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.176471, 0.176471, 0.176471, 0.898039)
+
+[node name="SettingTabs" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_a52ye")
+current_tab = 0
+
+[node name="Video" type="TabBar" parent="SettingTabs"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingTabs/Video"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VideoSettings" type="GridContainer" parent="SettingTabs/Video/MarginContainer"]
+layout_mode = 2
