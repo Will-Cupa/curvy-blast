@@ -126,9 +126,8 @@ sprite_frames = SubResource("SpriteFrames_pwwcx")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="outline" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, 32)
-scale = Vector2(0.162, 0.162)
+[node name="outline" type="AnimatedSprite2D" parent="body"]
+scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_6qhpy")
 animation = &"idle"
 autoplay = "idle"
