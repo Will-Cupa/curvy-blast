@@ -194,7 +194,7 @@ libraries = {
 }
 
 [node name="GPUParticles2D" parent="." instance=ExtResource("5_g1prp")]
-position = Vector2(857, 849)
+position = Vector2(852, 1010)
 scale = Vector2(6, 0.5)
 amount = 20
-speed_scale = 3.0
+speed_scale = 2.0

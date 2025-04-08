@@ -2,6 +2,8 @@ class_name Player extends CharacterBody2D
 
 @onready var animation: Node2D = $AnimationManager
 @onready var hitBoxPatte = $CollisionShape2D2
+@onready var hitBox = $CollisionShape2D
+
 const PAUSE_MENU = preload("res://scenes/GameLevel/Menu/PauseMenu.tscn")
 signal death
 
@@ -33,10 +35,11 @@ func calculeCurve():
 		
 func shoot(f):
 	if(inCanon):
+		functionCurve = f
+		position.y += functionCurve.valueAt(0.1)
 		canoned = true
 		inCanon = false
-		
-		functionCurve = f
+	
 		#changer d'annimation
 		show()
 
@@ -139,16 +142,16 @@ func _physics_process(delta):
 	checkDeath()
 	
 	if(inCanon):
-		pass
 		
-	elif(canoned):
-		scale = Vector2(0.5,0.5)
-		applyCanonMov(delta)
 		hitBoxPatte.disabled = true
 		
-	else:
-		scale = Vector2(1,1)
+	elif(canoned):
 		
+		scale = Vector2(0.5,0.5)
+		applyCanonMov(delta)
+		
+	else:
+		scale = Vector2(1,1)	
 		
 		# Add the gravity.
 		if not is_on_floor():

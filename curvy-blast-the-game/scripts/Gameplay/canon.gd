@@ -9,11 +9,16 @@ var expressionReady = false
 
 var camera
 @export var cameraOffset : Vector2
+@export var focusCam : bool = true
+@export var startCanon : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inputField.visible = false
 	camera = get_viewport().get_camera_2d()
+	if(startCanon):
+		camera.setTarget(self)
+		camera.setOffset(cameraOffset)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -49,8 +54,9 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
 		
-		camera.setTarget(self)
-		camera.setOffset(cameraOffset)
+		if(focusCam):
+			camera.setTarget(self)
+			camera.setOffset(cameraOffset)
 		
 		playerInCanon = true #Le joueur est dans le canon
 		queue_redraw()
