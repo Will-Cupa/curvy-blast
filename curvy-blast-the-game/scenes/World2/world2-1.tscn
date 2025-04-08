@@ -30,6 +30,7 @@ position = Vector2(-2188, 1186)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_087lw")]
 position = Vector2(705, -117)
+nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_2.tscn"
 
 [node name="canon2" parent="." instance=ExtResource("4_capyj")]
 position = Vector2(-2016, 1184)

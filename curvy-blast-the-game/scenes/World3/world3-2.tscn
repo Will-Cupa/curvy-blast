@@ -36,6 +36,7 @@ position = Vector2(1233, 925)
 
 [node name="EndFlag" parent="." instance=ExtResource("5_laf8y")]
 position = Vector2(2876, 582)
+nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_3.tscn"
 
 [node name="Collectable" parent="." instance=ExtResource("7_wgycv")]
 position = Vector2(525, 900)

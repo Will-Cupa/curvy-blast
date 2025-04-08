@@ -37,6 +37,7 @@ startCanon = true
 
 [node name="EndFlag" parent="." instance=ExtResource("6_2mf30")]
 position = Vector2(140, 664)
+nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -3

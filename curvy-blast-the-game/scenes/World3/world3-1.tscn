@@ -35,6 +35,7 @@ startCanon = true
 
 [node name="EndFlag" parent="." instance=ExtResource("4_squy6")]
 position = Vector2(3045, 253)
+nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_3.tscn"
 
 [node name="canon2" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(1320, 351)

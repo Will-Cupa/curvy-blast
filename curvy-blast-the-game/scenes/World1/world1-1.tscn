@@ -75,6 +75,7 @@ focusSelf = false
 
 [node name="EndFlag" parent="." instance=ExtResource("6_hwnlj")]
 position = Vector2(5184, -184)
+nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -3
