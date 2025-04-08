@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="3_ted5i"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_bjl8x"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="5_laf8y"]
-[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="7_wgycv"]
+[ext_resource type="PackedScene" path="res://scenes/Character/collectable.tscn" id="7_wgycv"]
 
 [node name="World3-2" type="Node2D"]
 script = ExtResource("1_hj1mo")
@@ -15,11 +15,6 @@ script = ExtResource("1_hj1mo")
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_qg74t")]
 position_smoothing_enabled = true
 target = NodePath("../Player")
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1039.03, 367)
-scale = Vector2(1.07914, 1.0963)
-texture = ExtResource("1_whre5")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_m2gdb")
@@ -46,3 +41,11 @@ position = Vector2(525, 900)
 
 [node name="Collectable2" parent="." instance=ExtResource("7_wgycv")]
 position = Vector2(755, 900)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(888, 496)
+scale = Vector2(1.06748, 1.06748)
+texture = ExtResource("1_whre5")

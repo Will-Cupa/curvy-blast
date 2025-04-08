@@ -54,10 +54,12 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		player = body #On garde la reference
 		player.enterCanon(position.x,position.y)
 		
+		#set camera
 		if(focusCam):
 			camera.setTarget(self)
 			camera.setOffset(cameraOffset)
 		
+		inputField.grab_focus()
 		playerInCanon = true #Le joueur est dans le canon
 		queue_redraw()
 
