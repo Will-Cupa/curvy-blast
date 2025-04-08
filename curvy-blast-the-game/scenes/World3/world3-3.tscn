@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbbsas6nxfmsq"]
+[gd_scene load_steps=8 format=3 uid="uid://bykm5tu1og381"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_y3i2r"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="2_7v1yc"]
-[ext_resource type="TileSet" uid="uid://c1g633y8ka5bd" path="res://assets/tileset/tileset3.tres" id="3_wf57i"]
+[ext_resource type="TileSet" uid="uid://dygtp05udik3t" path="res://assets/tileset/tileset3.tres" id="3_wf57i"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_00uui"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_2xdx4"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_5nafb"]
