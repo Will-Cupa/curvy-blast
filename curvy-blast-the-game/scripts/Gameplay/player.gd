@@ -10,7 +10,7 @@ signal death
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-const CANON_VELOCITY = 3
+const CANON_VELOCITY = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -24,7 +24,8 @@ var yAvantCanon = 0
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
-		get_tree().reload_current_scene()
+		if(get_tree() != null):
+			get_tree().reload_current_scene()
 
 
 func calculeCurve():
@@ -115,7 +116,8 @@ func checkDeath(collision = null):
 				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
 					#death.emit()
-					get_tree().reload_current_scene()
+					if(get_tree() != null):
+						get_tree().reload_current_scene()
 	
 	for i in get_slide_collision_count():
 		collision = get_slide_collision(i)
@@ -132,7 +134,8 @@ func checkDeath(collision = null):
 				if tile_data.get_collision_polygons_count(0) > 0:
 					print("tu es mort")
 					#death.emit()
-					get_tree().reload_cu0rrent_scene()
+					if(get_tree() != null):
+						get_tree().reload_current_scene()
 					
 
 
