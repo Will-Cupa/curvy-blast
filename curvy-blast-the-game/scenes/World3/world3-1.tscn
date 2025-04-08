@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://6bnwukxfp832"]
+[gd_scene load_steps=10 format=3 uid="uid://6bnwukxfp832"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_1igc8"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_xj5vl"]
 [ext_resource type="TileSet" uid="uid://dygtp05udik3t" path="res://assets/tileset/tileset3.tres" id="2_kwx4u"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="2_q2lpn"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="3_3uotk"]
+[ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="4_k32ow"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="4_squy6"]
 [ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="6_mxkvk"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="8_4yvlj"]
@@ -22,6 +23,10 @@ layer_1/tile_data = PackedInt32Array(851977, 1, 4, 851978, 1, 4, 851984, 1, 4, 8
 
 [node name="Player" parent="." instance=ExtResource("2_q2lpn")]
 position = Vector2(337, 883)
+
+[node name="panneau" parent="." instance=ExtResource("4_k32ow")]
+position = Vector2(396, 712)
+metadata/lignes = PackedStringArray("Te voila !", "Sache que tes connaissances, ici,", "Te seront très utiles.", "Essaie une composition de fonctions", "Avec sinus et cosinus.", "Bonne chance ...", "...")
 
 [node name="canon" parent="." instance=ExtResource("3_3uotk")]
 position = Vector2(160, 859)

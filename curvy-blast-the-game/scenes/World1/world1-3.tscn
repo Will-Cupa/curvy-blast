@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dh2qy1jc6bqsv"]
+[gd_scene load_steps=10 format=3 uid="uid://csfmyssy3akpt"]
 
+[ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_8dvn1"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="1_r3jvg"]
 [ext_resource type="TileSet" uid="uid://c8dccpov8bvq2" path="res://assets/tileset/tileset1.tres" id="2_rfjcl"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="3_qfwc2"]
@@ -12,6 +13,7 @@
 shader = ExtResource("1_r3jvg")
 
 [node name="levelAlain" type="Node2D"]
+script = ExtResource("1_8dvn1")
 
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource("ShaderMaterial_iue33")
