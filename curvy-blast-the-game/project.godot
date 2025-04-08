@@ -24,8 +24,7 @@ Global="*res://scripts/Global.gd"
 
 window/size/viewport_width=1728
 window/size/viewport_height=972
-window/size/resizable=false
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
@@ -52,3 +51,7 @@ reset={
 [layer_names]
 
 2d_physics/layer_1="Player"
+
+[rendering]
+
+anti_aliasing/quality/msaa_2d=1
