@@ -24,6 +24,7 @@ var yAvantCanon = 0
 
 func _ready():
 	camera = get_viewport().get_camera_2d()
+	DialogManager.clean()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):

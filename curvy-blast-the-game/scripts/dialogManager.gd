@@ -13,10 +13,15 @@ var can_advance_line = false
 
 var acualPanneau
 
+func clean():
+	if(text_box != null):
+		text_box.queue_free()
+
 func start_dialog(position: Vector2, lines, panneau):
 	if acualPanneau == panneau:
 		return
-	
+	elif(text_box != null):
+		text_box.queue_free()
 	current_line_index = 0
 	acualPanneau = panneau
 	dialog_lines = lines
