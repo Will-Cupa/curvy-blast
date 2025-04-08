@@ -10,6 +10,8 @@ extends Control
 #Gameplay settings
 
 
+var menuPrincipal = load("res://scenes/GameLevel/Two/second_scene.tscn");
+
 func _ready():
 	pass # Replace with function body.
 
@@ -30,3 +32,7 @@ func _on_master_vol_slider_value_changed(value):
 
 func _on_music_vol_slider_value_changed(value):
 	Global.update_volume(1, value)
+
+
+func _on_retour_pressed():
+	get_tree().change_scene_to_packed(menuPrincipal)
