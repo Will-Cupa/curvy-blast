@@ -10,7 +10,7 @@ size = Vector2(524, 607.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ybo5i"]
 shader = ExtResource("2_b4r3f")
-shader_parameter/baseColor = Vector3(1, 0.8, 0)
+shader_parameter/baseColor = Vector3(1, 0.4, 0.3)
 
 [node name="panneau" type="Node2D"]
 scale = Vector2(0.5, 0.5)
