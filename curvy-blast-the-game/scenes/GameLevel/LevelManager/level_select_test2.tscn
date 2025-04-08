@@ -30,26 +30,23 @@ offset_bottom = 377.0
 next_scene_path = ExtResource("3_1nai7")
 next_level_right = NodePath("../LevelIcon2")
 
-[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_up", "next_level_right", "next_level_left") instance=ExtResource("2_sqbsl")]
+[node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_right", "next_level_left") instance=ExtResource("2_sqbsl")]
 offset_left = 709.0
 offset_top = 639.0
 offset_right = 773.0
 offset_bottom = 703.0
 level_name = "2"
 next_scene_path = ExtResource("4_2yvt6")
-next_level_up = NodePath("")
 next_level_right = NodePath("../LevelIcon3")
 next_level_left = NodePath("../LevelIcon1")
 
-[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_down", "next_level_right", "next_level_left") instance=ExtResource("2_sqbsl")]
+[node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_left") instance=ExtResource("2_sqbsl")]
 offset_left = 1188.0
 offset_top = 622.0
 offset_right = 1252.0
 offset_bottom = 686.0
 level_name = "3"
 next_scene_path = ExtResource("5_6rp8q")
-next_level_down = NodePath("")
-next_level_right = NodePath("")
 next_level_left = NodePath("../LevelIcon2")
 
 [node name="PlayerIcon" parent="." instance=ExtResource("3_gle7j")]

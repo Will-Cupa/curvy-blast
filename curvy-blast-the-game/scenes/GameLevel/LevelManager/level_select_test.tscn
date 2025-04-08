@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3k0ngcoky2wk" path="res://scenes/World1/world1-1.tscn" id="3_eeyo5"]
 [ext_resource type="PackedScene" uid="uid://18q4g1eg566h" path="res://scenes/World1/world1-2.tscn" id="4_w0dmv"]
 
-[node name="LevelSelectTest" type="Control"]
+[node name="LevelSelectTest2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
