@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scripts/world_select.gd" id="1_b5are"]
 [ext_resource type="Texture2D" uid="uid://4nvnr8m2mml" path="res://assets/Sprites/world.png" id="2_w8otc"]
 [ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_6aq3q"]
-[ext_resource type="PackedScene" path="res://scenes/GameLevel/LevelManager/level_select_world.tscn" id="3_6awmx"]
-[ext_resource type="PackedScene" path="res://scenes/GameLevel/LevelManager/level_select_world_2.tscn" id="4_qrorh"]
+[ext_resource type="PackedScene" uid="uid://wu0woxtgjbxa" path="res://scenes/GameLevel/LevelManager/level_select_world.tscn" id="3_6awmx"]
+[ext_resource type="PackedScene" uid="uid://c6bebk54j4366" path="res://scenes/GameLevel/LevelManager/level_select_world_2.tscn" id="4_qrorh"]
 [ext_resource type="PackedScene" uid="uid://cpxdv5r5yukg" path="res://scenes/GameLevel/LevelManager/level_select_world_3.tscn" id="5_7f8pr"]
 
 [node name="WorldSelect" type="Control"]
@@ -51,3 +51,10 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 69.0
 offset_bottom = 74.0
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.565487
+color = Color(0.816196, 0.878847, 0.891642, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32
