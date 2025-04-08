@@ -13,11 +13,6 @@ shader = ExtResource("2_ngr4l")
 
 [node name="levelAlain" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(472, -256)
-scale = Vector2(1.20162, 1.20162)
-texture = ExtResource("1_7ss7k")
-
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource("ShaderMaterial_iue33")
 tile_set = ExtResource("3_qqy04")
@@ -68,3 +63,11 @@ focusCam = false
 
 [node name="EndFlag" parent="." instance=ExtResource("7_w7nhe")]
 position = Vector2(5696, -896)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(888, 496)
+scale = Vector2(1.06748, 1.06748)
+texture = ExtResource("1_7ss7k")

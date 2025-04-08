@@ -130,11 +130,6 @@ sources/0 = SubResource("TileSetAtlasSource_8vvmv")
 
 [node name="Tutoriel2" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-954.251, 679.251)
-scale = Vector2(2.78724, 2.94583)
-texture = ExtResource("1_2j3gh")
-
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource("ShaderMaterial_hjemj")
 tile_set = SubResource("TileSet_ssfd8")
@@ -173,6 +168,14 @@ position = Vector2(-1512, 240)
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_i0bel")]
 target = NodePath("../CharacterBody2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(888, 496)
+scale = Vector2(1.06748, 1.06748)
+texture = ExtResource("1_2j3gh")
 
 [editable path="TileMap/canon"]
 [editable path="panneau"]

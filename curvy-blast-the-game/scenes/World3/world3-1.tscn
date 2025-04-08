@@ -6,16 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="2_q2lpn"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="3_3uotk"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="4_squy6"]
-[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="6_mxkvk"]
+[ext_resource type="PackedScene" path="res://scenes/Character/collectable.tscn" id="6_mxkvk"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="8_4yvlj"]
 
 [node name="World3-1" type="Node2D"]
 script = ExtResource("1_1igc8")
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1623.03, 228.001)
-scale = Vector2(1.68747, 1.35371)
-texture = ExtResource("1_xj5vl")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_xlafe")
@@ -43,3 +38,11 @@ position = Vector2(445, 920)
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("8_4yvlj")]
 position = Vector2(340, 827)
 target = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(888, 496)
+scale = Vector2(1.06748, 1.06748)
+texture = ExtResource("1_xj5vl")
