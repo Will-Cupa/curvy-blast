@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://xtmrhg7vphc8"]
+[gd_scene load_steps=6 format=3 uid="uid://xtmrhg7vphc8"]
 
 [ext_resource type="Texture2D" uid="uid://vpuicj5m0ni0" path="res://assets/kenney_fantasy-ui-borders/PNG/Default/Panel/panel-001.png" id="1_hqp5n"]
 [ext_resource type="Script" path="res://scripts/text_box.gd" id="1_taicn"]
 [ext_resource type="FontFile" uid="uid://cp5qst7dfn33s" path="res://assets/font/superstar_memesbruh03.ttf" id="2_1nkxr"]
+[ext_resource type="FontFile" uid="uid://dqgagawndsewt" path="res://assets/font/Bitshow.otf" id="4_b7nbt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_71edt"]
+font = ExtResource("4_b7nbt")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Text" type="MarginContainer"]
 offset_left = -16.0
@@ -38,6 +45,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_1nkxr")
 theme_override_font_sizes/font_size = 50
+label_settings = SubResource("LabelSettings_71edt")
 vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="."]

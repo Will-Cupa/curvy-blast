@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cvrjwhkuax0fy" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-021.png" id="1_jehlr"]
 [ext_resource type="Script" path="res://scripts/Gameplay/PauseMenu.gd" id="1_pothm"]
-[ext_resource type="FontFile" uid="uid://bs3r1553ilivc" path="res://assets/font/Superstar M54.ttf" id="2_pogug"]
+[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="3_7h7ua"]
 [ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="3_o3kwf"]
 
 [node name="PauseMenu" type="Control"]
@@ -50,7 +50,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_pogug")
+theme_override_fonts/font = ExtResource("3_7h7ua")
 theme_override_font_sizes/font_size = 120
 text = "PAUSE"
 
