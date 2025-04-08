@@ -1,14 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs64qb3wr381y"]
+[gd_scene load_steps=3 format=3 uid="uid://bs64qb3wr381y"]
 
 [ext_resource type="Script" path="res://scripts/world_icon.gd" id="1_sse5n"]
-[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_lmq5h"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_wwkpd"]
-font = ExtResource("2_lmq5h")
-font_size = 18
-font_color = Color(0.894764, 0.720819, 0, 1)
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="LabelSettings" uid="uid://dwwda5x2aieat" path="res://assets/Themes/iconTextTheme.tres" id="2_is3yv"]
 
 [node name="WorldIcon" type="Control"]
 layout_mode = 3
@@ -23,4 +16,4 @@ layout_mode = 0
 offset_top = -23.0
 offset_right = 64.0
 text = "World  1"
-label_settings = SubResource("LabelSettings_wwkpd")
+label_settings = ExtResource("2_is3yv")
