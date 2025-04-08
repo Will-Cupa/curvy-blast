@@ -15,7 +15,7 @@ var niveau_1_score : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.collectables_by_level.has(next_scene_path):
+	if Global.collectables_by_level:
 		niveau_1_score = Global.collectables_by_level.get(next_scene_path, 0)
 	$Label.text = "Level  " + level_name
 	if niveau_1_score:

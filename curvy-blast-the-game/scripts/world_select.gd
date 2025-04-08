@@ -11,6 +11,8 @@ func _ready():
 
 #Called when the player press direction button
 func _input(event):
+	if move_tween and move_tween.is_running():
+		return 
 	if event.is_action_pressed("ui_left") and current_world > 0:
 		current_world -= 1
 	elif event.is_action_pressed("ui_right") and current_world < worlds.size() - 1:
@@ -26,5 +28,13 @@ func _input(event):
 			get_tree().get_root().remove_child(self)
 
 func tween_icon():
+	$PlayerIcon/body.play("walk");
+	$PlayerIcon/outline.play("walk")
+	
 	move_tween = get_tree().create_tween()
 	move_tween.tween_property($PlayerIcon, "global_position", worlds[current_world].global_position, 0.5).set_trans(Tween.TRANS_SINE)
+	move_tween.connect("finished", Callable(self, "_on_tween_finished"))
+
+func _on_tween_finished():
+	$PlayerIcon/body.play("idle");
+	$PlayerIcon/outline.play("idle")
