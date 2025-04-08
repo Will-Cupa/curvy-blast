@@ -117,8 +117,8 @@ size_flags_stretch_ratio = 0.7
 theme = ExtResource("5_hl5or")
 text = "Quitter"
 
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Tuto" to="." method="_on_tuto_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

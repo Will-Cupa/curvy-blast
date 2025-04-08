@@ -14,13 +14,16 @@ const CANON_VELOCITY = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var camera
 var canoned = false
 var inCanon = false 
 var functionCurve #Expression
 var xRelatif = 0
 var yRelatif = 0
 var yAvantCanon = 0
+
+func _ready():
+	camera = get_viewport().get_camera_2d()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
@@ -152,6 +155,7 @@ func _physics_process(delta):
 		
 		scale = Vector2(0.5,0.5)
 		applyCanonMov(delta)
+		camera.setTarget(self)
 		
 	else:
 		scale = Vector2(1,1)	
