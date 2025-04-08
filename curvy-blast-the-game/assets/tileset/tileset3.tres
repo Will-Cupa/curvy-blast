@@ -1,9 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c8dccpov8bvq2"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1g633y8ka5bd"]
 
-[ext_resource type="Texture2D" uid="uid://cdjjegy4vvaxh" path="res://assets/Sprites/tileset.png" id="1_48s3g"]
+[ext_resource type="Texture2D" uid="uid://bcmsjyhq2ds2b" path="res://assets/Sprites/tileset3.png" id="1_lo6sr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyank"]
-texture = ExtResource("1_48s3g")
+texture = ExtResource("1_lo6sr")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
