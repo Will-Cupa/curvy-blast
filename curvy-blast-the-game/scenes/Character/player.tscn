@@ -364,7 +364,7 @@ material = SubResource("ShaderMaterial_q7a57")
 position = Vector2(0, 2.615)
 scale = Vector2(0.162, 0.162)
 sprite_frames = SubResource("SpriteFrames_ro566")
-animation = &"walk"
+animation = &"idle"
 
 [node name="outline" type="AnimatedSprite2D" parent="AnimationManager"]
 position = Vector2(0, 2.615)

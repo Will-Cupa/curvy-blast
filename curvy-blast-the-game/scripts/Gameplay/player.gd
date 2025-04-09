@@ -25,6 +25,7 @@ func _ready():
 	DialogManager.clean()
 
 func _process(delta: float) -> void:
+	animationGestion()
 	if Input.is_action_just_pressed("reset"):
 		if(get_tree() != null):
 			get_tree().reload_current_scene()
@@ -142,8 +143,6 @@ func checkDeath(collision = null):
 
 
 func _physics_process(delta):
-	
-	animationGestion()
 	checkDeath()
 	
 	if(inCanon):
