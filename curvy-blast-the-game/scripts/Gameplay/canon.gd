@@ -69,7 +69,6 @@ func _on_area_2d_body_entered(body : Object) -> void:
 		queue_redraw()
 
 func getOptiPoint(x1, space, treshold) -> float:
-	print(space)
 	var x2 = x1 + space
 	var x3 = x1 + space/2
 	var y1 = expression.valueAt(x1)

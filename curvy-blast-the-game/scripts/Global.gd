@@ -3,6 +3,11 @@ extends Node
 signal brightness_updated(value)
 
 var speedrunTime = 0
+
+#id on the map
+var current_level_id : int
+var current_world_id : int
+
 var current_level : PackedScene
 var collectables_by_level : Dictionary = {
 }
