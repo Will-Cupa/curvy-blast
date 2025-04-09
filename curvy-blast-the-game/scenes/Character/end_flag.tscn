@@ -27,6 +27,7 @@ fill_to = Vector2(0.956897, 0.0560345)
 script = ExtResource("1_w7vmj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 material = SubResource("ShaderMaterial_7jc6x")
 scale = Vector2(0.539063, 0.539063)
 texture = ExtResource("3_l4eh0")

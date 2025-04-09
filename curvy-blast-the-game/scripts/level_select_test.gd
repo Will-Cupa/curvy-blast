@@ -2,14 +2,29 @@
 extends Control
 class_name LevelSelect
 
-@onready var current_level : LevelIcon = $LevelIcon1
-var parent_world_select
+var current_level : LevelIcon
+
 var move_tween : Tween
 var world_select = load("res://scenes/GameLevel/LevelManager/world_select.tscn")
 
+@onready var level_list = [
+	$LevelIcon1,
+	$LevelIcon2,
+	$LevelIcon3
+]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(Global.current_level_id)
+	if Global.current_level_id == null:
+		current_level = level_list[0]
+	else:
+		current_level = level_list[Global.current_level_id]
+		print(current_level)
+
 	$PlayerIcon.global_position = current_level.global_position
+
+
 
 #Called when the player press direction button
 func _input(event):
@@ -34,6 +49,8 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
 			Global.current_level = current_level.next_scene_path
+			Global.current_level_id = level_list.find(current_level)
+			print(Global.current_level_id)
 			get_tree().change_scene_to_packed(current_level.next_scene_path)
 
 func tween_icon():
@@ -48,4 +65,3 @@ func tween_icon():
 func _on_tween_finished():
 	$PlayerIcon/body.play("idle");
 	$PlayerIcon/outline.play("idle")
-	
