@@ -3,8 +3,9 @@ extends Control
 class_name LevelSelect
 
 @onready var current_level : LevelIcon = $LevelIcon1
-var parent_world_select = Node
+var parent_world_select
 var move_tween : Tween
+var world_select = load("res://scenes/GameLevel/LevelManager/world_select.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,9 +29,7 @@ func _input(event):
 		tween_icon()
 	
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().get_root().add_child(parent_world_select)
-		get_tree().current_scene = parent_world_select
-		get_tree().get_root().remove_child(self)
+		get_tree().change_scene_to_packed(world_select)
 	
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
