@@ -8,8 +8,8 @@ extends Control
 @onready var music_vol_slider = $SettingTabs/Audio/MarginContainer/AudioSettings/MusicVolSlider
 
 #Gameplay settings
-@onready var input_button = preload("res://scenes/Keybinding.tscn")
-@onready var game_settings = $SettingTabs/Gameplay/MarginContainer/ScrollContainer/GameSettings
+@onready var game_settings = $SettingTabs/Gameplay/MarginContainer/ScrollContainer
+@onready var input_button : PackedScene = preload("res://scenes/input_button.tscn")
 
 var input_actions = {
 	"ui_left" : "Se deplacer a gauche",
@@ -33,33 +33,6 @@ func _ready():
 func _process(delta):
 	_on_create_grid_list()
 
-func _on_create_grid_list():
-	InputMap.load_from_project_settings()
-	for item in game_settings.get_children():
-		item.queue_free()
-	
-	for action in input_actions:
-		var button = input_button.instantiate()
-		var action_label = button.find_child("LabelAction")
-		var key_label = button.find_child("LabelKey")
-		
-		action_label.text = input_actions[action]
-		var events = InputMap.action_get_events(action)
-		if events.size() > 0:
-			key_label.text = events[0].as_text().trim_suffix(" (Physical)")
-		else:
-			key_label.text = ""
-		
-		game_settings.add_child(button)
-		button.pressed.connect(_on_input_button_pressed.bind(button, action))
-
-func _on_input_button_pressed(button , action):
-	if !is_remapping:
-		is_remapping = true
-		action_to_remap = action
-		remapping_button = button
-		button.find_child("LabelKey").text = "Appuie sur une touche..."
-
 func _on_display_option_item_selected(index):
 	var isFull : bool = index == 1
 	Global.toogle_fullscreen(isFull)
@@ -75,3 +48,35 @@ func _on_music_vol_slider_value_changed(value):
 
 func _on_retour_pressed():
 	get_tree().change_scene_to_packed(menuPrincipal)
+
+func _on_create_grid_list():
+	InputMap.load_from_project_settings()
+	for item in game_settings.get_children():
+		item.queue_free()
+	
+	for action in input_actions:
+		var button = input_button.instantiate()
+		if button is Button:
+			var action_label = button.find_child("LabelAction")
+			var key_label = button.find_child("LabelKey")
+			
+			action_label.text = input_actions[action]
+			var events = InputMap.action_get_events(action)
+			if events.size() > 0:
+				key_label.text = events[0].as_text().trim_suffix(" (Physical)")
+			else:
+				key_label.text = ""
+			
+			game_settings.get_node('GameSettings').add_child(button)
+			button.mouse_filter = Control.MOUSE_FILTER_PASS
+			if button.is_pressed():
+				print("salut")
+			button.connect("pressed", _on_input_button_pressed.bind(button, action))
+
+func _on_input_button_pressed(button , action):
+	print("salut")
+	if !is_remapping:
+		is_remapping = true
+		action_to_remap = action
+		remapping_button = button
+		button.find_child("LabelKey").text = "Appuie sur une touche..."
