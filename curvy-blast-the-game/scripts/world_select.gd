@@ -30,6 +30,9 @@ func _input(event):
 			get_tree().get_root().add_child(worlds[current_world].level_select_scene)
 			get_tree().current_scene = worlds[current_world].level_select_scene
 			get_tree().get_root().remove_child(self)
+	
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://scenes/GameLevel/Two/second_scene.tscn")
 
 func tween_icon():
 	$PlayerIcon/body.play("walk");
