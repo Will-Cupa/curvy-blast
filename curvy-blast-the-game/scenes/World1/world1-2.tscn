@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://18q4g1eg566h"]
+[gd_scene load_steps=10 format=3 uid="uid://18q4g1eg566h"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_7ss7k"]
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_vjh33"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="6_00wc0"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="7_w7nhe"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="9_g23k6"]
+[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="9_ttp6f"]
 
 [node name="levelAlain" type="Node2D"]
 script = ExtResource("1_vjh33")
@@ -86,9 +87,18 @@ position = Vector2(-38, -506)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 rotation = -0.565487
-color = Color(0.790469, 0.818876, 0.628206, 1)
+color = Color(0.858974, 0.890947, 0.662738, 1)
 blend_mode = 2
 shadow_color = Color(0, 0, 0, 1)
 height = 0.32
+
+[node name="Collectable" parent="." instance=ExtResource("9_ttp6f")]
+position = Vector2(4653, -1773)
+
+[node name="Collectable2" parent="." instance=ExtResource("9_ttp6f")]
+position = Vector2(2623, -1675)
+
+[node name="Collectable3" parent="." instance=ExtResource("9_ttp6f")]
+position = Vector2(1563, -1557)
 
 [editable path="panneau4"]

@@ -42,10 +42,11 @@ nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_3.tscn"
 position = Vector2(525, 900)
 
 [node name="Collectable2" parent="." instance=ExtResource("7_wgycv")]
-position = Vector2(755, 900)
+position = Vector2(1566, 914)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -3
+visible = false
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(888, 496)
@@ -66,3 +67,6 @@ color = Color(0.715641, 0.921051, 0.951694, 1)
 blend_mode = 2
 shadow_color = Color(0, 0, 0, 1)
 height = 0.32
+
+[node name="Collectable3" parent="." instance=ExtResource("7_wgycv")]
+position = Vector2(2376, 915)

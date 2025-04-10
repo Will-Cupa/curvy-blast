@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3k0ngcoky2wk"]
+[gd_scene load_steps=10 format=3 uid="uid://c3k0ngcoky2wk"]
 
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_1u2h2"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_d7oyu"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_os1k8"]
 [ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_hwnlj"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="7_exjeu"]
+[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="9_087xk"]
 [ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="9_qqm6q"]
 
 [node name="root" type="Node2D"]
@@ -22,13 +23,6 @@ layer_1/tile_data = PackedInt32Array(327676, 1, 4, 327677, 1, 4, 327678, 1, 4, 3
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_j8skl")]
 position = Vector2(-356, 162)
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-rotation = 0.947714
-color = Color(0.790469, 0.818876, 0.628206, 1)
-blend_mode = 2
-shadow_color = Color(0, 0, 0, 1)
-height = 0.32
 
 [node name="canon" parent="." instance=ExtResource("5_os1k8")]
 position = Vector2(-512, 152)
@@ -95,3 +89,19 @@ metadata/lignes = PackedStringArray("Les nombres négatifs marchent aussi !")
 [node name="panneau4" parent="." instance=ExtResource("9_qqm6q")]
 position = Vector2(3672, -400)
 metadata/lignes = PackedStringArray("Cette dernière énigme est un peu plus compliquée...")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.565487
+color = Color(0.858974, 0.890947, 0.662738, 1)
+blend_mode = 2
+shadow_color = Color(0, 0, 0, 1)
+height = 0.32
+
+[node name="Collectable" parent="." instance=ExtResource("9_087xk")]
+position = Vector2(-84, -277)
+
+[node name="Collectable2" parent="." instance=ExtResource("9_087xk")]
+position = Vector2(1041, 85)
+
+[node name="Collectable3" parent="." instance=ExtResource("9_087xk")]
+position = Vector2(3287, 180)

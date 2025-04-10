@@ -41,7 +41,7 @@ nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_3.tscn"
 position = Vector2(1320, 351)
 
 [node name="Collectable" parent="." instance=ExtResource("6_mxkvk")]
-position = Vector2(445, 920)
+position = Vector2(863, 916)
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("target") instance=ExtResource("8_4yvlj")]
 position = Vector2(340, 827)
@@ -65,3 +65,9 @@ color = Color(0.715641, 0.921051, 0.951694, 1)
 blend_mode = 2
 shadow_color = Color(0, 0, 0, 1)
 height = 0.32
+
+[node name="Collectable2" parent="." instance=ExtResource("6_mxkvk")]
+position = Vector2(1922, 300)
+
+[node name="Collectable3" parent="." instance=ExtResource("6_mxkvk")]
+position = Vector2(2770, 277)

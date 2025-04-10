@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs6sgks0d5gwp"]
+[gd_scene load_steps=10 format=3 uid="uid://cs6sgks0d5gwp"]
 
 [ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_54ya5"]
 [ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_ehk4p"]
-[ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/Sprites/icon.svg" id="2_s5shd"]
+[ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_nbi5i"]
+[ext_resource type="Texture2D" uid="uid://c4h325nwbrajw" path="res://assets/Sprites/star.png" id="4_1rclu"]
+[ext_resource type="Texture2D" uid="uid://bynuqj4apbdrf" path="res://assets/Sprites/starOutline.png" id="5_v28xf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n422s"]
 font = ExtResource("2_ehk4p")
@@ -10,6 +12,18 @@ font_size = 18
 font_color = Color(0.894764, 0.720819, 0, 1)
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ulaas"]
+shader = ExtResource("3_nbi5i")
+shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o0phw"]
+shader = ExtResource("3_nbi5i")
+shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnj7u"]
+shader = ExtResource("3_nbi5i")
+shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
 
 [node name="LevelIcon" type="Control"]
 layout_mode = 3
@@ -39,24 +53,81 @@ offset_bottom = 103.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 visible = false
+material = SubResource("ShaderMaterial_ulaas")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_s5shd")
+texture = ExtResource("4_1rclu")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -16.5
+offset_right = 25.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_v28xf")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
 visible = false
+material = SubResource("ShaderMaterial_o0phw")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_s5shd")
+texture = ExtResource("4_1rclu")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -16.5
+offset_right = 25.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_v28xf")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
 visible = false
+material = SubResource("ShaderMaterial_lnj7u")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_s5shd")
+texture = ExtResource("4_1rclu")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -16.5
+offset_right = 25.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_v28xf")
 expand_mode = 2
 stretch_mode = 5
