@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="1_fuvob"]
 [ext_resource type="Theme" uid="uid://b6kt1jg0qm6pn" path="res://assets/Themes/SettingTabsTheme.tres" id="2_2tlbn"]
 [ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="4_27qcs"]
-[ext_resource type="PackedScene" uid="uid://dxbn1s0c5sfda" path="res://scenes/key_binding.tscn" id="4_m2n8b"]
+[ext_resource type="PackedScene" path="res://scenes/key_binding.tscn" id="4_m2n8b"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3

@@ -39,7 +39,6 @@ cameraOffset = Vector2(1000, 0)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_5nafb")]
 position = Vector2(2994, 4)
-nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_3.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -3
