@@ -71,7 +71,7 @@ func applyCanonMov(delta):
 
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		move_and_collide(-velocity*5 * delta)
+		#move_and_collide(-velocity*5 * delta)
 		checkDeath(collision)
 		canoned = false
 
@@ -145,11 +145,11 @@ func _physics_process(delta):
 		
 	elif(canoned):
 		
-		scale = Vector2(0.5,0.5)
+		#scale = Vector2(0.5,0.5)
 		applyCanonMov(delta)
 		
 	else:
-		scale = Vector2(1,1)	
+		#scale = Vector2(1,1)	
 		
 		# Add the gravity.
 		if not is_on_floor():
