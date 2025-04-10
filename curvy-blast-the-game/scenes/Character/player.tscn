@@ -370,7 +370,7 @@ animation = &"idle"
 position = Vector2(0, 2.615)
 scale = Vector2(0.162, 0.162)
 sprite_frames = SubResource("SpriteFrames_fnynk")
-animation = &"walk"
+animation = &"idle"
 
 [node name="FaceSprite" type="Sprite2D" parent="AnimationManager"]
 position = Vector2(1.19209e-07, -5)
