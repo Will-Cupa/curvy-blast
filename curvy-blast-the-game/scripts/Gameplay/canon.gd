@@ -108,6 +108,7 @@ func drawScale():
 	for n in range(40):
 		draw_string(default_font, Vector2(n*expression.getXYScale(),0), str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.WHITE)
 		draw_string(default_font, Vector2(0,-n*expression.getXYScale()), str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.WHITE)
-
+		draw_string(default_font, Vector2(0,n*expression.getXYScale()), "- " + str(n), HORIZONTAL_ALIGNMENT_LEFT, 32, 16, Color.WHITE)
+		
 func setScale(scale):
 	expression.XYScale = scale
