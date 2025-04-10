@@ -34,7 +34,6 @@ func _process(delta: float) -> void:
 func calculeCurve():
 	var result = functionCurve.valueAt(xRelatif)
 	if not functionCurve.has_execute_failed():
-		#print(result)
 		return result
 		
 func shoot(f):
@@ -103,10 +102,8 @@ func animationGestion():
 			
 func checkDeath(collision = null):
 	if(collision != null):
-		print("ok")
 		var body = collision.get_collider()
 		if body is TileMap:
-			print("ok")
 			var tilemap = body
 			var collision_position = collision.get_position()
 			var cell = tilemap.local_to_map(collision_position)
@@ -115,9 +112,7 @@ func checkDeath(collision = null):
 			print(collision_position)
 			var tile_data = tilemap.get_cell_tile_data(layer_id, cell)
 			if tile_data:
-				print("ok")
 				if tile_data.get_collision_polygons_count(0) > 0:
-					print("tu es mort")
 					#death.emit()
 					if(get_tree() != null):
 						get_tree().reload_current_scene()
@@ -135,7 +130,6 @@ func checkDeath(collision = null):
 			var tile_data = tilemap.get_cell_tile_data(layer_id, cell)
 			if tile_data:
 				if tile_data.get_collision_polygons_count(0) > 0:
-					print("tu es mort")
 					#death.emit()
 					if(get_tree() != null):
 						get_tree().reload_current_scene()

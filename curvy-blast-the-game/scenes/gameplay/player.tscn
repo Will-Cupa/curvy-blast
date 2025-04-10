@@ -1,6 +1,6 @@
 [gd_scene load_steps=74 format=3 uid="uid://cjyn8on0dme0a"]
 
-[ext_resource type="Script" path="res://scripts/Gameplay/player.gd" id="1_cpcmr"]
+[ext_resource type="Script" path="res://scripts/Gameplay/player/player.gd" id="1_cpcmr"]
 [ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_u1ash"]
 [ext_resource type="Texture2D" uid="uid://droo83lmb2m4g" path="res://assets/Sprites/launch/normal/0001.png" id="3_u4j7b"]
 [ext_resource type="Texture2D" uid="uid://c200cdny3d65g" path="res://assets/Sprites/launch/normal/0002.png" id="4_bfwtb"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dy2fv3k8os77" path="res://assets/Sprites/walk/normal/0008.png" id="26_xq3bs"]
 [ext_resource type="Texture2D" uid="uid://cvrjl4qt1qbxk" path="res://assets/Sprites/walk/normal/0009.png" id="27_ydygc"]
 [ext_resource type="Texture2D" uid="uid://b64e1s341b7ke" path="res://assets/Sprites/idle/outline/0001.png" id="28_1wooc"]
-[ext_resource type="Script" path="res://scripts/animationManager.gd" id="28_hkiip"]
+[ext_resource type="Script" path="res://scripts/Gameplay/player/animationManager.gd" id="28_hkiip"]
 [ext_resource type="Texture2D" uid="uid://gisgrl20mblh" path="res://assets/Sprites/walk/normal/0010.png" id="28_nbv6o"]
 [ext_resource type="Texture2D" uid="uid://6hakqk26f5nd" path="res://assets/Sprites/face.png" id="28_tas6e"]
 [ext_resource type="Texture2D" uid="uid://48aruneueesq" path="res://assets/Sprites/idle/outline/0002.png" id="29_3wmry"]

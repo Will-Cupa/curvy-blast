@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cs6sgks0d5gwp"]
 
-[ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_ugden"]
+[ext_resource type="Script" path="res://scripts/LevelSelect/level_icon.gd" id="1_ugden"]
 [ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_hkqa3"]
 [ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_b8oiq"]
 [ext_resource type="Texture2D" uid="uid://c4h325nwbrajw" path="res://assets/Sprites/star.png" id="4_cpiu7"]

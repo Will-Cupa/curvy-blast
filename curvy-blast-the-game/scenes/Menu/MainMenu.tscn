@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnw5ysym0p7k"]
 
-[ext_resource type="Script" path="res://scripts/second_scene.gd" id="1_ei6nq"]
-[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="2_scgs7"]
-[ext_resource type="Texture2D" uid="uid://bte4k8hrengj8" path="res://assets/BackgroundMenu/Image2.png" id="2_vdhsn"]
-[ext_resource type="Texture2D" uid="uid://dh3w8d0d58kbm" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-018.png" id="3_uosdw"]
-[ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="5_hl5or"]
+[ext_resource type="Script" path="res://scripts/Menu/main_menu.gd" id="1_mo1fw"]
+[ext_resource type="Texture2D" uid="uid://dh3w8d0d58kbm" path="res://assets/kenney_fantasy-ui-borders/PNG/Double/Border/panel-border-018.png" id="2_qpulw"]
+[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="3_dd1tk"]
+[ext_resource type="Texture2D" uid="uid://bte4k8hrengj8" path="res://assets/BackgroundMenu/Image2.png" id="4_mdd8r"]
+[ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="5_6v4wq"]
 
 [node name="SecondScene" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ei6nq")
+script = ExtResource("1_mo1fw")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_uosdw")
+texture = ExtResource("2_qpulw")
 patch_margin_left = 32
 patch_margin_top = 32
 patch_margin_right = 32
@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_scgs7")
+stream = ExtResource("3_dd1tk")
 autoplay = true
 expand = true
 loop = true
@@ -62,7 +62,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(278, 221)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_vdhsn")
+texture = ExtResource("4_mdd8r")
 expand_mode = 1
 stretch_mode = 5
 
@@ -92,7 +92,7 @@ theme_override_constants/separation = 45
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
-theme = ExtResource("5_hl5or")
+theme = ExtResource("5_6v4wq")
 text = "Jouer
 "
 
@@ -100,21 +100,21 @@ text = "Jouer
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
-theme = ExtResource("5_hl5or")
+theme = ExtResource("5_6v4wq")
 text = "Parametres"
 
 [node name="Tuto" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
-theme = ExtResource("5_hl5or")
+theme = ExtResource("5_6v4wq")
 text = "Tuto"
 
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
-theme = ExtResource("5_hl5or")
+theme = ExtResource("5_6v4wq")
 text = "Quitter"
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_new_game_pressed"]

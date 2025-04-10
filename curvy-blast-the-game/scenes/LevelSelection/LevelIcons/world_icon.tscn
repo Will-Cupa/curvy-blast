@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bs64qb3wr381y"]
 
-[ext_resource type="Script" path="res://scripts/world_icon.gd" id="1_sse5n"]
+[ext_resource type="Script" path="res://scripts/LevelSelect/world_icon.gd" id="1_sse5n"]
 [ext_resource type="LabelSettings" uid="uid://dwwda5x2aieat" path="res://assets/Themes/iconTextTheme.tres" id="2_is3yv"]
 
 [node name="WorldIcon" type="Control"]

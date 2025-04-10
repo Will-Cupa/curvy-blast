@@ -10,10 +10,12 @@ func _on_quit_pressed():
 
 
 func _on_play_pressed():
+	Global.current_world_id = 0
 	get_tree().change_scene_to_packed(world);
 
 
 func _on_tuto_pressed():
+	Global.current_world_id = 3 #main menu, needed to redirect player to this menu at the end of the tutorial
 	get_tree().change_scene_to_packed(WORLD_TUTO);
 
 

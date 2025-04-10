@@ -7,7 +7,8 @@ extends AnimatableBody2D
 var worldScenes = [
 	"res://scenes/LevelSelection/LevelManager/level_select_world.tscn",
 	"res://scenes/LevelSelection/LevelManager/level_select_world_2.tscn",
-	"res://scenes/LevelSelection/LevelManager/level_select_world_3.tscn"
+	"res://scenes/LevelSelection/LevelManager/level_select_world_3.tscn",
+	"res://scenes/Menu/MainMenu.tscn"
 ]
 
 # Called when the node enters the scene tree for the first time.

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bpfsrhjb67wm7"]
 
-[ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_hj1mo"]
+[ext_resource type="Script" path="res://scripts/Gameplay/world_item_manager.gd" id="1_hj1mo"]
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_whre5"]
 [ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/gameplay/camera.tscn" id="2_qg74t"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/gameplay/player.tscn" id="3_ted5i"]

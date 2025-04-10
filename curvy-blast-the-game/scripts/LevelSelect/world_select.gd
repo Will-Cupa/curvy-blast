@@ -32,7 +32,7 @@ func _input(event):
 			get_tree().get_root().remove_child(self)
 	
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().change_scene_to_file("res://scenes/GameLevel/Two/second_scene.tscn")
+		get_tree().change_scene_to_file("res://scenes/Menu/MainMenu.tscn")
 
 func tween_icon():
 	$PlayerIcon/body.play("walk");

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://wgxxm6qgg1o4"]
 
-[ext_resource type="Script" path="res://scripts/collectable.gd" id="1_gc517"]
+[ext_resource type="Script" path="res://scripts/Gameplay/collectable.gd" id="1_gc517"]
 [ext_resource type="Shader" path="res://shaders/player.gdshader" id="2_uh67l"]
 [ext_resource type="Texture2D" uid="uid://c4h325nwbrajw" path="res://assets/Sprites/star.png" id="3_q64du"]
 [ext_resource type="Texture2D" uid="uid://bynuqj4apbdrf" path="res://assets/Sprites/starOutline.png" id="4_id0rf"]

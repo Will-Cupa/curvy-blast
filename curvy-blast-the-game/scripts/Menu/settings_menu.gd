@@ -21,7 +21,7 @@ var input_actions = {
 	"pass_dialog": "Passer les dialogues",
 }
 
-var menuPrincipal = load("res://scenes/introStartup/second_scene.tscn");
+var menuPrincipal = load("res://scenes/Menu/MainMenu.tscn");
 var is_remapping = false
 var action_to_remap = null
 var remapping_button = null

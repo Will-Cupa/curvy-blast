@@ -22,7 +22,7 @@ buses/default_bus_layout="res://assets/sound/default_bus_layout.tres"
 
 [autoload]
 
-DialogManager="*res://scripts/dialogManager.gd"
+DialogManager="*res://scripts/Gameplay/dialogManager.gd"
 Global="*res://scripts/Global.gd"
 MainMusic="*res://scenes/MainMusic.tscn"
 

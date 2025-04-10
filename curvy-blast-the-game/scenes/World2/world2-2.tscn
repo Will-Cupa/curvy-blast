@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4x535jcf1iyn"]
 
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_2j3gh"]
-[ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_bpo3b"]
+[ext_resource type="Script" path="res://scripts/Gameplay/world_item_manager.gd" id="1_bpo3b"]
 [ext_resource type="TileSet" uid="uid://bblsj72icdgl0" path="res://assets/tileset/tileset2.tres" id="2_m72vh"]
 [ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/gameplay/canon.tscn" id="4_bqibe"]
 [ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/gameplay/player.tscn" id="5_t0vi3"]
