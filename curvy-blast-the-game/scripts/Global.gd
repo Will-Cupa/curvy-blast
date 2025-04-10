@@ -2,7 +2,7 @@ extends Node
 
 signal brightness_updated(value)
 
-var speedrunTime = 0
+var timer : Node
 
 #id on the map
 var current_level_id : int
