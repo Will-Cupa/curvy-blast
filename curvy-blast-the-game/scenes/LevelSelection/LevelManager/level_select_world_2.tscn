@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_5kfe8"]
 [ext_resource type="Texture2D" uid="uid://jekxmug64nfd" path="res://assets/Sprites/worldMap2.png" id="2_0skn6"]
-[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="2_sqbsl"]
+[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/LevelSelection/LevelIcons/level_icon.tscn" id="2_sqbsl"]
 [ext_resource type="PackedScene" uid="uid://c3cdmqav1ju0o" path="res://scenes/World2/world2-1.tscn" id="3_1nai7"]
-[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_gle7j"]
+[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/LevelSelection/LevelIcons/player_icon.tscn" id="3_gle7j"]
 [ext_resource type="PackedScene" uid="uid://b4x535jcf1iyn" path="res://scenes/World2/world2-2.tscn" id="4_2yvt6"]
 [ext_resource type="PackedScene" uid="uid://dtda5dlwxv0u" path="res://scenes/World2/world2-3.tscn" id="5_6rp8q"]
 

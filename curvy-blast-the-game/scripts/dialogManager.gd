@@ -1,6 +1,6 @@
 extends Node
 
-@onready var text_box_scene : PackedScene = preload('res://scenes/GameLevel/textBox.tscn')
+@onready var text_box_scene : PackedScene = preload('res://scenes/textBox.tscn')
 
 var dialog_lines
 var current_line_index = 0

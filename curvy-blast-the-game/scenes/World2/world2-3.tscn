@@ -32,7 +32,6 @@ position = Vector2(-1004, 2)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_5kgst")]
 position = Vector2(1028, 20)
-nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_2.tscn"
 
 [node name="GPUParticles2D" parent="." instance=ExtResource("9_5e4r1")]
 

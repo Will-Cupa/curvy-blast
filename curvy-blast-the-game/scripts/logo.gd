@@ -1,7 +1,7 @@
 extends TextureRect
 
 @onready var animation_player = $AnimationPlayer
-var menu = preload("res://scenes/GameLevel/Two/second_scene.tscn");
+var menu = preload("res://scenes/introStartup/second_scene.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

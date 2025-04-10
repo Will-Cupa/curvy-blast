@@ -5,7 +5,7 @@ class_name LevelSelect
 var current_level : LevelIcon
 
 var move_tween : Tween
-var world_select = load("res://scenes/GameLevel/LevelManager/world_select.tscn")
+var world_select = load("res://scenes/LevelSelection/LevelManager/world_select.tscn")
 
 @onready var level_list = [
 	$LevelIcon1,

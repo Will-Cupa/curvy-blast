@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmsj2hrgr868t"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay/camera.gd" id="1_uqck4"]
-[ext_resource type="PackedScene" uid="uid://07lw112t3m28" path="res://scenes/GameLevel/Menu/PauseMenu.tscn" id="2_j2m3w"]
+[ext_resource type="PackedScene" uid="uid://07lw112t3m28" path="res://scenes/Menu/PauseMenu.tscn" id="2_j2m3w"]
 
 [node name="Camera2D" type="Camera2D"]
 zoom = Vector2(0.75, 0.75)

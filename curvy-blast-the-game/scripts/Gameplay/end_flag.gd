@@ -2,7 +2,13 @@ extends AnimatableBody2D
 
 @onready var win_timer: Timer = $winTimer
 @onready var sprite = $Sprite2D
-@export var nextScenePath : String
+#@export var nextScenePath : String
+
+var worldScenes = [
+	"res://scenes/LevelSelection/LevelManager/level_select_world.tscn",
+	"res://scenes/LevelSelection/LevelManager/level_select_world_2.tscn",
+	"res://scenes/LevelSelection/LevelManager/level_select_world_3.tscn"
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,4 +33,4 @@ func _on_win_timer_timeout() -> void:
 	var total_collectable = get_parent().total_colletable
 	Global.collectables_by_level[Global.current_level] = total_collectable
 	DialogManager.clean()
-	get_tree().change_scene_to_file(nextScenePath)
+	get_tree().change_scene_to_file(worldScenes[Global.current_world_id])

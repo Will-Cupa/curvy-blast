@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://wu0woxtgjbxa"]
 
 [ext_resource type="Script" path="res://scripts/level_select_test.gd" id="1_b13nv"]
-[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/GameLevel/LevelIcons/level_icon.tscn" id="1_ks0ri"]
+[ext_resource type="PackedScene" uid="uid://cs6sgks0d5gwp" path="res://scenes/LevelSelection/LevelIcons/level_icon.tscn" id="1_ks0ri"]
 [ext_resource type="Texture2D" uid="uid://cm3cyeyxduq3h" path="res://assets/Sprites/worldMap1.png" id="2_krcn4"]
-[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/GameLevel/LevelIcons/player_icon.tscn" id="3_c787i"]
+[ext_resource type="PackedScene" uid="uid://b723wpkm1g8iw" path="res://scenes/LevelSelection/LevelIcons/player_icon.tscn" id="3_c787i"]
 [ext_resource type="PackedScene" uid="uid://c3k0ngcoky2wk" path="res://scenes/World1/world1-1.tscn" id="3_eeyo5"]
 [ext_resource type="PackedScene" uid="uid://18q4g1eg566h" path="res://scenes/World1/world1-2.tscn" id="4_w0dmv"]
 

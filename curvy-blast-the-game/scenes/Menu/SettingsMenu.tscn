@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccpbe1wlpv7lr"]
 
-[ext_resource type="Script" path="res://scripts/Menu/settings_menu.gd" id="1_5wmgp"]
-[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="1_fuvob"]
-[ext_resource type="Theme" uid="uid://b6kt1jg0qm6pn" path="res://assets/Themes/SettingTabsTheme.tres" id="2_2tlbn"]
-[ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="4_27qcs"]
+[ext_resource type="Script" path="res://scripts/Menu/settings_menu.gd" id="1_fe5pe"]
+[ext_resource type="VideoStream" path="res://assets/BackgroundMenu/menu_back2.ogv" id="2_xxawu"]
+[ext_resource type="Theme" uid="uid://b6kt1jg0qm6pn" path="res://assets/Themes/SettingTabsTheme.tres" id="3_uj7xd"]
+[ext_resource type="Theme" uid="uid://c070wc77f0186" path="res://assets/Themes/ThemeButtonGeneral.tres" id="4_loo1r"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("1_5wmgp")
+script = ExtResource("1_fe5pe")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -23,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-stream = ExtResource("1_fuvob")
+stream = ExtResource("2_xxawu")
 autoplay = true
 expand = true
 loop = true
@@ -45,7 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_2tlbn")
+theme = ExtResource("3_uj7xd")
 current_tab = 2
 
 [node name="Video" type="TabBar" parent="SettingTabs"]
@@ -195,7 +195,7 @@ offset_top = -27.0161
 offset_right = 156.0
 offset_bottom = 31.9839
 mouse_filter = 1
-theme = ExtResource("4_27qcs")
+theme = ExtResource("4_loo1r")
 text = "Retour"
 
 [connection signal="item_selected" from="SettingTabs/Video/MarginContainer/VideoSettings/DisplayOption" to="." method="_on_display_option_item_selected"]

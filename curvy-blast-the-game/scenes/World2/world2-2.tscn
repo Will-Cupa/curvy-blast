@@ -31,7 +31,6 @@ position = Vector2(-2875, 1500)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_jj3kg")]
 position = Vector2(952, -515)
-nextScenePath = "res://scenes/GameLevel/LevelManager/level_select_world_2.tscn"
 
 [node name="panneau" parent="." instance=ExtResource("8_h8kh8")]
 position = Vector2(-2049, 1267)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Curvy blast the game"
-run/main_scene="res://scenes/GameLevel/One/FirstScene.tscn"
+run/main_scene="res://scenes/introStartup/FirstScene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/Sprites/logoDesktop.png"
 config/windows_native_icon="res://assets/logoDesktop.ico"

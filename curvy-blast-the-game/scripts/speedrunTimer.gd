@@ -6,7 +6,6 @@ var hours = 0
 
 func _physics_process(delta):
 	second = second + delta
-	print(second)
 	if second >= 60:
 		minuts += 1
 		second = 0

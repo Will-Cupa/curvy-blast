@@ -1,28 +1,28 @@
 [gd_scene load_steps=10 format=3 uid="uid://cs6sgks0d5gwp"]
 
-[ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_54ya5"]
-[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_ehk4p"]
-[ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_nbi5i"]
-[ext_resource type="Texture2D" uid="uid://c4h325nwbrajw" path="res://assets/Sprites/star.png" id="4_1rclu"]
-[ext_resource type="Texture2D" uid="uid://bynuqj4apbdrf" path="res://assets/Sprites/starOutline.png" id="5_v28xf"]
+[ext_resource type="Script" path="res://scripts/level_icon.gd" id="1_ugden"]
+[ext_resource type="FontFile" uid="uid://bcsa6mtsqear3" path="res://assets/font/Chicalo.otf" id="2_hkqa3"]
+[ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_b8oiq"]
+[ext_resource type="Texture2D" uid="uid://c4h325nwbrajw" path="res://assets/Sprites/star.png" id="4_cpiu7"]
+[ext_resource type="Texture2D" uid="uid://bynuqj4apbdrf" path="res://assets/Sprites/starOutline.png" id="5_6mciq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n422s"]
-font = ExtResource("2_ehk4p")
+font = ExtResource("2_hkqa3")
 font_size = 18
 font_color = Color(0.894764, 0.720819, 0, 1)
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ulaas"]
-shader = ExtResource("3_nbi5i")
+shader = ExtResource("3_b8oiq")
 shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o0phw"]
-shader = ExtResource("3_nbi5i")
+shader = ExtResource("3_b8oiq")
 shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lnj7u"]
-shader = ExtResource("3_nbi5i")
+shader = ExtResource("3_b8oiq")
 shader_parameter/baseColor = Vector3(0, 0.8, 0.6)
 
 [node name="LevelIcon" type="Control"]
@@ -31,7 +31,7 @@ anchors_preset = 0
 offset_right = 64.0
 offset_bottom = 64.0
 pivot_offset = Vector2(32, 32)
-script = ExtResource("1_54ya5")
+script = ExtResource("1_ugden")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
@@ -56,7 +56,7 @@ visible = false
 material = SubResource("ShaderMaterial_ulaas")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_1rclu")
+texture = ExtResource("4_cpiu7")
 expand_mode = 2
 stretch_mode = 5
 
@@ -74,7 +74,7 @@ offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_v28xf")
+texture = ExtResource("5_6mciq")
 expand_mode = 2
 stretch_mode = 5
 
@@ -83,7 +83,7 @@ visible = false
 material = SubResource("ShaderMaterial_o0phw")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_1rclu")
+texture = ExtResource("4_cpiu7")
 expand_mode = 2
 stretch_mode = 5
 
@@ -101,7 +101,7 @@ offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_v28xf")
+texture = ExtResource("5_6mciq")
 expand_mode = 2
 stretch_mode = 5
 
@@ -110,7 +110,7 @@ visible = false
 material = SubResource("ShaderMaterial_lnj7u")
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_1rclu")
+texture = ExtResource("4_cpiu7")
 expand_mode = 2
 stretch_mode = 5
 
@@ -128,6 +128,6 @@ offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_v28xf")
+texture = ExtResource("5_6mciq")
 expand_mode = 2
 stretch_mode = 5

@@ -4,7 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var hitBoxPatte = $CollisionShape2D2
 @onready var hitBox = $CollisionShape2D
 
-const PAUSE_MENU = preload("res://scenes/GameLevel/Menu/PauseMenu.tscn")
+const PAUSE_MENU = preload("res://scenes/Menu/PauseMenu.tscn")
 signal death
 
 const SPEED = 300.0

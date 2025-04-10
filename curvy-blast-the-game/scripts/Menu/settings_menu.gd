@@ -8,7 +8,7 @@ extends Control
 @onready var music_vol_slider = $SettingTabs/Audio/MarginContainer/AudioSettings/MusicVolSlider
 
 #Gameplay settings
-@onready var game_settings = $SettingTabs/Gameplay/MarginContainer/ScrollContainer
+@onready var game_settings = $SettingTabs/Gameplay/MarginContainer/VideoSettings
 @onready var input_button : PackedScene = preload("res://scenes/input_button.tscn")
 @onready var timerScene = preload("res://scenes/Gameplay/speedrun_timer.tscn")
 
@@ -21,7 +21,7 @@ var input_actions = {
 	"pass_dialog": "Passer les dialogues",
 }
 
-var menuPrincipal = load("res://scenes/GameLevel/Two/second_scene.tscn");
+var menuPrincipal = load("res://scenes/introStartup/second_scene.tscn");
 var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
