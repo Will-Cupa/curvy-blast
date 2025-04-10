@@ -10,7 +10,7 @@ extends Control
 #Gameplay settings
 @onready var game_settings = $SettingTabs/Gameplay/MarginContainer/ScrollContainer
 @onready var input_button : PackedScene = preload("res://scenes/input_button.tscn")
-@onready var timerScene = preload("res://scenes/Character/speedrun_timer.tscn")
+@onready var timerScene = preload("res://scenes/Gameplay/speedrun_timer.tscn")
 
 var input_actions = {
 	"ui_left" : "Se deplacer a gauche",

@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_2j3gh"]
 [ext_resource type="Script" path="res://scripts/world_item_manager.gd" id="1_bpo3b"]
 [ext_resource type="TileSet" uid="uid://bblsj72icdgl0" path="res://assets/tileset/tileset2.tres" id="2_m72vh"]
-[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="4_bqibe"]
-[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="5_t0vi3"]
-[ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/Character/end_flag.tscn" id="6_jj3kg"]
-[ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/Character/panneau.tscn" id="8_h8kh8"]
-[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="9_i0bel"]
-[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/Character/collectable.tscn" id="9_lw1cr"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/gameplay/canon.tscn" id="4_bqibe"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/gameplay/player.tscn" id="5_t0vi3"]
+[ext_resource type="PackedScene" uid="uid://it8fnil5mt0a" path="res://scenes/gameplay/end_flag.tscn" id="6_jj3kg"]
+[ext_resource type="PackedScene" uid="uid://b753lvw7yeh1s" path="res://scenes/gameplay/panneau.tscn" id="8_h8kh8"]
+[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/gameplay/camera.tscn" id="9_i0bel"]
+[ext_resource type="PackedScene" uid="uid://wgxxm6qgg1o4" path="res://scenes/gameplay/collectable.tscn" id="9_lw1cr"]
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_bpo3b")
