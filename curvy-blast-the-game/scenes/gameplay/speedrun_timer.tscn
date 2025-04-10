@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1tutg5nsjatk"]
+
+[ext_resource type="Script" path="res://scripts/speedrunTimer.gd" id="1_byooc"]
+[ext_resource type="LabelSettings" uid="uid://dwwda5x2aieat" path="res://assets/Themes/iconTextTheme.tres" id="2_wnv6l"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_byooc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 29.0
+offset_right = 78.0
+offset_bottom = 52.0
+text = "100.00"
+label_settings = ExtResource("2_wnv6l")

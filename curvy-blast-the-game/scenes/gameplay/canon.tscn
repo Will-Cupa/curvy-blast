@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6dannarqfvkd"]
+
+[ext_resource type="Script" path="res://scripts/Gameplay/canon.gd" id="1_tuoyq"]
+[ext_resource type="Texture2D" uid="uid://dnnni56rtwoj" path="res://assets/Sprites/canonBase.png" id="2_qkad7"]
+[ext_resource type="Texture2D" uid="uid://diyr05g5mycc1" path="res://assets/Sprites/canonNormal.png" id="3_bgm4c"]
+[ext_resource type="Shader" path="res://shaders/player.gdshader" id="3_q8tap"]
+[ext_resource type="Texture2D" uid="uid://t18faawd0q8l" path="res://assets/Sprites/canonOutline.png" id="4_wfdmn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_husja"]
+size = Vector2(105, 94)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aabir"]
+shader = ExtResource("3_q8tap")
+shader_parameter/baseColor = Vector3(0.2, 0.2, 0.4)
+
+[node name="canon" type="StaticBody2D"]
+script = ExtResource("1_tuoyq")
+cameraOffset = Vector2(1000, -450)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = -51.0
+offset_top = 94.0
+offset_right = 135.0
+offset_bottom = 152.0
+expand_to_text_length = true
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_husja")
+
+[node name="baseSprite" type="Sprite2D" parent="."]
+position = Vector2(-2.28882e-05, -7.62939e-06)
+scale = Vector2(0.148148, 0.130722)
+texture = ExtResource("2_qkad7")
+
+[node name="canonNormal" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_aabir")
+position = Vector2(0.573171, 1.19209e-07)
+scale = Vector2(0.180071, 0.168333)
+texture = ExtResource("3_bgm4c")
+offset = Vector2(110, 0)
+flip_v = true
+
+[node name="canonOutline" type="Sprite2D" parent="canonNormal"]
+texture = ExtResource("4_wfdmn")
+offset = Vector2(110, 0)
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

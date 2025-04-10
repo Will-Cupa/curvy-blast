@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var canon: StaticBody2D = $TileMap/canon
+@onready var canon: StaticBody2D = $canon
 var total_colletable = 0
 const MAX_COLLECTABLE = 3
 

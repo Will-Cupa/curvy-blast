@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://3f3a8r01be8" path="res://assets/background.png" id="1_dimun"]
 [ext_resource type="Shader" path="res://shaders/terrain.gdshader" id="2_boaof"]
 [ext_resource type="Texture2D" uid="uid://cdjjegy4vvaxh" path="res://assets/Sprites/tileset.png" id="3_tc54y"]
-[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/Character/player.tscn" id="4_snwv3"]
-[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/Character/canon.tscn" id="5_x35b3"]
+[ext_resource type="PackedScene" uid="uid://cjyn8on0dme0a" path="res://scenes/gameplay/player.tscn" id="4_snwv3"]
+[ext_resource type="PackedScene" uid="uid://b6dannarqfvkd" path="res://scenes/gameplay/canon.tscn" id="5_x35b3"]
 [ext_resource type="Texture2D" uid="uid://b6tvn3hbwbx6f" path="res://assets/Sprites/icon.svg" id="6_ag3x6"]
 [ext_resource type="Script" path="res://scenes/test_dialog.gd" id="7_bvk7x"]
-[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/Character/camera.tscn" id="8_kos68"]
+[ext_resource type="PackedScene" uid="uid://cmsj2hrgr868t" path="res://scenes/gameplay/camera.tscn" id="8_kos68"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjemj"]
 shader = ExtResource("2_boaof")

@@ -10,6 +10,7 @@ extends Control
 #Gameplay settings
 @onready var game_settings = $SettingTabs/Gameplay/MarginContainer/ScrollContainer
 @onready var input_button : PackedScene = preload("res://scenes/input_button.tscn")
+@onready var timerScene = preload("res://scenes/Gameplay/speedrun_timer.tscn")
 
 var input_actions = {
 	"ui_left" : "Se deplacer a gauche",
@@ -81,3 +82,11 @@ func _on_create_grid_list():
 		#action_to_remap = action
 		#remapping_button = button
 		#button.find_child("LabelKey").text = "Appuie sur une touche..."
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		Global.timer = timerScene.instantiate()
+		get_tree().get_root().add_child(Global.timer)
+	else:
+		Global.timer.queue_free()
+			
