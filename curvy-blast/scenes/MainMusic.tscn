@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vkvfpm3bp3ch"]
+
+[ext_resource type="AudioStream" uid="uid://ci430oxaguchl" path="res://assets/sound/Chill Vintage Cozy Piano Lofi Apple Tree by Lukrembo.mp3" id="1_h12ha"]
+
+[node name="MainMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_h12ha")
+autoplay = true
+bus = &"Music"
