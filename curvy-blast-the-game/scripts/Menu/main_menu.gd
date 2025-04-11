@@ -2,7 +2,6 @@ extends Control
 
 const WORLD_TUTO = preload("res://scenes/tuto/world-tuto.tscn")
 const world = preload("res://scenes/LevelSelection/LevelManager/world_select.tscn")
-const settings = preload("res://scenes/Menu/SettingsMenu.tscn")
 
 
 func _on_quit_pressed():
@@ -20,4 +19,4 @@ func _on_tuto_pressed():
 
 
 func _on_settings_pressed():
-	get_tree().change_scene_to_packed(settings);
+	get_tree().change_scene_to_file("res://scenes/Menu/SettingsMenu.tscn");

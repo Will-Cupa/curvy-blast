@@ -21,7 +21,6 @@ var input_actions = {
 	"pass_dialog": "Passer les dialogues",
 }
 
-var menuPrincipal = load("res://scenes/Menu/MainMenu.tscn");
 var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
@@ -48,7 +47,7 @@ func _on_music_vol_slider_value_changed(value):
 
 
 func _on_retour_pressed():
-	get_tree().change_scene_to_packed(menuPrincipal)
+	get_tree().change_scene_to_file("res://scenes/Menu/MainMenu.tscn")
 
 func _on_create_grid_list():
 	pass
